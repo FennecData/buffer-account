@@ -6,7 +6,7 @@ import { AppContainer } from 'react-hot-loader';
 import {
   ConnectedRouter as Router,
 } from 'react-router-redux';
-import createStore, { history } from '@bufferapp/publish-store';
+import createStore, { history } from '@bufferapp/accounts-store';
 import App from './components/App';
 
 
