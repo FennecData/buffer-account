@@ -1,0 +1,36 @@
+{
+  "name": "@bufferapp/publish-server",
+  "version": "0.5.34",
+  "description": "",
+  "scripts": {
+    "start": "micro",
+    "lint": "eslint . --ignore-pattern coverage node_modules",
+    "test": "yarn run lint && sh ../../package_test.sh",
+    "test-watch": "jest --watch"
+  },
+  "author": "hharnisc@gmail.com",
+  "dependencies": {
+    "@bufferapp/logger": "0.7.0",
+    "@bufferapp/micro-rpc": "0.1.6",
+    "@bufferapp/publish-utils": "0.5.33",
+    "@bufferapp/shutdown-helper": "0.2.0",
+    "body-parser": "1.17.2",
+    "bugsnag": "1.11.0",
+    "cookie-parser": "1.4.3",
+    "express": "4.15.3",
+    "jsonwebtoken": "7.4.1",
+    "micro": "7.3.3",
+    "micro-rpc-client": "0.1.1",
+    "microrouter": "2.1.1",
+    "pusher": "1.5.1",
+    "request": "2.81.0",
+    "request-promise": "4.2.1"
+  },
+  "devDependencies": {
+    "eslint": "3.19.0",
+    "jest": "19.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

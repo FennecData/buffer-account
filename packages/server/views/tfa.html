@@ -1,0 +1,9 @@
+<h1>Login</h1>
+
+<p>Enter your two factor code</p>
+<!-- We should tell the user if it's SMS or app-based tfa code -->
+
+<form action="/login/tfa" method="post">
+  <input type="text" name="code" value="" placeholder="" required>
+  <button type="submit">Complete Login</button>
+</form>

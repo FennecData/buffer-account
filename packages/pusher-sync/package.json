@@ -1,0 +1,24 @@
+{
+  "name": "@bufferapp/publish-pusher-sync",
+  "version": "0.5.34",
+  "description": "Keep application data in sync with Pusher",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ignore-pattern coverage node_modules",
+    "test": "yarn run lint && sh ../../package_test.sh",
+    "test-watch": "jest --watch"
+  },
+  "author": "hamstu@gmail.com",
+  "devDependencies": {
+    "eslint": "3.19.0",
+    "jest": "19.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@bufferapp/publish-profile-sidebar": "0.5.34",
+    "@bufferapp/publish-utils": "0.5.33",
+    "pusher-js": "4.1.0"
+  }
+}

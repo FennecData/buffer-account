@@ -1,0 +1,3421 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshots DropdownItem default 1`] = `
+<span>
+  <DropdownItem
+    active={false}
+    onClick={[Function]}
+  >
+    Posting Schedule
+  </DropdownItem>
+</span>
+`;
+
+exports[`Snapshots DropdownTab default 1`] = `
+<span>
+  <DropdownTab
+    active={false}
+    isDropdownShown={false}
+    title="Settings"
+  >
+    <DropdownItem
+      active={false}
+      onClick={[Function]}
+    >
+      Posting Schedule
+    </DropdownItem>
+    <DropdownItem
+      active={false}
+      onClick={[Function]}
+    >
+      Empty your Queue
+    </DropdownItem>
+    <DropdownItem
+      active={false}
+      onClick={[Function]}
+    >
+      Disconnect this account
+    </DropdownItem>
+  </DropdownTab>
+</span>
+`;
+
+exports[`Snapshots DropdownTab dropdown opened 1`] = `
+<span>
+  <DropdownTab
+    active={false}
+    isDropdownShown={true}
+    title="Settings"
+  >
+    <DropdownItem
+      active={false}
+      onClick={[Function]}
+    >
+      Posting Schedule
+    </DropdownItem>
+    <DropdownItem
+      active={false}
+      onClick={[Function]}
+    >
+      Empty your Queue
+    </DropdownItem>
+    <DropdownItem
+      active={false}
+      onClick={[Function]}
+    >
+      Disconnect this account
+    </DropdownItem>
+  </DropdownTab>
+</span>
+`;
+
+exports[`Snapshots EmptyState default 1`] = `
+<span>
+  <EmptyState
+    heroImg="https://s3.amazonaws.com/buffer-publish/images/fresh-queue.png"
+    heroImgSize={
+      Object {
+        "height": "196px",
+        "width": "229px",
+      }
+    }
+    subtitle="Click the box above to add a post to your queue :)"
+    title="It looks like you haven't got any posts in your queue!"
+  />
+</span>
+`;
+
+exports[`Snapshots Example default 1`] = `
+<span>
+  <Unknown />
+</span>
+`;
+
+exports[`Snapshots HoverableText color = torchRed 1`] = `
+<span>
+  <HoverableText
+    color="torchRed"
+    hoverColor="black"
+    hovered={false}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    Hoverable Text!
+  </HoverableText>
+</span>
+`;
+
+exports[`Snapshots HoverableText default 1`] = `
+<span>
+  <HoverableText
+    hoverColor="black"
+    hovered={false}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    Hoverable Text!
+  </HoverableText>
+</span>
+`;
+
+exports[`Snapshots HoverableText hovered + hoverColor = curiousBlue 1`] = `
+<span>
+  <HoverableText
+    hoverColor="curiousBlue"
+    hovered={true}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    Hoverable Text!
+  </HoverableText>
+</span>
+`;
+
+exports[`Snapshots HoverableText onMouseEnter + onMouseLeave 1`] = `
+<span>
+  <HoverableText
+    hoverColor="black"
+    hovered={false}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    Hoverable Text!
+  </HoverableText>
+</span>
+`;
+
+exports[`Snapshots HoverableText size = small 1`] = `
+<span>
+  <HoverableText
+    hoverColor="black"
+    hovered={false}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    size="small"
+  >
+    Hoverable Text!
+  </HoverableText>
+</span>
+`;
+
+exports[`Snapshots ImagePost error 1`] = `
+<span>
+  <ImagePost
+    imageSrc="https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg"
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "error": "Something went wrong. Try again?",
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots ImagePost queued image post 1`] = `
+<span>
+  <ImagePost
+    imageSrc="https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg"
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots ImagePost retweet 1`] = `
+<span>
+  <ImagePost
+    imageSrc="https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg"
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": true,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    retweetProfile={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png",
+        "handle": "@joelgascoigne",
+        "name": "Joel Gascoigne",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots ImagePost sent image post 1`] = `
+<span>
+  <ImagePost
+    imageSrc="https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg"
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={true}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots ImagePost square image 1`] = `
+<span>
+  <ImagePost
+    imageSrc="http://lorempixel.com/400/400/cats/"
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots ImagePost tag 1`] = `
+<span>
+  <ImagePost
+    imageSrc="https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg"
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    tag="GIF"
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots ImagePost tall image 1`] = `
+<span>
+  <ImagePost
+    imageSrc="http://lorempixel.com/400/900/cats/"
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots ImagePost wide image 1`] = `
+<span>
+  <ImagePost
+    imageSrc="http://lorempixel.com/900/400/cats/"
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots LinkPost error 1`] = `
+<span>
+  <LinkPost
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    linkAttachment={
+      Object {
+        "description": "A brief history at how history and markets influence design titles",
+        "thumbnailUrl": "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+        "title": "What is a Product Designer?",
+        "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+      }
+    }
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "error": "Woops something went wrong. Try again?",
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots LinkPost queued link post 1`] = `
+<span>
+  <LinkPost
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    linkAttachment={
+      Object {
+        "description": "A brief history at how history and markets influence design titles",
+        "thumbnailUrl": "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+        "title": "What is a Product Designer?",
+        "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+      }
+    }
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots LinkPost sent 1`] = `
+<span>
+  <LinkPost
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    linkAttachment={
+      Object {
+        "description": "A brief history at how history and markets influence design titles",
+        "thumbnailUrl": "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+        "title": "What is a Product Designer?",
+        "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+      }
+    }
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={true}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots LinkPost square image 1`] = `
+<span>
+  <LinkPost
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    linkAttachment={
+      Object {
+        "description": "A brief history at how history and markets influence design titles",
+        "thumbnailUrl": "http://lorempixel.com/400/400/cats/",
+        "title": "What is a Product Designer?",
+        "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+      }
+    }
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots LinkPost tall image 1`] = `
+<span>
+  <LinkPost
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    linkAttachment={
+      Object {
+        "description": "A brief history at how history and markets influence design titles",
+        "thumbnailUrl": "http://lorempixel.com/400/900/cats/",
+        "title": "What is a Product Designer?",
+        "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+      }
+    }
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots LinkPost wide image 1`] = `
+<span>
+  <LinkPost
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    linkAttachment={
+      Object {
+        "description": "A brief history at how history and markets influence design titles",
+        "thumbnailUrl": "http://lorempixel.com/900/400/cats/",
+        "title": "What is a Product Designer?",
+        "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+      }
+    }
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots MultipleImagesPost error 1`] = `
+<span>
+  <MultipleImagesPost
+    imageUrls={
+      Array [
+        "http://lorempixel.com/400/400/cats/",
+        "http://lorempixel.com/400/400/cats/",
+        "http://lorempixel.com/400/400/cats/",
+        "http://lorempixel.com/400/400/cats/",
+      ]
+    }
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "error": "Sharing failed. Try again?",
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots MultipleImagesPost queued multiple image post 1`] = `
+<span>
+  <MultipleImagesPost
+    imageUrls={
+      Array [
+        "http://lorempixel.com/400/400/cats/",
+        "http://lorempixel.com/400/400/cats/",
+        "http://lorempixel.com/400/400/cats/",
+        "http://lorempixel.com/400/400/cats/",
+      ]
+    }
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots MultipleImagesPost sent multiple image post 1`] = `
+<span>
+  <MultipleImagesPost
+    imageUrls={
+      Array [
+        "http://lorempixel.com/400/400/cats/",
+        "http://lorempixel.com/400/400/cats/",
+        "http://lorempixel.com/400/400/cats/",
+        "http://lorempixel.com/400/400/cats/",
+      ]
+    }
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={true}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots Post error 1`] = `
+<span>
+  <Post
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "error": "Sharing failed. Try again?",
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+  >
+    <Text
+      color="black"
+      size="mini"
+    >
+      Rubber baby buggy bumpers.
+    </Text>
+  </Post>
+</span>
+`;
+
+exports[`Snapshots Post isConfirmingDelete 1`] = `
+<span>
+  <Post
+    isConfirmingDelete={true}
+    isDeleting={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+  >
+    <Text
+      color="black"
+      size="mini"
+    >
+      Rubber baby buggy bumpers.
+    </Text>
+  </Post>
+</span>
+`;
+
+exports[`Snapshots Post isDeleting 1`] = `
+<span>
+  <Post
+    isConfirmingDelete={false}
+    isDeleting={true}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+  >
+    <Text
+      color="black"
+      size="mini"
+    >
+      Rubber baby buggy bumpers.
+    </Text>
+  </Post>
+</span>
+`;
+
+exports[`Snapshots Post isWorking 1`] = `
+<span>
+  <Post
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={true}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+  >
+    <Text
+      color="black"
+      size="mini"
+    >
+      Rubber baby buggy bumpers.
+    </Text>
+  </Post>
+</span>
+`;
+
+exports[`Snapshots Post queued post 1`] = `
+<span>
+  <Post
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+  >
+    <Text
+      color="black"
+      size="mini"
+    >
+      Rubber baby buggy bumpers.
+    </Text>
+  </Post>
+</span>
+`;
+
+exports[`Snapshots Post retweet 1`] = `
+<span>
+  <Post
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": true,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    retweetProfile={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png",
+        "handle": "@joelgascoigne",
+        "name": "Joel Gascoigne",
+      }
+    }
+    sent={false}
+  >
+    <Text
+      color="black"
+      size="mini"
+    >
+      Rubber baby buggy bumpers.
+    </Text>
+  </Post>
+</span>
+`;
+
+exports[`Snapshots Post retweet with comment 1`] = `
+<span>
+  <Post
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": true,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    retweetComment="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+    retweetCommentLinks={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    retweetProfile={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png",
+        "handle": "@joelgascoigne",
+        "name": "Joel Gascoigne",
+      }
+    }
+    sent={false}
+  >
+    <Text
+      color="black"
+      size="mini"
+    >
+      Rubber baby buggy bumpers.
+    </Text>
+  </Post>
+</span>
+`;
+
+exports[`Snapshots Post sent 1`] = `
+<span>
+  <Post
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "postAction": "This post was sent June 20th at 9:21 (GMT)",
+      }
+    }
+    sent={true}
+  >
+    <Text
+      color="black"
+      size="mini"
+    >
+      Rubber baby buggy bumpers.
+    </Text>
+  </Post>
+</span>
+`;
+
+exports[`Snapshots PostFooter isConfirmingDelete 1`] = `
+<span>
+  <PostFooter
+    isConfirmingDelete={true}
+    isDeleting={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    postDetails={
+      Object {
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+  />
+</span>
+`;
+
+exports[`Snapshots PostFooter isDeleting 1`] = `
+<span>
+  <PostFooter
+    isConfirmingDelete={false}
+    isDeleting={true}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    postDetails={
+      Object {
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+  />
+</span>
+`;
+
+exports[`Snapshots PostFooter isWorking 1`] = `
+<span>
+  <PostFooter
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={true}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    postDetails={
+      Object {
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+  />
+</span>
+`;
+
+exports[`Snapshots PostFooter post with error 1`] = `
+<span>
+  <PostFooter
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "error": "Woops! Something went wrong. Try again?",
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+  />
+</span>
+`;
+
+exports[`Snapshots PostFooter queued post 1`] = `
+<span>
+  <PostFooter
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+  />
+</span>
+`;
+
+exports[`Snapshots PostFooter sent post 1`] = `
+<span>
+  <PostFooter
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    postDetails={
+      Object {
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={true}
+  />
+</span>
+`;
+
+exports[`Snapshots PostFooterButtons default 1`] = `
+<span>
+  <PostFooterButtons
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+  />
+</span>
+`;
+
+exports[`Snapshots PostFooterButtons isConfirmingDelete 1`] = `
+<span>
+  <PostFooterButtons
+    isConfirmingDelete={true}
+    isDeleting={false}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+  />
+</span>
+`;
+
+exports[`Snapshots PostFooterButtons isDeleting 1`] = `
+<span>
+  <PostFooterButtons
+    isConfirmingDelete={false}
+    isDeleting={true}
+    isWorking={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+  />
+</span>
+`;
+
+exports[`Snapshots PostFooterButtons isWorking 1`] = `
+<span>
+  <PostFooterButtons
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={true}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+  />
+</span>
+`;
+
+exports[`Snapshots PostFooterDelete black text 1`] = `
+<span>
+  <PostFooterDelete
+    color="black"
+    isConfirmingDelete={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+  />
+</span>
+`;
+
+exports[`Snapshots PostFooterDelete default 1`] = `
+<span>
+  <PostFooterDelete
+    isConfirmingDelete={false}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+  />
+</span>
+`;
+
+exports[`Snapshots PostFooterDelete isConfirmingDelete 1`] = `
+<span>
+  <PostFooterDelete
+    isConfirmingDelete={true}
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+  />
+</span>
+`;
+
+exports[`Snapshots PostList default 1`] = `
+<span>
+  <PostList
+    listHeader="List Header"
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    posts={
+      Array [
+        Object {
+          "id": "590a365d749c2018007b23c6",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "postDetails": Object {
+            "isRetweet": false,
+            "postAction": "This post is scheduled for May 3rd",
+          },
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "New thing",
+          "type": "text",
+        },
+        Object {
+          "id": "590a3693749c200e007b23c7",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "postDetails": Object {
+            "isRetweet": false,
+            "postAction": "This post is scheduled for May 3rd",
+          },
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "Another thing, that is also new",
+          "type": "text",
+        },
+      ]
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots PostList image posts 1`] = `
+<span>
+  <PostList
+    listHeader="List Header"
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    posts={
+      Array [
+        Object {
+          "id": "590a365d749c2018007b23c6",
+          "imageSrc": "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "postDetails": Object {
+            "isRetweet": false,
+            "postAction": "This post is scheduled for May 3rd",
+          },
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "New thing",
+          "type": "image",
+        },
+        Object {
+          "id": "590a3693749c200e007b23c7",
+          "imageSrc": "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "postDetails": Object {
+            "isRetweet": false,
+            "postAction": "This post is scheduled for May 3rd",
+          },
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "Another thing, that is also new",
+          "type": "image",
+        },
+      ]
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots PostList link posts 1`] = `
+<span>
+  <PostList
+    listHeader="List Header"
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    posts={
+      Array [
+        Object {
+          "id": "590a365d749c2018007b23c6",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {
+            "description": "A brief history at how history and markets influence design titles",
+            "thumbnailUrl": "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+            "title": "What is a Product Designer?",
+            "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+          },
+          "links": Array [
+            Object {
+              "displayString": "http://buff.ly/1LTbUqv",
+              "indices": Array [
+                74,
+                96,
+              ],
+              "rawString": "http://buff.ly/1LTbUqv",
+              "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+            },
+          ],
+          "postDetails": Object {
+            "postAction": "This post is scheduled for 9:42pm (GMT)",
+          },
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv",
+          "type": "link",
+        },
+        Object {
+          "id": "590a3693749c200e007b23c7",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {
+            "description": "A brief history at how history and markets influence design titles",
+            "thumbnailUrl": "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+            "title": "What is a Product Designer?",
+            "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+          },
+          "links": Array [
+            Object {
+              "displayString": "http://buff.ly/1LTbUqv",
+              "indices": Array [
+                74,
+                96,
+              ],
+              "rawString": "http://buff.ly/1LTbUqv",
+              "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+            },
+          ],
+          "postDetails": Object {
+            "postAction": "This post is scheduled for 9:42pm (GMT)",
+          },
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv",
+          "type": "link",
+        },
+      ]
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots PostList missing type 1`] = `
+<span>
+  <PostList
+    listHeader="List Header"
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    posts={
+      Array [
+        Object {
+          "id": "590a365d749c2018007b23c6",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "postDetails": Object {
+            "isRetweet": false,
+            "postAction": "This post is scheduled for May 3rd",
+          },
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "New thing",
+          "type": undefined,
+        },
+        Object {
+          "id": "590a3693749c200e007b23c7",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "postDetails": Object {
+            "isRetweet": false,
+            "postAction": "This post is scheduled for May 3rd",
+          },
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "Another thing, that is also new",
+          "type": undefined,
+        },
+      ]
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots PostList multiple image posts 1`] = `
+<span>
+  <PostList
+    listHeader="List Header"
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    posts={
+      Array [
+        Object {
+          "id": "590a365d749c2018007b23c6",
+          "imageUrls": Array [
+            "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+            "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+            "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+            "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+          ],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "postDetails": Object {
+            "isRetweet": false,
+            "postAction": "This post is scheduled for May 3rd",
+          },
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "New thing",
+          "type": "multipleImage",
+        },
+        Object {
+          "id": "590a3693749c200e007b23c7",
+          "imageUrls": Array [
+            "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+            "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+            "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+            "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+          ],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "postDetails": Object {
+            "isRetweet": false,
+            "postAction": "This post is scheduled for May 3rd",
+          },
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "Another thing, that is also new",
+          "type": "multipleImage",
+        },
+      ]
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots PostList sent 1`] = `
+<span>
+  <PostList
+    listHeader="List Header"
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    posts={
+      Array [
+        Object {
+          "id": "590a365d749c2018007b23c6",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "postDetails": Object {
+            "isRetweet": false,
+            "postAction": "This post is scheduled for May 3rd",
+          },
+          "retweetCommentLinks": Array [],
+          "sent": true,
+          "text": "New thing",
+          "type": "text",
+        },
+        Object {
+          "id": "590a3693749c200e007b23c7",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "postDetails": Object {
+            "isRetweet": false,
+            "postAction": "This post is scheduled for May 3rd",
+          },
+          "retweetCommentLinks": Array [],
+          "sent": true,
+          "text": "Another thing, that is also new",
+          "type": "text",
+        },
+      ]
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots PostList video posts 1`] = `
+<span>
+  <PostList
+    listHeader="List Header"
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    posts={
+      Array [
+        Object {
+          "id": "590a365d749c2018007b23c6",
+          "imageSrc": "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "postDetails": Object {
+            "isRetweet": false,
+            "postAction": "This post is scheduled for May 3rd",
+          },
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "New thing",
+          "type": "video",
+        },
+        Object {
+          "id": "590a3693749c200e007b23c7",
+          "imageSrc": "https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg",
+          "imageUrls": Array [],
+          "isConfirmingDelete": false,
+          "isDeleting": false,
+          "isWorking": false,
+          "linkAttachment": Object {},
+          "links": Array [],
+          "postDetails": Object {
+            "isRetweet": false,
+            "postAction": "This post is scheduled for May 3rd",
+          },
+          "retweetCommentLinks": Array [],
+          "sent": false,
+          "text": "Another thing, that is also new",
+          "type": "video",
+        },
+      ]
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots PostLists default 1`] = `
+<span>
+  <PostLists
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postLists={
+      Array [
+        Object {
+          "listHeader": "Today",
+          "posts": Array [
+            Object {
+              "id": "590a365d749c2018007b23c6",
+              "imageUrls": Array [],
+              "isConfirmingDelete": false,
+              "isDeleting": false,
+              "isWorking": false,
+              "linkAttachment": Object {},
+              "links": Array [],
+              "postDetails": Object {
+                "isRetweet": false,
+                "postAction": "This post is scheduled for May 2nd",
+              },
+              "retweetCommentLinks": Array [],
+              "sent": false,
+              "text": "New thing",
+              "type": "text",
+            },
+            Object {
+              "id": "590a3693749c200e007b23c7",
+              "imageUrls": Array [],
+              "isConfirmingDelete": false,
+              "isDeleting": false,
+              "isWorking": false,
+              "linkAttachment": Object {},
+              "links": Array [],
+              "postDetails": Object {
+                "isRetweet": false,
+                "postAction": "This post is scheduled for May 2nd",
+              },
+              "retweetCommentLinks": Array [],
+              "sent": false,
+              "text": "Another thing, that is also new",
+              "type": "text",
+            },
+          ],
+        },
+        Object {
+          "listHeader": "Tuesday May 3rd",
+          "posts": Array [
+            Object {
+              "id": "590a365d749c2018007b23c6",
+              "imageUrls": Array [],
+              "isConfirmingDelete": false,
+              "isDeleting": false,
+              "isWorking": false,
+              "linkAttachment": Object {},
+              "links": Array [],
+              "postDetails": Object {
+                "isRetweet": false,
+                "postAction": "This post is scheduled for May 3rd",
+              },
+              "retweetCommentLinks": Array [],
+              "sent": false,
+              "text": "New thing",
+              "type": "text",
+            },
+            Object {
+              "id": "590a3693749c200e007b23c7",
+              "imageUrls": Array [],
+              "isConfirmingDelete": false,
+              "isDeleting": false,
+              "isWorking": false,
+              "linkAttachment": Object {},
+              "links": Array [],
+              "postDetails": Object {
+                "isRetweet": false,
+                "postAction": "This post is scheduled for May 3rd",
+              },
+              "retweetCommentLinks": Array [],
+              "sent": false,
+              "text": "Another thing, that is also new",
+              "type": "text",
+            },
+          ],
+        },
+      ]
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots RetweetPanel default 1`] = `
+<span>
+  <RetweetPanel
+    avatarUrl="https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png"
+    handle="@joelgascoigne"
+    name="Joel Gascoigne"
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleSettingHeader default 1`] = `
+<span>
+  <ScheduleSettingHeader
+    profileName="Buffer Admin"
+    profileService="Twitter"
+    profileServiceType="Profile"
+    timezoneOptions={
+      Array [
+        Object {
+          "name": "London",
+          "value": "London",
+        },
+        Object {
+          "name": "New York",
+          "value": "New York",
+        },
+        Object {
+          "name": "San Francisco",
+          "value": "San Francisco",
+        },
+        Object {
+          "name": "Tokyo",
+          "value": "Tokyo",
+        },
+      ]
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTable 24-hour time setting 1`] = `
+<span>
+  <ScheduleTable
+    days={
+      Array [
+        Object {
+          "dayName": "Monday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Tuesday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Wednesday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Thursday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Friday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Saturday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Sunday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+      ]
+    }
+    disabled={false}
+    select24Hours={true}
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTable 24-hour time setting, disabled 1`] = `
+<span>
+  <ScheduleTable
+    days={
+      Array [
+        Object {
+          "dayName": "Monday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Tuesday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Wednesday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Thursday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Friday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Saturday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Sunday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+      ]
+    }
+    disabled={true}
+    select24Hours={true}
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTable default 1`] = `
+<span>
+  <ScheduleTable
+    days={
+      Array [
+        Object {
+          "dayName": "Monday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Tuesday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Wednesday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Thursday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Friday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Saturday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Sunday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+      ]
+    }
+    disabled={false}
+    select24Hours={false}
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTable disabled 1`] = `
+<span>
+  <ScheduleTable
+    days={
+      Array [
+        Object {
+          "dayName": "Monday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Tuesday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Wednesday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Thursday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Friday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Saturday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Sunday",
+          "postingTimesTotal": 2,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 19,
+                "minutes": 0,
+              },
+            },
+          ],
+        },
+      ]
+    }
+    disabled={true}
+    select24Hours={false}
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTable no times 1`] = `
+<span>
+  <ScheduleTable
+    days={
+      Array [
+        Object {
+          "dayName": "Monday",
+          "postingTimesTotal": 0,
+          "times": Array [],
+        },
+        Object {
+          "dayName": "Tuesday",
+          "postingTimesTotal": 0,
+          "times": Array [],
+        },
+        Object {
+          "dayName": "Wednesday",
+          "postingTimesTotal": 0,
+          "times": Array [],
+        },
+        Object {
+          "dayName": "Thursday",
+          "postingTimesTotal": 0,
+          "times": Array [],
+        },
+        Object {
+          "dayName": "Friday",
+          "postingTimesTotal": 0,
+          "times": Array [],
+        },
+        Object {
+          "dayName": "Saturday",
+          "postingTimesTotal": 0,
+          "times": Array [],
+        },
+        Object {
+          "dayName": "Sunday",
+          "postingTimesTotal": 0,
+          "times": Array [],
+        },
+      ]
+    }
+    disabled={false}
+    select24Hours={false}
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTable single time 1`] = `
+<span>
+  <ScheduleTable
+    days={
+      Array [
+        Object {
+          "dayName": "Monday",
+          "postingTimesTotal": 1,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Tuesday",
+          "postingTimesTotal": 1,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Wednesday",
+          "postingTimesTotal": 1,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Thursday",
+          "postingTimesTotal": 1,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Friday",
+          "postingTimesTotal": 1,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Saturday",
+          "postingTimesTotal": 1,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+          ],
+        },
+        Object {
+          "dayName": "Sunday",
+          "postingTimesTotal": 1,
+          "times": Array [
+            Object {
+              "onChange": [Function],
+              "onRemoveTimeClick": [Function],
+              "value": Object {
+                "hours": 9,
+                "minutes": 41,
+              },
+            },
+          ],
+        },
+      ]
+    }
+    disabled={false}
+    select24Hours={false}
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTableCell 24-hour time setting 1`] = `
+<span>
+  <ScheduleTableCell
+    disabled={false}
+    select24Hours={true}
+    time={
+      Object {
+        "onChange": [Function],
+        "onRemoveTimeClick": [Function],
+        "value": Object {
+          "hours": 19,
+          "minutes": 41,
+        },
+      }
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTableCell 24-hour time setting, disabled 1`] = `
+<span>
+  <ScheduleTableCell
+    disabled={true}
+    select24Hours={true}
+    time={
+      Object {
+        "onChange": [Function],
+        "onRemoveTimeClick": [Function],
+        "value": Object {
+          "hours": 19,
+          "minutes": 41,
+        },
+      }
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTableCell default 1`] = `
+<span>
+  <ScheduleTableCell
+    disabled={false}
+    select24Hours={false}
+    time={
+      Object {
+        "onChange": [Function],
+        "onRemoveTimeClick": [Function],
+        "value": Object {
+          "hours": 19,
+          "minutes": 41,
+        },
+      }
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTableCell disabled 1`] = `
+<span>
+  <ScheduleTableCell
+    disabled={true}
+    select24Hours={false}
+    time={
+      Object {
+        "onChange": [Function],
+        "onRemoveTimeClick": [Function],
+        "value": Object {
+          "hours": 19,
+          "minutes": 41,
+        },
+      }
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTableColumn 24-hour time setting 1`] = `
+<span>
+  <ScheduleTableColumn
+    dayName="Monday"
+    disabled={false}
+    select24Hours={true}
+    times={
+      Array [
+        Object {
+          "onChange": [Function],
+          "onRemoveTimeClick": [Function],
+          "value": Object {
+            "hours": 9,
+            "minutes": 41,
+          },
+        },
+        Object {
+          "onChange": [Function],
+          "onRemoveTimeClick": [Function],
+          "value": Object {
+            "hours": 19,
+            "minutes": 0,
+          },
+        },
+      ]
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTableColumn 24-hour time setting, disabled 1`] = `
+<span>
+  <ScheduleTableColumn
+    dayName="Monday"
+    disabled={true}
+    select24Hours={true}
+    times={
+      Array [
+        Object {
+          "onChange": [Function],
+          "onRemoveTimeClick": [Function],
+          "value": Object {
+            "hours": 9,
+            "minutes": 41,
+          },
+        },
+        Object {
+          "onChange": [Function],
+          "onRemoveTimeClick": [Function],
+          "value": Object {
+            "hours": 19,
+            "minutes": 0,
+          },
+        },
+      ]
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTableColumn default 1`] = `
+<span>
+  <ScheduleTableColumn
+    dayName="Monday"
+    disabled={false}
+    select24Hours={false}
+    times={
+      Array [
+        Object {
+          "onChange": [Function],
+          "onRemoveTimeClick": [Function],
+          "value": Object {
+            "hours": 9,
+            "minutes": 41,
+          },
+        },
+        Object {
+          "onChange": [Function],
+          "onRemoveTimeClick": [Function],
+          "value": Object {
+            "hours": 19,
+            "minutes": 0,
+          },
+        },
+      ]
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTableColumn disabled 1`] = `
+<span>
+  <ScheduleTableColumn
+    dayName="Monday"
+    disabled={true}
+    select24Hours={false}
+    times={
+      Array [
+        Object {
+          "onChange": [Function],
+          "onRemoveTimeClick": [Function],
+          "value": Object {
+            "hours": 9,
+            "minutes": 41,
+          },
+        },
+        Object {
+          "onChange": [Function],
+          "onRemoveTimeClick": [Function],
+          "value": Object {
+            "hours": 19,
+            "minutes": 0,
+          },
+        },
+      ]
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTableColumn single time 1`] = `
+<span>
+  <ScheduleTableColumn
+    dayName="Monday"
+    disabled={false}
+    select24Hours={false}
+    times={
+      Array [
+        Object {
+          "onChange": [Function],
+          "onRemoveTimeClick": [Function],
+          "value": Object {
+            "hours": 9,
+            "minutes": 41,
+          },
+        },
+      ]
+    }
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTableColumn without times 1`] = `
+<span>
+  <ScheduleTableColumn
+    dayName="Monday"
+    disabled={false}
+    select24Hours={false}
+    times={Array []}
+  />
+</span>
+`;
+
+exports[`Snapshots ScheduleTableHeader default 1`] = `
+<span>
+  <ScheduleTableHeader
+    dayName="Monday"
+  />
+</span>
+`;
+
+exports[`Snapshots Tab default 1`] = `
+<span>
+  <Tab
+    onClick={[Function]}
+    selected={false}
+    tabId="tabId"
+  >
+    Tab
+  </Tab>
+</span>
+`;
+
+exports[`Snapshots Tab selected 1`] = `
+<span>
+  <Tab
+    onClick={[Function]}
+    selected={true}
+    tabId="selectedTabId"
+  >
+    Tab
+  </Tab>
+</span>
+`;
+
+exports[`Snapshots TableCell default 1`] = `
+<span>
+  <TableCell>
+    <HoverableFocusableThing />
+  </TableCell>
+</span>
+`;
+
+exports[`Snapshots Tabs default 1`] = `
+<span>
+  <Tabs
+    onTabClick={[Function]}
+    selectedTabId="tabId"
+  >
+    <Tab
+      selected={false}
+      tabId="tabId"
+    >
+      Tab 1
+    </Tab>
+    <Tab
+      selected={false}
+      tabId="tabId2"
+    >
+      Tab 2
+    </Tab>
+  </Tabs>
+</span>
+`;
+
+exports[`Snapshots TextPost error 1`] = `
+<span>
+  <TextPost
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "error": "Woops something went wrong. Try again?",
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots TextPost queued text post 1`] = `
+<span>
+  <TextPost
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots TextPost retweet 1`] = `
+<span>
+  <TextPost
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": true,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    retweetProfile={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png",
+        "handle": "@joelgascoigne",
+        "name": "Joel Gascoigne",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots TextPost retweet with comment 1`] = `
+<span>
+  <TextPost
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": true,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    retweetComment="Awesome book news here: http://buff.ly/2oZYTnY"
+    retweetCommentLinks={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/2oZYTnY",
+          "indices": Array [
+            24,
+            46,
+          ],
+          "rawString": "http://buff.ly/2oZYTnY",
+          "url": "https://www.theguardian.com/books",
+        },
+      ]
+    }
+    retweetProfile={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png",
+        "handle": "@joelgascoigne",
+        "name": "Joel Gascoigne",
+      }
+    }
+    sent={false}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots TextPost sent 1`] = `
+<span>
+  <TextPost
+    isConfirmingDelete={false}
+    isDeleting={false}
+    isWorking={false}
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={true}
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots VideoPost error 1`] = `
+<span>
+  <VideoPost
+    imageSrc="https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg"
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "error": "Woops something went wrong. Try again?",
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    tag="VIDEO"
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots VideoPost queued video post 1`] = `
+<span>
+  <VideoPost
+    imageSrc="https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg"
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    tag="VIDEO"
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots VideoPost retweet 1`] = `
+<span>
+  <VideoPost
+    imageSrc="https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg"
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": true,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    retweetProfile={
+      Object {
+        "avatarUrl": "https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png",
+        "handle": "@joelgascoigne",
+        "name": "Joel Gascoigne",
+      }
+    }
+    sent={false}
+    tag="VIDEO"
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots VideoPost sent 1`] = `
+<span>
+  <VideoPost
+    imageSrc="https://cdn-images-1.medium.com/max/2000/1*1Kua7bNJfvLlTxWqgxVKfw.jpeg"
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={true}
+    tag="VIDEO"
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots VideoPost square image 1`] = `
+<span>
+  <VideoPost
+    imageSrc="http://lorempixel.com/400/400/cats/"
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    tag="VIDEO"
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots VideoPost tall image 1`] = `
+<span>
+  <VideoPost
+    imageSrc="http://lorempixel.com/400/900/cats/"
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    tag="VIDEO"
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;
+
+exports[`Snapshots VideoPost wide image 1`] = `
+<span>
+  <VideoPost
+    imageSrc="http://lorempixel.com/900/400/cats/"
+    links={
+      Array [
+        Object {
+          "displayString": "http://buff.ly/1LTbUqv",
+          "indices": Array [
+            74,
+            96,
+          ],
+          "rawString": "http://buff.ly/1LTbUqv",
+          "url": "https://austinstartups.com/what-is-a-product-designer-who-cares-eb38fc7afa7b#.i3r34a75x",
+        },
+      ]
+    }
+    onCancelConfirmClick={[Function]}
+    onDeleteClick={[Function]}
+    onDeleteConfirmClick={[Function]}
+    onEditClick={[Function]}
+    onShareNowClick={[Function]}
+    postDetails={
+      Object {
+        "isRetweet": false,
+        "postAction": "This post will be sent at 9:21 (GMT)",
+      }
+    }
+    sent={false}
+    tag="VIDEO"
+    text="What is a Product Designer? An awesome story by @jgadapee over on Medium! http://buff.ly/1LTbUqv"
+  />
+</span>
+`;

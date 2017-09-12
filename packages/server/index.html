@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buffer Web</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="//icons.buffer.com/0.16.4/buffer-icons.css" rel="stylesheet" type="text/css"/>
+    <style>
+      html, body, #root {
+        height: 100%;
+        margin: 0;
+      }
+      ::-webkit-scrollbar {
+         width: 5px;
+         height: 0;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: rgba(89, 98, 106, 0.2);
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        border-radius: 10px;
+        background: rgba(89, 98, 106, 0.4);
+      }
+      [data-hide-scrollbar] {
+        -ms-overflow-style: none;
+      }
+      [data-hide-scrollbar]::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    {{{bugsnagScript}}}
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="{{{bundle}}}"></script>
+  </body>
+</html>

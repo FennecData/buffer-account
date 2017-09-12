@@ -1,0 +1,6 @@
+.git
+node_modules
+packages/**/node_modules
+packages/**/__mocks__
+packages/**/__snapshots__
+packages/**/.storybook

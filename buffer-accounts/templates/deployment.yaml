@@ -1,0 +1,96 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ template "fullname" . }}
+  labels:
+    app: {{ .Chart.Name }}
+    service: app
+    track: {{ .Values.track }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
+    branch: {{ .Values.branchName }}
+  namespace: buffer
+spec:
+  minReadySeconds: 10
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "fullname" . }}
+      service: app
+      track: {{ .Values.track }}
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: {{ template "fullname" . }}
+        service: app
+        track: {{ .Values.track }}
+    spec:
+      containers:
+      - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        name: {{ .Chart.Name }}
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        env:
+        - name: SESSION_SVC_HOST
+          value: session-service-1
+        - name: CLIENT_ID
+          valueFrom:
+            secretKeyRef:
+              key: client-id
+              name: buffer-publish-buffer-api-client
+        - name: CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              key: client-secret
+              name: buffer-publish-buffer-api-client
+        - name: API_ADDR
+          value: https://api.bufferapp.com
+        - name: BUGSNAG_KEY
+          valueFrom:
+            secretKeyRef:
+              key: bugsnag
+              name: buffer-publish-keys
+        - name: PUSHER_APP_ID
+          valueFrom:
+            secretKeyRef:
+              key: pusher-app-id
+              name: buffer-publish-keys
+        - name: PUSHER_APP_KEY
+          valueFrom:
+            secretKeyRef:
+              key: pusher-app-key
+              name: buffer-publish-keys
+        - name: PUSHER_APP_SECRET
+          valueFrom:
+            secretKeyRef:
+              key: pusher-app-secret
+              name: buffer-publish-keys
+        - name: PUSHER_CLUSTER
+          valueFrom:
+            secretKeyRef:
+              key: pusher-cluster
+              name: buffer-publish-keys
+        livenessProbe:
+          httpGet:
+            path: /health-check
+            port: 80
+          initialDelaySeconds: 15
+          periodSeconds: 5
+          failureThreshold: 2
+          timeoutSeconds: 1
+        resources:
+{{ toYaml .Values.resources | indent 11 }}
+        terminationMessagePath: /dev/termination-log
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+      - name: dhbufferapp
+      restartPolicy: Always
+      securityContext: {}
+      terminationGracePeriodSeconds: 30

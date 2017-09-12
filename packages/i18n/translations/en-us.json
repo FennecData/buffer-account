@@ -1,0 +1,11 @@
+{
+  "example": {
+    "loggedIn": "Logged In...",
+    "loggedOut": "Logged Out..."
+  },
+  "profile-sidebar": {
+    "connectButton": "Connect a Social Account",
+    "lockedList": "Locked Social Accounts",
+    "lockedListTooltip": "Sorry, the free plan lets you access up to two social accounts at the same time (and any business accounts you’re a team member on). We’ll keep these other ones safe and sound until you’re ready to upgrade!"
+  }
+}

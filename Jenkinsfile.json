@@ -1,0 +1,16 @@
+{
+  "app": {
+    "name": "buffer-accounts",
+    "namespace": "buffer",
+    "deployment_url": "accounts.buffer.com",
+    "test": true
+  },
+  "container_repo": {
+    "repo": "bufferapp/buffer-accounts",
+    "jenkins_creds_id": "dockerhub-credentials"
+  },
+  "pipeline": {
+      "enabled": true,
+      "debug": false
+  }
+}

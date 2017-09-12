@@ -1,0 +1,10 @@
+{
+  "example": {
+    "loggedIn": "登錄...",
+    "loggedOut": "登出..."
+  },
+  "profile-sidebar": {
+    "connectButton": "连接社会账户",
+    "lockedList": "锁定的社会账户"
+  }
+}

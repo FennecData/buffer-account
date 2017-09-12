@@ -1,0 +1,9 @@
+{
+  "transformIgnorePatterns": [
+    "node_modules/(?!@bufferapp/*)"
+  ],
+  "verbose": true,
+  "moduleNameMapper": {
+    "\\.(css|less)$": "identity-obj-proxy"
+  }
+}

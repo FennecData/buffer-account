@@ -1,0 +1,11 @@
+FROM node:8.1.2-slim
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+ENV NODE_ENV development
+RUN npm install -g nodemon
+
+EXPOSE 80
+
+CMD nodemon --ignore 'index.html' --watch ./packages/server -e html,js,json packages/server/index.js

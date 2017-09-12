@@ -1,0 +1,535 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshots Notifications - Test Harness default 1`] = `
+<div>
+  <span>
+    <div
+      style={
+        Object {
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "marginRight": "1rem",
+            "marginTop": "1rem",
+            "width": "25rem",
+          }
+        }
+      />
+    </div>
+  </span>
+  <button
+    onClick={[Function]}
+  >
+    Create Notification
+  </button>
+</div>
+`;
+
+exports[`Snapshots Notifications 1 notification 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "column",
+          "marginRight": "1rem",
+          "marginTop": "1rem",
+          "width": "25rem",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "marginBottom": "1rem",
+            "maxHeight": "100vh",
+            "transition": "all 0.2s linear",
+          }
+        }
+      >
+        <div
+          onMouseEnter={undefined}
+          onMouseLeave={undefined}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "border": 0,
+              "borderRadius": "0.126rem",
+              "boxShadow": "0 1px 4px rgba(50, 59, 67, 0.8)",
+              "color": "#323b43",
+              "fontSize": "0.9rem",
+              "lineHeight": 1.5,
+              "padding": 0,
+              "transition": "box-shadow 0.2s linear",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "display": "flex",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "margin": "1.5rem",
+                }
+              }
+            >
+              <svg
+                height="100%"
+                style={
+                  Object {
+                    "fill": "#2fd566",
+                    "height": "2rem",
+                    "width": "2rem",
+                  }
+                }
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="100%"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+              >
+                <g
+                  className="shamrock"
+                >
+                  <path
+                    d="M8,15.976 C3.59497684,15.976 0.024,12.4050232 0.024,8 C0.024,3.59497684 3.59497684,0.024 8,0.024 C12.4050232,0.024 15.976,3.59497684 15.976,8 C15.976,12.4050232 12.4050232,15.976 8,15.976 Z M4.84201948,7.87755339 C4.44877253,8.27080035 4.45446122,8.90420869 4.84864429,9.29839176 L6.24960824,10.6993557 C6.64984179,11.0995893 7.28084969,11.0955774 7.67251796,10.7039092 L11.2039092,7.17251796 C11.6034584,6.7729687 11.5965048,6.14675734 11.2059805,5.75623305 C10.8127336,5.36298609 10.1823522,5.36564781 9.79190308,5.75609692 L6.96333983,8.58466017 L6.25623305,7.87755339 C5.86298609,7.48430644 5.23254378,7.4870291 4.84201948,7.87755339 Z"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div
+              style={
+                Object {
+                  "flexGrow": 1,
+                  "margin": "1.5rem 0",
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#59626a",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontSize": "1.25rem",
+                    "fontWeight": 400,
+                  }
+                }
+              >
+                Awesome! You've got a notification!
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "margin": "0.5rem 0.5rem 0 1.5rem",
+                }
+              }
+            >
+              <button
+                aria-label={null}
+                disabled={undefined}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "background": "none",
+                    "backgroundColor": "unset",
+                    "border": "none",
+                    "borderRadius": "unset",
+                    "color": "unset",
+                    "cursor": "pointer",
+                    "display": "unset",
+                    "fontFamily": "unset",
+                    "fontSize": "unset",
+                    "fontWeight": "unset",
+                    "lineHeight": "unset",
+                    "margin": "unset",
+                    "outline": "none",
+                    "padding": 0,
+                    "transition": "unset",
+                  }
+                }
+              >
+                <svg
+                  height="100%"
+                  style={
+                    Object {
+                      "fill": "#59626a",
+                      "height": "1rem",
+                      "width": "1rem",
+                    }
+                  }
+                  version="1.1"
+                  viewBox="0 0 16 16"
+                  width="100%"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                >
+                  <g
+                    className="shuttleGray"
+                  >
+                    <path
+                      d="M7,9 L1.00292933,9 C0.449026756,9 -8.8817842e-16,8.55613518 -8.8817842e-16,8 L-8.8817842e-16,8 C-8.8817842e-16,7.44771525 0.437881351,7 1.00292933,7 L7,7 L7,1.00292933 C7,0.449026756 7.44386482,0 8,0 L8,0 C8.55228475,0 9,0.437881351 9,1.00292933 L9,7 L14.9970707,7 C15.5509732,7 16,7.44386482 16,8 L16,8 C16,8.55228475 15.5621186,9 14.9970707,9 L9,9 L9,14.9970707 C9,15.5509732 8.55613518,16 8,16 L8,16 C7.44771525,16 7,15.5621186 7,14.9970707 L7,9 Z"
+                      transform="translate(8.000000, 8.000000) rotate(-315.000000) translate(-8.000000, -8.000000)"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</span>
+`;
+
+exports[`Snapshots Notifications default 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "column",
+          "marginRight": "1rem",
+          "marginTop": "1rem",
+          "width": "25rem",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "marginBottom": "1rem",
+            "maxHeight": "100vh",
+            "transition": "all 0.2s linear",
+          }
+        }
+      >
+        <div
+          onMouseEnter={undefined}
+          onMouseLeave={undefined}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "border": 0,
+              "borderRadius": "0.126rem",
+              "boxShadow": "0 1px 4px rgba(50, 59, 67, 0.8)",
+              "color": "#323b43",
+              "fontSize": "0.9rem",
+              "lineHeight": 1.5,
+              "padding": 0,
+              "transition": "box-shadow 0.2s linear",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "display": "flex",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "margin": "1.5rem",
+                }
+              }
+            >
+              <svg
+                height="100%"
+                style={
+                  Object {
+                    "fill": "#2fd566",
+                    "height": "2rem",
+                    "width": "2rem",
+                  }
+                }
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="100%"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+              >
+                <g
+                  className="shamrock"
+                >
+                  <path
+                    d="M8,15.976 C3.59497684,15.976 0.024,12.4050232 0.024,8 C0.024,3.59497684 3.59497684,0.024 8,0.024 C12.4050232,0.024 15.976,3.59497684 15.976,8 C15.976,12.4050232 12.4050232,15.976 8,15.976 Z M4.84201948,7.87755339 C4.44877253,8.27080035 4.45446122,8.90420869 4.84864429,9.29839176 L6.24960824,10.6993557 C6.64984179,11.0995893 7.28084969,11.0955774 7.67251796,10.7039092 L11.2039092,7.17251796 C11.6034584,6.7729687 11.5965048,6.14675734 11.2059805,5.75623305 C10.8127336,5.36298609 10.1823522,5.36564781 9.79190308,5.75609692 L6.96333983,8.58466017 L6.25623305,7.87755339 C5.86298609,7.48430644 5.23254378,7.4870291 4.84201948,7.87755339 Z"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div
+              style={
+                Object {
+                  "flexGrow": 1,
+                  "margin": "1.5rem 0",
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#59626a",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontSize": "1.25rem",
+                    "fontWeight": 400,
+                  }
+                }
+              >
+                Awesome! You've got a notification!
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "margin": "0.5rem 0.5rem 0 1.5rem",
+                }
+              }
+            >
+              <button
+                aria-label={null}
+                disabled={undefined}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "background": "none",
+                    "backgroundColor": "unset",
+                    "border": "none",
+                    "borderRadius": "unset",
+                    "color": "unset",
+                    "cursor": "pointer",
+                    "display": "unset",
+                    "fontFamily": "unset",
+                    "fontSize": "unset",
+                    "fontWeight": "unset",
+                    "lineHeight": "unset",
+                    "margin": "unset",
+                    "outline": "none",
+                    "padding": 0,
+                    "transition": "unset",
+                  }
+                }
+              >
+                <svg
+                  height="100%"
+                  style={
+                    Object {
+                      "fill": "#59626a",
+                      "height": "1rem",
+                      "width": "1rem",
+                    }
+                  }
+                  version="1.1"
+                  viewBox="0 0 16 16"
+                  width="100%"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                >
+                  <g
+                    className="shuttleGray"
+                  >
+                    <path
+                      d="M7,9 L1.00292933,9 C0.449026756,9 -8.8817842e-16,8.55613518 -8.8817842e-16,8 L-8.8817842e-16,8 C-8.8817842e-16,7.44771525 0.437881351,7 1.00292933,7 L7,7 L7,1.00292933 C7,0.449026756 7.44386482,0 8,0 L8,0 C8.55228475,0 9,0.437881351 9,1.00292933 L9,7 L14.9970707,7 C15.5509732,7 16,7.44386482 16,8 L16,8 C16,8.55228475 15.5621186,9 14.9970707,9 L9,9 L9,14.9970707 C9,15.5509732 8.55613518,16 8,16 L8,16 C7.44771525,16 7,15.5621186 7,14.9970707 L7,9 Z"
+                      transform="translate(8.000000, 8.000000) rotate(-315.000000) translate(-8.000000, -8.000000)"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "marginBottom": "1rem",
+            "maxHeight": "100vh",
+            "transition": "all 0.2s linear",
+          }
+        }
+      >
+        <div
+          onMouseEnter={undefined}
+          onMouseLeave={undefined}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "border": 0,
+              "borderRadius": "0.126rem",
+              "boxShadow": "0 1px 4px rgba(50, 59, 67, 0.8)",
+              "color": "#323b43",
+              "fontSize": "0.9rem",
+              "lineHeight": 1.5,
+              "padding": 0,
+              "transition": "box-shadow 0.2s linear",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "display": "flex",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "margin": "1.5rem",
+                }
+              }
+            >
+              <svg
+                height="100%"
+                style={
+                  Object {
+                    "fill": "#ff1e1e",
+                    "height": "2rem",
+                    "width": "2rem",
+                  }
+                }
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="100%"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+              >
+                <g
+                  className="torchRed"
+                >
+                  <path
+                    d="M7.28522294,0.582295182 C7.68011914,-0.193881453 8.32015168,-0.194315304 8.71526856,0.582295182 L15.8443277,14.5946078 C16.2392239,15.3707845 15.8563826,16 14.9948436,16 L1.00564792,16 C0.141594621,16 -0.238953082,15.3712184 0.156163853,14.5946078 L7.28522294,0.582295182 Z M8.00063465,13.6403459 C8.4327265,13.6403459 8.78300622,13.2881948 8.78300622,12.8537945 C8.78300622,12.4193942 8.4327265,12.0672431 8.00063465,12.0672431 C7.56854277,12.0672431 7.21826309,12.4193942 7.21826309,12.8537945 C7.21826309,13.2881948 7.56854277,13.6403459 8.00063465,13.6403459 Z M7.3863128,5.77483204 C7.38259314,5.77483204 7.37887467,5.77496538 7.37516447,5.77523181 C7.2889657,5.78142176 7.22407908,5.85669092 7.23023613,5.94335021 L7.59906844,11.1345893 C7.60491729,11.2169107 7.67305263,11.2806917 7.75514511,11.2806917 L8.24612423,11.2806917 C8.32821668,11.2806917 8.39635201,11.2169107 8.40220086,11.1345893 L8.77103319,5.94335021 C8.77129818,5.93962018 8.77143079,5.93588184 8.77143079,5.93214231 C8.77143079,5.84526225 8.7013749,5.77483204 8.61495648,5.77483204 L7.3863128,5.77483204 Z"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div
+              style={
+                Object {
+                  "flexGrow": 1,
+                  "margin": "1.5rem 0",
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#59626a",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "fontSize": "1.25rem",
+                    "fontWeight": 400,
+                  }
+                }
+              >
+                Oh No! There was an error doing the thing!
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "margin": "0.5rem 0.5rem 0 1.5rem",
+                }
+              }
+            >
+              <button
+                aria-label={null}
+                disabled={undefined}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "background": "none",
+                    "backgroundColor": "unset",
+                    "border": "none",
+                    "borderRadius": "unset",
+                    "color": "unset",
+                    "cursor": "pointer",
+                    "display": "unset",
+                    "fontFamily": "unset",
+                    "fontSize": "unset",
+                    "fontWeight": "unset",
+                    "lineHeight": "unset",
+                    "margin": "unset",
+                    "outline": "none",
+                    "padding": 0,
+                    "transition": "unset",
+                  }
+                }
+              >
+                <svg
+                  height="100%"
+                  style={
+                    Object {
+                      "fill": "#59626a",
+                      "height": "1rem",
+                      "width": "1rem",
+                    }
+                  }
+                  version="1.1"
+                  viewBox="0 0 16 16"
+                  width="100%"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                >
+                  <g
+                    className="shuttleGray"
+                  >
+                    <path
+                      d="M7,9 L1.00292933,9 C0.449026756,9 -8.8817842e-16,8.55613518 -8.8817842e-16,8 L-8.8817842e-16,8 C-8.8817842e-16,7.44771525 0.437881351,7 1.00292933,7 L7,7 L7,1.00292933 C7,0.449026756 7.44386482,0 8,0 L8,0 C8.55228475,0 9,0.437881351 9,1.00292933 L9,7 L14.9970707,7 C15.5509732,7 16,7.44386482 16,8 L16,8 C16,8.55228475 15.5621186,9 14.9970707,9 L9,9 L9,14.9970707 C9,15.5509732 8.55613518,16 8,16 L8,16 C7.44771525,16 7,15.5621186 7,14.9970707 L7,9 Z"
+                      transform="translate(8.000000, 8.000000) rotate(-315.000000) translate(-8.000000, -8.000000)"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</span>
+`;

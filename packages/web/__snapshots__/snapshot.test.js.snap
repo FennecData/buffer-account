@@ -1,0 +1,4446 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshots App should render application 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "height": "100%",
+      }
+    }
+  >
+    <nav
+      aria-label="sidebar"
+      role="menubar"
+      style={
+        Object {
+          "background": "#192534",
+          "display": "flex",
+          "flex": "1",
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "maxWidth": "65px",
+          "padding": "1rem 0 1rem 0",
+          "textAlign": "center",
+          "zIndex": 1000,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "margin": ".25rem 0 .75rem 0",
+          }
+        }
+      >
+        <svg
+          height="100%"
+          style={
+            Object {
+              "fill": "#fff",
+              "height": "27px",
+              "width": "27px",
+            }
+          }
+          version="1.1"
+          viewBox="0 0 16 16"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+          <g
+            className="white"
+          >
+            <path
+              d="M14.8975838,11.6596673 C15.0341387,11.7226127 15.0341387,11.8255895 14.8975838,11.8885349 L8.24833642,14.9528456 C8.11178147,15.015791 7.88821853,15.015791 7.75166358,14.9528456 L1.10241622,11.8885349 C0.965861261,11.8255895 0.965861261,11.7226127 1.10241622,11.6596673 L2.6950287,10.9257049 C2.83158366,10.8627595 3.0550919,10.8627595 3.19170155,10.9257049 L7.75166358,13.0271856 C7.88821853,13.090131 8.11178147,13.090131 8.24833642,13.0271856 L12.8082985,10.9257049 C12.9449081,10.8627595 13.1684163,10.8627595 13.3049713,10.9257049 L14.8975838,11.6596673 Z M14.8975838,7.88556618 C15.0341387,7.94851162 15.0341387,8.05154307 14.8975838,8.1144885 L8.24833642,11.1787445 C8.11178147,11.2416899 7.88821853,11.2416899 7.75166358,11.1787445 L1.10241622,8.1144885 C0.965861261,8.05154307 0.965861261,7.94851162 1.10241622,7.88556618 L2.6950287,7.1516585 C2.83158366,7.08871306 3.0550919,7.08871306 3.19170155,7.1516585 L7.75166358,9.25308448 C7.88821853,9.31602991 8.11178147,9.31602991 8.24833642,9.25308448 L12.8082985,7.1516585 C12.9449081,7.08871306 13.1684163,7.08871306 13.3049713,7.1516585 L14.8975838,7.88556618 Z M1.10241622,4.34038738 C0.965861261,4.27744195 0.965861261,4.17446518 1.10241622,4.11151975 L7.75166358,1.04720908 C7.88821853,0.984263641 8.11178147,0.984263641 8.24833642,1.04720908 L14.8975838,4.11151975 C15.0341387,4.17446518 15.0341387,4.27744195 14.8975838,4.34038738 L8.24833642,7.40469806 C8.11178147,7.46764349 7.88821853,7.46764349 7.75166358,7.40469806 L1.10241622,4.34038738 Z"
+            />
+          </g>
+        </svg>
+      </div>
+      <button
+        aria-label="Publish"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        role="button"
+        style={
+          Object {
+            "background": "#168eea",
+            "border": 0,
+            "borderRadius": "0.126rem",
+            "color": "white",
+            "cursor": "pointer",
+            "display": "inline-block",
+            "margin": "16px 16px 16px 16px",
+            "padding": "6px",
+            "position": "relative",
+          }
+        }
+        tabIndex="0"
+      >
+        <div
+          id=""
+          style={
+            Object {
+              "background": "#2E435E",
+              "borderRadius": "0.126rem",
+              "boxShadow": "0 1px 2px 0 rgba(0,0,0,0.50)",
+              "color": "#fff",
+              "display": "none",
+              "left": "100%",
+              "padding": ".25rem .75rem",
+              "position": "absolute",
+              "textAlign": "left",
+              "transform": "translate(11px, -3px)",
+              "whiteSpace": "nowrap",
+              "zIndex": 4000,
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "borderBottomColor": "transparent",
+                "borderBottomWidth": 7,
+                "borderLeftColor": "transparent",
+                "borderLeftWidth": 0,
+                "borderRightColor": "#2E435E",
+                "borderRightWidth": 8,
+                "borderStyle": "solid",
+                "borderTopColor": "transparent",
+                "borderTopWidth": 7,
+                "height": 0,
+                "left": -8,
+                "position": "absolute",
+                "top": "50%",
+                "transform": "translate(0, -50%)",
+                "width": 0,
+              }
+            }
+          />
+          <span
+            style={
+              Object {
+                "color": "#fff",
+                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontSize": "0.8rem",
+                "fontWeight": 400,
+              }
+            }
+          >
+            Publish
+          </span>
+        </div>
+        <div
+          style={
+            Object {
+              "height": "20px",
+              "width": "20px",
+            }
+          }
+        >
+          <svg
+            height="100%"
+            style={
+              Object {
+                "fill": "#fff",
+                "height": "20px",
+                "width": "20px",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 16 16"
+            width="100%"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+          >
+            <g
+              className="white"
+            >
+              <path
+                d="M16,0 L12,14.5116279 L6.58066667,9.73664271 L11.782,4.30533615 L4.81,9.07240592 L0,7.9154334 L16,0 Z M5.95348837,11.1627907 L5.95348837,16 L8.18604651,13.0766947 L5.95348837,11.1627907 Z"
+              />
+            </g>
+          </svg>
+        </div>
+      </button>
+      <button
+        aria-label="Reply"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        role="button"
+        style={
+          Object {
+            "background": "none",
+            "border": 0,
+            "borderRadius": "0.126rem",
+            "cursor": "pointer",
+            "display": "inline-block",
+            "margin": "16px 16px 16px 16px",
+            "padding": "6px",
+            "position": "relative",
+          }
+        }
+        tabIndex="0"
+      >
+        <div
+          id=""
+          style={
+            Object {
+              "background": "#2E435E",
+              "borderRadius": "0.126rem",
+              "boxShadow": "0 1px 2px 0 rgba(0,0,0,0.50)",
+              "color": "#fff",
+              "display": "none",
+              "left": "100%",
+              "padding": ".25rem .75rem",
+              "position": "absolute",
+              "textAlign": "left",
+              "transform": "translate(11px, -3px)",
+              "whiteSpace": "nowrap",
+              "zIndex": 4000,
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "borderBottomColor": "transparent",
+                "borderBottomWidth": 7,
+                "borderLeftColor": "transparent",
+                "borderLeftWidth": 0,
+                "borderRightColor": "#2E435E",
+                "borderRightWidth": 8,
+                "borderStyle": "solid",
+                "borderTopColor": "transparent",
+                "borderTopWidth": 7,
+                "height": 0,
+                "left": -8,
+                "position": "absolute",
+                "top": "50%",
+                "transform": "translate(0, -50%)",
+                "width": 0,
+              }
+            }
+          />
+          <span
+            style={
+              Object {
+                "color": "#fff",
+                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontSize": "0.8rem",
+                "fontWeight": 400,
+              }
+            }
+          >
+            Reply
+          </span>
+        </div>
+        <div
+          style={
+            Object {
+              "height": "20px",
+              "width": "20px",
+            }
+          }
+        >
+          <svg
+            height="100%"
+            style={
+              Object {
+                "fill": "#7088A5",
+                "height": "20px",
+                "width": "20px",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 16 16"
+            width="100%"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+          >
+            <g
+              className="sidebarIcon"
+            >
+              <g
+                transform="translate(8.066952, 8.472268) rotate(-45.000000) translate(-8.066952, -8.472268) translate(0.066952, 1.972268)"
+              >
+                <path
+                  d="M0.0215566657,3.31257555 C0.0215566657,3.03718605 0.238778853,2.81393875 0.523178151,2.81393875 L10.4217198,2.81393875 L10.4217197,0.427889852 C10.4217197,0.149934187 10.5821386,0.0844435872 10.7695555,0.271180514 L15.63441,5.11838601 C15.8265144,5.3097935 15.7566205,5.46495993 15.4870722,5.46495993 L0.516730268,5.46495988 C0.243253439,5.46495988 0.0215566657,5.23893531 0.0215566657,4.96632308 L0.0215566657,3.31257555 Z"
+                />
+                <path
+                  d="M15.984894,9.45772119 C15.984894,9.73311069 15.7676718,9.95635798 15.4832725,9.95635798 L5.58473083,9.95635798 L5.58473093,12.3996933 C5.58473094,12.6753679 5.42431198,12.7374758 5.23689513,12.5489472 L0.372040608,7.65523588 C0.179936192,7.46199196 0.249830113,7.30533681 0.519378395,7.30533681 L15.4897204,7.30533686 C15.7631972,7.30533686 15.984894,7.53136143 15.984894,7.80397365 L15.984894,9.45772119 Z"
+                />
+              </g>
+            </g>
+          </svg>
+        </div>
+      </button>
+      <button
+        aria-label="Analyze (Coming Soon)"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        role="button"
+        style={
+          Object {
+            "background": "none",
+            "border": 0,
+            "borderRadius": "0.126rem",
+            "cursor": "pointer",
+            "display": "inline-block",
+            "margin": "16px 16px 16px 16px",
+            "padding": "6px",
+            "position": "relative",
+          }
+        }
+        tabIndex="0"
+      >
+        <div
+          id=""
+          style={
+            Object {
+              "background": "#2E435E",
+              "borderRadius": "0.126rem",
+              "boxShadow": "0 1px 2px 0 rgba(0,0,0,0.50)",
+              "color": "#fff",
+              "display": "none",
+              "left": "100%",
+              "padding": ".25rem .75rem",
+              "position": "absolute",
+              "textAlign": "left",
+              "transform": "translate(11px, -3px)",
+              "whiteSpace": "nowrap",
+              "zIndex": 4000,
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "borderBottomColor": "transparent",
+                "borderBottomWidth": 7,
+                "borderLeftColor": "transparent",
+                "borderLeftWidth": 0,
+                "borderRightColor": "#2E435E",
+                "borderRightWidth": 8,
+                "borderStyle": "solid",
+                "borderTopColor": "transparent",
+                "borderTopWidth": 7,
+                "height": 0,
+                "left": -8,
+                "position": "absolute",
+                "top": "50%",
+                "transform": "translate(0, -50%)",
+                "width": 0,
+              }
+            }
+          />
+          <span
+            style={
+              Object {
+                "color": "#fff",
+                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontSize": "0.8rem",
+                "fontWeight": 400,
+              }
+            }
+          >
+            Analyze (Coming Soon)
+          </span>
+        </div>
+        <div
+          style={
+            Object {
+              "height": "20px",
+              "width": "20px",
+            }
+          }
+        >
+          <svg
+            height="100%"
+            style={
+              Object {
+                "fill": "#7088A5",
+                "height": "20px",
+                "width": "20px",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 16 16"
+            width="100%"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+          >
+            <g
+              className="sidebarIcon"
+            >
+              <polygon
+                fillRule="nonzero"
+                points="11.3146503 9.57492875 15.4856547 1.64892397 14.069743 0.903810408 10.4735244 7.73757125 4.65360704 6.38869876 0.735225826 14.342021 2.1704915 15.0491366 5.52821115 8.23381544"
+              />
+              <path
+                d="M1.45454545,16 C0.651222182,16 0,15.3487778 0,14.5454545 C0,13.7421313 0.651222182,13.0909091 1.45454545,13.0909091 C2.25786873,13.0909091 2.90909091,13.7421313 2.90909091,14.5454545 C2.90909091,15.3487778 2.25786873,16 1.45454545,16 Z M5.09090909,8.72727273 C4.28758582,8.72727273 3.63636364,8.07605055 3.63636364,7.27272727 C3.63636364,6.469404 4.28758582,5.81818182 5.09090909,5.81818182 C5.89423236,5.81818182 6.54545455,6.469404 6.54545455,7.27272727 C6.54545455,8.07605055 5.89423236,8.72727273 5.09090909,8.72727273 Z M10.9090909,10.1818182 C10.1057676,10.1818182 9.45454545,9.530596 9.45454545,8.72727273 C9.45454545,7.92394945 10.1057676,7.27272727 10.9090909,7.27272727 C11.7124142,7.27272727 12.3636364,7.92394945 12.3636364,8.72727273 C12.3636364,9.530596 11.7124142,10.1818182 10.9090909,10.1818182 Z M14.5454545,2.90909091 C13.7421313,2.90909091 13.0909091,2.25786873 13.0909091,1.45454545 C13.0909091,0.651222182 13.7421313,0 14.5454545,0 C15.3487778,0 16,0.651222182 16,1.45454545 C16,2.25786873 15.3487778,2.90909091 14.5454545,2.90909091 Z"
+              />
+            </g>
+          </svg>
+        </div>
+      </button>
+      <div
+        style={
+          Object {
+            "marginTop": "auto",
+            "textAlign": "center",
+          }
+        }
+      >
+        <div
+          aria-expanded={false}
+          aria-haspopup="true"
+          aria-label="Help and Support"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          role="submenu"
+          style={
+            Object {
+              "background": "none",
+              "border": 0,
+              "borderRadius": "0.126rem",
+              "cursor": "pointer",
+              "display": "inline-block",
+              "margin": "16px 16px 16px 16px",
+              "padding": "6px",
+              "position": "relative",
+            }
+          }
+          tabIndex="0"
+        >
+          <div
+            id=""
+            style={
+              Object {
+                "background": "#2E435E",
+                "borderRadius": "0.126rem",
+                "bottom": 0,
+                "boxShadow": "0 1px 2px 0 rgba(0,0,0,0.50)",
+                "color": "#fff",
+                "display": "none",
+                "left": "100%",
+                "position": "absolute",
+                "textAlign": "left",
+                "transform": "translate(11px, 4px)",
+                "whiteSpace": "nowrap",
+                "zIndex": 4000,
+              }
+            }
+          >
+            <span
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "borderBottomColor": "transparent",
+                  "borderBottomWidth": 7,
+                  "borderLeftColor": "transparent",
+                  "borderLeftWidth": 0,
+                  "borderRightColor": "#2E435E",
+                  "borderRightWidth": 8,
+                  "borderStyle": "solid",
+                  "borderTopColor": "transparent",
+                  "borderTopWidth": 7,
+                  "bottom": "6px",
+                  "height": 0,
+                  "left": -8,
+                  "position": "absolute",
+                  "top": "none",
+                  "transform": "none",
+                  "width": 0,
+                }
+              }
+            />
+            <span
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "fontSize": "0.8rem",
+                  "fontWeight": 400,
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "padding": ".5rem 0",
+                  }
+                }
+              >
+                <div
+                  style={
+                    Object {
+                      "cursor": "default",
+                      "padding": ".5rem 1rem 0 1rem",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#fff",
+                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontSize": "1rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  >
+                    Help & Support
+                  </span>
+                  <hr
+                    style={
+                      Object {
+                        "background": "#192534",
+                        "border": "none",
+                        "boxSizing": "border-box",
+                        "height": "0.063rem",
+                        "marginBottom": ".25rem",
+                        "marginTop": "0.5rem",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </div>
+                <ul
+                  aria-label="Help & Support"
+                  style={
+                    Object {
+                      "listStyle": "none",
+                      "margin": 0,
+                      "padding": 0,
+                    }
+                  }
+                >
+                  <li
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                  >
+                    <a
+                      href="https://faq.buffer.com"
+                      role="menuitem"
+                      style={
+                        Object {
+                          "color": "#ced7df",
+                          "display": "block",
+                          "padding": ".5rem 1rem",
+                          "textDecoration": "none",
+                        }
+                      }
+                    >
+                      FAQ
+                    </a>
+                  </li>
+                  <li
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                  >
+                    <a
+                      href="http://status.buffer.com/"
+                      role="menuitem"
+                      style={
+                        Object {
+                          "color": "#ced7df",
+                          "display": "block",
+                          "padding": ".5rem 1rem",
+                          "textDecoration": "none",
+                        }
+                      }
+                    >
+                      Status
+                    </a>
+                  </li>
+                  <li
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                  >
+                    <a
+                      href="https://buffer.com/pricing"
+                      role="menuitem"
+                      style={
+                        Object {
+                          "color": "#ced7df",
+                          "display": "block",
+                          "padding": ".5rem 1rem",
+                          "textDecoration": "none",
+                        }
+                      }
+                    >
+                      Pricing & Plans
+                    </a>
+                  </li>
+                  <li
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                  >
+                    <a
+                      href="https://buffer.com/wishlist"
+                      role="menuitem"
+                      style={
+                        Object {
+                          "color": "#ced7df",
+                          "display": "block",
+                          "padding": ".5rem 1rem",
+                          "textDecoration": "none",
+                        }
+                      }
+                    >
+                      Wishlist
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </span>
+          </div>
+          <div
+            style={
+              Object {
+                "height": "20px",
+                "width": "20px",
+              }
+            }
+          >
+            <svg
+              height="100%"
+              style={
+                Object {
+                  "fill": "#7088A5",
+                  "height": "20px",
+                  "width": "20px",
+                }
+              }
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            >
+              <g
+                className="sidebarIcon"
+              >
+                <path
+                  d="M8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 Z M8,14 C11.3137085,14 14,11.3137085 14,8 C14,4.6862915 11.3137085,2 8,2 C4.6862915,2 2,4.6862915 2,8 C2,11.3137085 4.6862915,14 8,14 Z"
+                />
+                <path
+                  d="M6.95019531,9.36035156 L6.95019531,8.96289062 C6.95019531,8.61913891 7.02359953,8.32015101 7.17041016,8.06591797 C7.31722079,7.81168493 7.58577279,7.54134258 7.97607422,7.25488281 C8.35205266,6.98632678 8.60001568,6.76790449 8.7199707,6.59960938 C8.83992573,6.43131426 8.89990234,6.24332786 8.89990234,6.03564453 C8.89990234,5.80289597 8.8139657,5.62565165 8.64208984,5.50390625 C8.47021398,5.38216085 8.23030753,5.32128906 7.92236328,5.32128906 C7.38525122,5.32128906 6.77295266,5.49674304 6.08544922,5.84765625 L5.5,4.67138672 C6.2985066,4.22379333 7.14534058,4 8.04052734,4 C8.77816124,4 9.36449978,4.17724432 9.79956055,4.53173828 C10.2346213,4.88623224 10.4521484,5.35888376 10.4521484,5.94970703 C10.4521484,6.34358921 10.3626311,6.68375508 10.1835938,6.97021484 C10.0045564,7.25667461 9.66439053,7.57893701 9.16308594,7.93701172 C8.81933422,8.19124476 8.6018071,8.3846022 8.51049805,8.51708984 C8.419189,8.64957749 8.37353516,8.82324111 8.37353516,9.03808594 L8.37353516,9.36035156 L6.95019531,9.36035156 Z M6.77832031,11.1972656 C6.77832031,10.8964829 6.85888591,10.6691088 7.02001953,10.5151367 C7.18115315,10.3611646 7.41568856,10.2841797 7.72363281,10.2841797 C8.02083482,10.2841797 8.25089437,10.3629549 8.41381836,10.5205078 C8.57674235,10.6780607 8.65820312,10.9036444 8.65820312,11.1972656 C8.65820312,11.4801446 8.57584718,11.7030428 8.41113281,11.8659668 C8.24641845,12.0288908 8.01725407,12.1103516 7.72363281,12.1103516 C7.42285006,12.1103516 7.19010499,12.0306811 7.02539062,11.8713379 C6.86067626,11.7119946 6.77832031,11.4873061 6.77832031,11.1972656 Z"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      style={
+        Object {
+          "flexGrow": 1,
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "marginRight": "1rem",
+            "marginTop": "1rem",
+            "width": "25rem",
+          }
+        }
+      />
+    </div>
+  </div>
+</span>
+`;
+
+exports[`Snapshots ProfilePage should render 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexGrow": 1,
+        "height": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "flexBasis": "16rem",
+          "minWidth": "16rem",
+          "width": "16rem",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "background": "#fcfcfc",
+            "borderRight": "0.063rem solid #e6ebef",
+            "boxSizing": "border-box",
+            "display": "flex",
+            "flexDirection": "column",
+            "maxHeight": "100vh",
+            "minHeight": "100vh",
+            "padding": "1rem",
+          }
+        }
+      >
+        <div>
+          <span
+            style={
+              Object {
+                "letterSpacing": "-0.01rem",
+                "marginRight": "0.25rem",
+              }
+            }
+          >
+            <span
+              style={
+                Object {
+                  "color": "#168eea",
+                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "fontSize": "1.25rem",
+                  "fontWeight": 600,
+                }
+              }
+            >
+              Publish
+            </span>
+          </span>
+          <span
+            style={
+              Object {
+                "color": "#59626a",
+                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontSize": "1.25rem",
+                "fontWeight": 400,
+              }
+            }
+          >
+            Free
+          </span>
+          <hr
+            style={
+              Object {
+                "background": "#e6ebef",
+                "border": "none",
+                "boxSizing": "border-box",
+                "height": "0.063rem",
+                "marginBottom": "0.5rem",
+                "marginTop": "1rem",
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+        <div
+          data-hide-scrollbar={true}
+          style={
+            Object {
+              "flexGrow": 1,
+              "overflowY": "scroll",
+            }
+          }
+        >
+          <ul
+            style={
+              Object {
+                "listStyleType": "none",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            <li
+              style={
+                Object {
+                  "listStyle": "none",
+                }
+              }
+            >
+              <a
+                href="#"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "color": "#168eea",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "outline": "none",
+                    "padding": "0",
+                    "textDecoration": "none",
+                  }
+                }
+                target="_self"
+              >
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "opacity": 0.6,
+                      "padding": "0.5rem",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "marginRight": "1rem",
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": "2rem",
+                          "position": "relative",
+                          "width": "2rem",
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        src="https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png"
+                        style={
+                          Object {
+                            "borderRadius": "50%",
+                            "height": "100%",
+                            "marginBottom": undefined,
+                            "marginTop": undefined,
+                            "maxHeight": undefined,
+                            "maxWidth": undefined,
+                            "minHeight": undefined,
+                            "minWidth": undefined,
+                            "objectFit": undefined,
+                            "verticalAlign": "bottom",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "background": "white",
+                            "borderRadius": "50%",
+                            "bottom": "0.05rem",
+                            "height": "0.90rem",
+                            "position": "absolute",
+                            "right": "0.05rem",
+                            "width": "0.90rem",
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "bottom": "0",
+                            "display": "flex",
+                            "height": "1rem",
+                            "position": "absolute",
+                            "right": "0",
+                            "width": "1rem",
+                          }
+                        }
+                      >
+                        <svg
+                          height="100%"
+                          style={
+                            Object {
+                              "fill": "#55acee",
+                              "height": "1rem",
+                              "width": "1rem",
+                            }
+                          }
+                          version="1.1"
+                          viewBox="0 0 16 16"
+                          width="100%"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                        >
+                          <g
+                            className="twitter"
+                          >
+                            <g
+                              fillRule="evenodd"
+                            >
+                              <path
+                                d="M0,8 C0,3.581722 3.59071231,0 8,0 L8,0 C12.418278,0 16,3.59071231 16,8 L16,8 C16,12.418278 12.4092877,16 8,16 L8,16 C3.581722,16 0,12.4092877 0,8 L0,8 Z M12,5.32763533 C11.7037037,5.46723647 11.3888889,5.56695157 11.0555556,5.60683761 C11.3981481,5.38746439 11.6574074,5.03846154 11.7777778,4.62962963 C11.462963,4.82905983 11.1111111,4.97863248 10.7407407,5.05840456 C10.4351852,4.71937322 10.0092593,4.5 9.53703704,4.5 C8.62962963,4.5 7.89814815,5.28774929 7.89814815,6.26495726 C7.89814815,6.4045584 7.90740741,6.54415954 7.93518519,6.67378917 C6.57407407,6.59401709 5.37037037,5.92592593 4.55555556,4.85897436 C4.41666667,5.11823362 4.33333333,5.38746439 4.33333333,5.71652422 C4.33333333,6.32478632 4.62037037,6.86324786 5.06481481,7.18233618 C4.7962963,7.17236467 4.5462963,7.09259259 4.32407407,6.96296296 L4.32407407,6.98290598 C4.32407407,7.84045584 4.88888889,8.55840456 5.63888889,8.71794872 C5.5,8.75783476 5.35185185,8.77777778 5.2037037,8.77777778 C5.10185185,8.77777778 5,8.76780627 4.89814815,8.74786325 C5.10185185,9.44586895 5.71296296,9.96438746 6.42592593,9.97435897 C5.87037037,10.4529915 5.15740741,10.8119658 4.38888889,10.8119658 C4.25925926,10.8119658 4.12962963,10.8019943 4,10.7820513 C4.72222222,11.2806268 5.59259259,11.5 6.51851852,11.5 C9.53703704,11.5 11.1851852,8.80769231 11.1851852,6.47435897 L11.1851852,6.24501425 C11.5,5.9957265 11.7777778,5.68660969 12,5.32763533 L12,5.32763533 Z"
+                              />
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <span
+                    style={
+                      Object {
+                        "color": "#59626a",
+                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontSize": "0.8rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  >
+                    joelgascoigne
+                  </span>
+                  <div
+                    style={
+                      Object {
+                        "flexGrow": 1,
+                        "textAlign": "right",
+                      }
+                    }
+                  >
+                    <span
+                      style={
+                        Object {
+                          "color": "#59626a",
+                          "fontFamily": "\\"Open Sans\\", sans-serif",
+                          "fontSize": "0.9rem",
+                          "fontWeight": 400,
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li
+              style={
+                Object {
+                  "listStyle": "none",
+                }
+              }
+            >
+              <a
+                href="#"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "color": "#168eea",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "outline": "none",
+                    "padding": "0",
+                    "textDecoration": "none",
+                  }
+                }
+                target="_self"
+              >
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "opacity": 0.6,
+                      "padding": "0.5rem",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "marginRight": "1rem",
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": "2rem",
+                          "position": "relative",
+                          "width": "2rem",
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        src="https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png"
+                        style={
+                          Object {
+                            "borderRadius": "50%",
+                            "height": "100%",
+                            "marginBottom": undefined,
+                            "marginTop": undefined,
+                            "maxHeight": undefined,
+                            "maxWidth": undefined,
+                            "minHeight": undefined,
+                            "minWidth": undefined,
+                            "objectFit": undefined,
+                            "verticalAlign": "bottom",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "background": "white",
+                            "borderRadius": "50%",
+                            "bottom": "0.05rem",
+                            "height": "0.90rem",
+                            "position": "absolute",
+                            "right": "0.05rem",
+                            "width": "0.90rem",
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "bottom": "0",
+                            "display": "flex",
+                            "height": "1rem",
+                            "position": "absolute",
+                            "right": "0",
+                            "width": "1rem",
+                          }
+                        }
+                      >
+                        <svg
+                          height="100%"
+                          style={
+                            Object {
+                              "fill": "#3b5998",
+                              "height": "1rem",
+                              "width": "1rem",
+                            }
+                          }
+                          version="1.1"
+                          viewBox="0 0 16 16"
+                          width="100%"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                        >
+                          <g
+                            className="facebook"
+                          >
+                            <g
+                              fillRule="evenodd"
+                            >
+                              <path
+                                d="M0,8 C0,3.581722 3.59071231,0 8,0 L8,0 C12.418278,0 16,3.59071231 16,8 L16,8 C16,12.418278 12.4092877,16 8,16 L8,16 C3.581722,16 0,12.4092877 0,8 L0,8 Z M7.18233349,12 L7.18233349,8.3508456 L6,8.3508456 L6,6.92867987 L7.18233349,6.92867987 L7.18233349,5.87988561 C7.18233349,4.66274759 7.89803602,4 8.94344305,4 C9.44416966,4 9.8745294,4.03873177 10,4.0560322 L10,5.32800198 L9.27491523,5.32835505 C8.70640526,5.32835505 8.59633378,5.60893973 8.59633378,6.0206899 L8.59633378,6.92867987 L9.95220491,6.92867987 L9.77564184,8.3508456 L8.59633378,8.3508456 L8.59633378,12 L7.18233349,12 Z"
+                              />
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <span
+                    style={
+                      Object {
+                        "color": "#59626a",
+                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontSize": "0.8rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  >
+                    Joel Gascoigne
+                  </span>
+                  <div
+                    style={
+                      Object {
+                        "flexGrow": 1,
+                        "textAlign": "right",
+                      }
+                    }
+                  >
+                    <span
+                      style={
+                        Object {
+                          "color": "#59626a",
+                          "fontFamily": "\\"Open Sans\\", sans-serif",
+                          "fontSize": "0.9rem",
+                          "fontWeight": 400,
+                        }
+                      }
+                    >
+                      1
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "margin": "1rem 0 0.5rem 0",
+              }
+            }
+          >
+            <span
+              style={
+                Object {
+                  "color": "#59626a",
+                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "fontSize": "0.8rem",
+                  "fontWeight": 400,
+                }
+              }
+            >
+              Locked Social Accounts
+            </span>
+            <div
+              style={
+                Object {
+                  "marginLeft": "auto",
+                }
+              }
+            >
+              <div
+                aria-describedby="tooltip_LockedSocialAccounts"
+                aria-label="Locked Social Accounts"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                role="tooltip"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "height": "16px",
+                    "position": "relative",
+                    "width": "16px",
+                  }
+                }
+                tabIndex="0"
+              >
+                <svg
+                  height="100%"
+                  style={
+                    Object {
+                      "fill": "#59626a",
+                      "height": "1rem",
+                      "width": "1rem",
+                    }
+                  }
+                  version="1.1"
+                  viewBox="0 0 16 16"
+                  width="100%"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                >
+                  <g
+                    className="shuttleGray"
+                  >
+                    <path
+                      d="M8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 Z M8,14 C11.3137085,14 14,11.3137085 14,8 C14,4.6862915 11.3137085,2 8,2 C4.6862915,2 2,4.6862915 2,8 C2,11.3137085 4.6862915,14 8,14 Z"
+                    />
+                    <path
+                      d="M6.95019531,9.36035156 L6.95019531,8.96289062 C6.95019531,8.61913891 7.02359953,8.32015101 7.17041016,8.06591797 C7.31722079,7.81168493 7.58577279,7.54134258 7.97607422,7.25488281 C8.35205266,6.98632678 8.60001568,6.76790449 8.7199707,6.59960938 C8.83992573,6.43131426 8.89990234,6.24332786 8.89990234,6.03564453 C8.89990234,5.80289597 8.8139657,5.62565165 8.64208984,5.50390625 C8.47021398,5.38216085 8.23030753,5.32128906 7.92236328,5.32128906 C7.38525122,5.32128906 6.77295266,5.49674304 6.08544922,5.84765625 L5.5,4.67138672 C6.2985066,4.22379333 7.14534058,4 8.04052734,4 C8.77816124,4 9.36449978,4.17724432 9.79956055,4.53173828 C10.2346213,4.88623224 10.4521484,5.35888376 10.4521484,5.94970703 C10.4521484,6.34358921 10.3626311,6.68375508 10.1835938,6.97021484 C10.0045564,7.25667461 9.66439053,7.57893701 9.16308594,7.93701172 C8.81933422,8.19124476 8.6018071,8.3846022 8.51049805,8.51708984 C8.419189,8.64957749 8.37353516,8.82324111 8.37353516,9.03808594 L8.37353516,9.36035156 L6.95019531,9.36035156 Z M6.77832031,11.1972656 C6.77832031,10.8964829 6.85888591,10.6691088 7.02001953,10.5151367 C7.18115315,10.3611646 7.41568856,10.2841797 7.72363281,10.2841797 C8.02083482,10.2841797 8.25089437,10.3629549 8.41381836,10.5205078 C8.57674235,10.6780607 8.65820312,10.9036444 8.65820312,11.1972656 C8.65820312,11.4801446 8.57584718,11.7030428 8.41113281,11.8659668 C8.24641845,12.0288908 8.01725407,12.1103516 7.72363281,12.1103516 C7.42285006,12.1103516 7.19010499,12.0306811 7.02539062,11.8713379 C6.86067626,11.7119946 6.77832031,11.4873061 6.77832031,11.1972656 Z"
+                    />
+                  </g>
+                </svg>
+                <div
+                  aria-hidden={true}
+                  id="tooltip_LockedSocialAccounts"
+                  role="tooltip"
+                  style={
+                    Object {
+                      "background": "#2E435E",
+                      "borderRadius": "0.126rem",
+                      "bottom": 0,
+                      "boxShadow": "0 1px 2px 0 rgba(0,0,0,0.50)",
+                      "color": "#fff",
+                      "display": "none",
+                      "left": "100%",
+                      "padding": ".25rem .75rem",
+                      "position": "absolute",
+                      "textAlign": "left",
+                      "transform": "translate(11px, 4px)",
+                      "width": "320px",
+                      "zIndex": 4000,
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderBottomColor": "transparent",
+                        "borderBottomWidth": 7,
+                        "borderLeftColor": "transparent",
+                        "borderLeftWidth": 0,
+                        "borderRightColor": "#2E435E",
+                        "borderRightWidth": 8,
+                        "borderStyle": "solid",
+                        "borderTopColor": "transparent",
+                        "borderTopWidth": 7,
+                        "bottom": "6px",
+                        "height": 0,
+                        "left": -8,
+                        "position": "absolute",
+                        "top": "none",
+                        "transform": "none",
+                        "width": 0,
+                      }
+                    }
+                  />
+                  <span
+                    style={
+                      Object {
+                        "color": "#fff",
+                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontSize": "0.8rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "padding": ".5rem .25rem",
+                        }
+                      }
+                    >
+                      Sorry, the free plan lets you access up to two social accounts at the same time (and any business accounts you’re a team member on). We’ll keep these other ones safe and sound until you’re ready to upgrade!
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr
+            style={
+              Object {
+                "background": "#e6ebef",
+                "border": "none",
+                "boxSizing": "border-box",
+                "height": "0.063rem",
+                "marginBottom": "0.5rem",
+                "marginTop": "0.5rem",
+                "width": "100%",
+              }
+            }
+          />
+          <ul
+            style={
+              Object {
+                "listStyleType": "none",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            <li
+              style={
+                Object {
+                  "listStyle": "none",
+                }
+              }
+            >
+              <a
+                href="#"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "color": "#168eea",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "outline": "none",
+                    "padding": "0",
+                    "textDecoration": "none",
+                  }
+                }
+                target="_self"
+              >
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "opacity": 0.6,
+                      "padding": "0.5rem",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "marginRight": "1rem",
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": "2rem",
+                          "position": "relative",
+                          "width": "2rem",
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        src="https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png"
+                        style={
+                          Object {
+                            "borderRadius": "50%",
+                            "height": "100%",
+                            "marginBottom": undefined,
+                            "marginTop": undefined,
+                            "maxHeight": undefined,
+                            "maxWidth": undefined,
+                            "minHeight": undefined,
+                            "minWidth": undefined,
+                            "objectFit": undefined,
+                            "verticalAlign": "bottom",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "background": "white",
+                            "borderRadius": "50%",
+                            "bottom": "0.05rem",
+                            "height": "0.90rem",
+                            "position": "absolute",
+                            "right": "0.05rem",
+                            "width": "0.90rem",
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "bottom": "0",
+                            "display": "flex",
+                            "height": "1rem",
+                            "position": "absolute",
+                            "right": "0",
+                            "width": "1rem",
+                          }
+                        }
+                      >
+                        <svg
+                          height="100%"
+                          style={
+                            Object {
+                              "fill": "#55acee",
+                              "height": "1rem",
+                              "width": "1rem",
+                            }
+                          }
+                          version="1.1"
+                          viewBox="0 0 16 16"
+                          width="100%"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                        >
+                          <g
+                            className="twitter"
+                          >
+                            <g
+                              fillRule="evenodd"
+                            >
+                              <path
+                                d="M0,8 C0,3.581722 3.59071231,0 8,0 L8,0 C12.418278,0 16,3.59071231 16,8 L16,8 C16,12.418278 12.4092877,16 8,16 L8,16 C3.581722,16 0,12.4092877 0,8 L0,8 Z M12,5.32763533 C11.7037037,5.46723647 11.3888889,5.56695157 11.0555556,5.60683761 C11.3981481,5.38746439 11.6574074,5.03846154 11.7777778,4.62962963 C11.462963,4.82905983 11.1111111,4.97863248 10.7407407,5.05840456 C10.4351852,4.71937322 10.0092593,4.5 9.53703704,4.5 C8.62962963,4.5 7.89814815,5.28774929 7.89814815,6.26495726 C7.89814815,6.4045584 7.90740741,6.54415954 7.93518519,6.67378917 C6.57407407,6.59401709 5.37037037,5.92592593 4.55555556,4.85897436 C4.41666667,5.11823362 4.33333333,5.38746439 4.33333333,5.71652422 C4.33333333,6.32478632 4.62037037,6.86324786 5.06481481,7.18233618 C4.7962963,7.17236467 4.5462963,7.09259259 4.32407407,6.96296296 L4.32407407,6.98290598 C4.32407407,7.84045584 4.88888889,8.55840456 5.63888889,8.71794872 C5.5,8.75783476 5.35185185,8.77777778 5.2037037,8.77777778 C5.10185185,8.77777778 5,8.76780627 4.89814815,8.74786325 C5.10185185,9.44586895 5.71296296,9.96438746 6.42592593,9.97435897 C5.87037037,10.4529915 5.15740741,10.8119658 4.38888889,10.8119658 C4.25925926,10.8119658 4.12962963,10.8019943 4,10.7820513 C4.72222222,11.2806268 5.59259259,11.5 6.51851852,11.5 C9.53703704,11.5 11.1851852,8.80769231 11.1851852,6.47435897 L11.1851852,6.24501425 C11.5,5.9957265 11.7777778,5.68660969 12,5.32763533 L12,5.32763533 Z"
+                              />
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <span
+                    style={
+                      Object {
+                        "color": "#59626a",
+                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontSize": "0.8rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  >
+                    joelfeed
+                  </span>
+                  <div
+                    style={
+                      Object {
+                        "flexGrow": 1,
+                        "textAlign": "right",
+                      }
+                    }
+                  >
+                    <svg
+                      height="100%"
+                      style={
+                        Object {
+                          "fill": "#59626a",
+                          "height": "1rem",
+                          "width": "1rem",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 16 16"
+                      width="100%"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        className="shuttleGray"
+                      >
+                        <path
+                          d="M13,7 L13.9931545,7 C14.5492199,7 15,7.4463114 15,7.99754465 L15,15.0026639 C15,15.5534774 14.5500512,16 13.9931545,16 L2.00684547,16 C1.45078007,16 1,15.5468246 1,15.0026639 L1,7.99754465 C1,7.44661595 1.44994876,7 2.00684547,7 L3,7 L3,4.99668583 C3,2.23709245 5.24419519,0 8,0 C10.7614237,0 13,2.24157855 13,4.99668583 L13,7 Z M11,7 L11,4.99668583 C11,3.34461797 9.6553241,2 8,2 C6.34618032,2 5,3.34424456 5,4.99668583 L5,7 L11,7 Z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li
+              style={
+                Object {
+                  "listStyle": "none",
+                }
+              }
+            >
+              <a
+                href="#"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "color": "#168eea",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "outline": "none",
+                    "padding": "0",
+                    "textDecoration": "none",
+                  }
+                }
+                target="_self"
+              >
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "opacity": 0.6,
+                      "padding": "0.5rem",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "marginRight": "1rem",
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": "2rem",
+                          "position": "relative",
+                          "width": "2rem",
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        src="https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png"
+                        style={
+                          Object {
+                            "borderRadius": "50%",
+                            "height": "100%",
+                            "marginBottom": undefined,
+                            "marginTop": undefined,
+                            "maxHeight": undefined,
+                            "maxWidth": undefined,
+                            "minHeight": undefined,
+                            "minWidth": undefined,
+                            "objectFit": undefined,
+                            "verticalAlign": "bottom",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "background": "white",
+                            "borderRadius": "50%",
+                            "bottom": "0.05rem",
+                            "height": "0.90rem",
+                            "position": "absolute",
+                            "right": "0.05rem",
+                            "width": "0.90rem",
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "bottom": "0",
+                            "display": "flex",
+                            "height": "1rem",
+                            "position": "absolute",
+                            "right": "0",
+                            "width": "1rem",
+                          }
+                        }
+                      >
+                        <svg
+                          height="100%"
+                          style={
+                            Object {
+                              "fill": "#ff1e1e",
+                              "height": "1rem",
+                              "width": "1rem",
+                            }
+                          }
+                          version="1.1"
+                          viewBox="0 0 16 16"
+                          width="100%"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                        >
+                          <g
+                            className="torchRed"
+                          >
+                            <circle
+                              cx="8"
+                              cy="8"
+                              r="8"
+                            />
+                            <g
+                              transform="translate(3.000000, 3.000000)"
+                            >
+                              <path
+                                d="M4.99843254,0.0031547619 C3.64093254,0.0031547619 3.47071429,0.00890873016 2.93757937,0.033234127 C2.40555556,0.0575 2.04220238,0.142003968 1.72426587,0.265575397 C1.3955754,0.393293651 1.1168254,0.564206349 0.838928571,0.842083333 C0.561051587,1.11998016 0.390138889,1.39873016 0.262420635,1.72742063 C0.138849206,2.04535714 0.0543452381,2.40871032 0.0300793651,2.94073413 C0.00575396825,3.47386905 0,3.6440873 0,5.0015873 C0,6.35906746 0.00575396825,6.52928571 0.0300793651,7.06242063 C0.0543452381,7.59444444 0.138849206,7.95779762 0.262420635,8.27573413 C0.390138889,8.6044246 0.561051587,8.8831746 0.838928571,9.16107143 C1.1168254,9.43894841 1.3955754,9.60986111 1.72426587,9.73759921 C2.04220238,9.86115079 2.40555556,9.94565476 2.93757937,9.96992063 C3.47071429,9.99424603 3.64093254,10 4.99843254,10 C6.3559127,10 6.52613095,9.99424603 7.05926587,9.96992063 C7.59128968,9.94565476 7.95464286,9.86115079 8.27257937,9.73759921 C8.60126984,9.60986111 8.88001984,9.43894841 9.15791667,9.16107143 C9.43579365,8.8831746 9.60670635,8.6044246 9.73444444,8.27573413 C9.85799603,7.95779762 9.9425,7.59444444 9.96676587,7.06242063 C9.99109127,6.52928571 9.99684524,6.35906746 9.99684524,5.0015873 C9.99684524,3.6440873 9.99109127,3.47386905 9.96676587,2.94073413 C9.9425,2.40871032 9.85799603,2.04535714 9.73444444,1.72742063 C9.60670635,1.39873016 9.43579365,1.11998016 9.15791667,0.842083333 C8.88001984,0.564206349 8.60126984,0.393293651 8.27257937,0.265575397 C7.95464286,0.142003968 7.59128968,0.0575 7.05926587,0.033234127 C6.52613095,0.00890873016 6.3559127,0.0031547619 4.99843254,0.0031547619 L4.99843254,0.0031547619 Z M4.99843254,0.903769841 C6.33305556,0.903769841 6.49115079,0.908869048 7.01821429,0.932916667 C7.50555556,0.955138889 7.77021825,1.03656746 7.94634921,1.10501984 C8.1796627,1.19569444 8.34617063,1.30400794 8.52107143,1.47892857 C8.69599206,1.65382937 8.80430556,1.8203373 8.89498016,2.05365079 C8.96343254,2.22978175 9.04486111,2.49444444 9.06708333,2.98178571 C9.09113095,3.50884921 9.09623016,3.66694444 9.09623016,5.0015873 C9.09623016,6.33621032 9.09113095,6.49430556 9.06708333,7.02136905 C9.04486111,7.50871032 8.96343254,7.77337302 8.89498016,7.94950397 C8.80430556,8.18281746 8.69599206,8.3493254 8.52107143,8.52422619 C8.34617063,8.69914683 8.1796627,8.80746032 7.94634921,8.89813492 C7.77021825,8.9665873 7.50555556,9.04801587 7.01821429,9.0702381 C6.49123016,9.09428571 6.33315476,9.09938492 4.99843254,9.09938492 C3.66369048,9.09938492 3.50563492,9.09428571 2.97863095,9.0702381 C2.49128968,9.04801587 2.22662698,8.9665873 2.05049603,8.89813492 C1.81718254,8.80746032 1.6506746,8.69914683 1.47577381,8.52422619 C1.30087302,8.3493254 1.19253968,8.18281746 1.10186508,7.94950397 C1.0334127,7.77337302 0.951984127,7.50871032 0.929761905,7.02136905 C0.905714286,6.49430556 0.900615079,6.33621032 0.900615079,5.0015873 C0.900615079,3.66694444 0.905714286,3.50884921 0.929761905,2.98178571 C0.951984127,2.49444444 1.0334127,2.22978175 1.10186508,2.05365079 C1.19253968,1.8203373 1.30085317,1.65382937 1.47577381,1.47892857 C1.6506746,1.30400794 1.81718254,1.19569444 2.05049603,1.10501984 C2.22662698,1.03656746 2.49128968,0.955138889 2.97863095,0.932916667 C3.50569444,0.908869048 3.66378968,0.903769841 4.99843254,0.903769841 L4.99843254,0.903769841 Z"
+                                fill="#FFFFFF"
+                                mask="url(#mask-2)"
+                              />
+                              <path
+                                d="M4.99843254,6.66771825 C4.07823413,6.66771825 3.33228175,5.92176587 3.33228175,5.0015873 C3.33228175,4.08138889 4.07823413,3.33543651 4.99843254,3.33543651 C5.91861111,3.33543651 6.66456349,4.08138889 6.66456349,5.0015873 C6.66456349,5.92176587 5.91861111,6.66771825 4.99843254,6.66771825 L4.99843254,6.66771825 Z M4.99843254,2.43482143 C3.58083333,2.43482143 2.43166667,3.5839881 2.43166667,5.0015873 C2.43166667,6.41916667 3.58083333,7.56833333 4.99843254,7.56833333 C6.4160119,7.56833333 7.56517857,6.41916667 7.56517857,5.0015873 C7.56517857,3.5839881 6.4160119,2.43482143 4.99843254,2.43482143 L4.99843254,2.43482143 Z"
+                                fill="#FFFFFF"
+                              />
+                              <path
+                                d="M8.26640873,2.3334127 C8.26640873,2.66468254 7.99785714,2.93321429 7.6665873,2.93321429 C7.3353373,2.93321429 7.06678571,2.66468254 7.06678571,2.3334127 C7.06678571,2.00214286 7.3353373,1.73359127 7.6665873,1.73359127 C7.99785714,1.73359127 8.26640873,2.00214286 8.26640873,2.3334127"
+                                fill="#FFFFFF"
+                              />
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <span
+                    style={
+                      Object {
+                        "color": "#59626a",
+                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontSize": "0.8rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  >
+                    joelgascoigne
+                  </span>
+                  <div
+                    style={
+                      Object {
+                        "flexGrow": 1,
+                        "textAlign": "right",
+                      }
+                    }
+                  >
+                    <svg
+                      height="100%"
+                      style={
+                        Object {
+                          "fill": "#59626a",
+                          "height": "1rem",
+                          "width": "1rem",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 16 16"
+                      width="100%"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        className="shuttleGray"
+                      >
+                        <path
+                          d="M13,7 L13.9931545,7 C14.5492199,7 15,7.4463114 15,7.99754465 L15,15.0026639 C15,15.5534774 14.5500512,16 13.9931545,16 L2.00684547,16 C1.45078007,16 1,15.5468246 1,15.0026639 L1,7.99754465 C1,7.44661595 1.44994876,7 2.00684547,7 L3,7 L3,4.99668583 C3,2.23709245 5.24419519,0 8,0 C10.7614237,0 13,2.24157855 13,4.99668583 L13,7 Z M11,7 L11,4.99668583 C11,3.34461797 9.6553241,2 8,2 C6.34618032,2 5,3.34424456 5,4.99668583 L5,7 L11,7 Z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div
+            style={
+              Object {
+                "marginBottom": "1rem",
+              }
+            }
+          >
+            <hr
+              style={
+                Object {
+                  "background": "#e6ebef",
+                  "border": "none",
+                  "boxSizing": "border-box",
+                  "height": "0.063rem",
+                  "marginBottom": "0.5rem",
+                  "marginTop": "0.5rem",
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+          <button
+            aria-label={null}
+            disabled={undefined}
+            onBlur={[Function]}
+            onClick={undefined}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "border": "0.063rem solid transparent",
+                "borderColor": "#168eea",
+                "borderRadius": "2rem",
+                "color": "#168eea",
+                "cursor": "pointer",
+                "display": "inline-block",
+                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontSize": "0.8rem",
+                "fontWeight": 400,
+                "margin": "0",
+                "outline": "none",
+                "padding": "0.5rem 2rem",
+                "transition": "background-color 0.2s linear",
+                "width": "100%",
+              }
+            }
+          >
+            Connect a Social Account
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "column",
+          "flexGrow": 1,
+          "height": "100vh",
+          "marginLeft": "1rem",
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <div
+        id="tabs"
+      >
+        <div>
+          <div
+            style={
+              Object {
+                "display": "inline-block",
+                "margin": "0 42px 0 0",
+                "minWidth": "60px",
+                "textAlign": "center",
+                "transform": "translate(0, 1px)",
+              }
+            }
+          >
+            <a
+              href="#"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "color": "#168eea",
+                  "display": "block",
+                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "outline": "none",
+                  "padding": "18px 13px 17px 13px",
+                  "textDecoration": "none",
+                }
+              }
+              target="_self"
+            >
+              <span
+                onMouseEnter={undefined}
+                onMouseLeave={undefined}
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#59626a",
+                      "fontFamily": "\\"Open Sans\\", sans-serif",
+                      "fontSize": "0.9rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                >
+                  Queue
+                </span>
+              </span>
+            </a>
+          </div>
+          <div
+            style={
+              Object {
+                "display": "inline-block",
+                "margin": "0 42px 0 0",
+                "minWidth": "60px",
+                "textAlign": "center",
+                "transform": "translate(0, 1px)",
+              }
+            }
+          >
+            <a
+              href="#"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "color": "#168eea",
+                  "display": "block",
+                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "outline": "none",
+                  "padding": "18px 13px 17px 13px",
+                  "textDecoration": "none",
+                }
+              }
+              target="_self"
+            >
+              <span
+                onMouseEnter={undefined}
+                onMouseLeave={undefined}
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#59626a",
+                      "fontFamily": "\\"Open Sans\\", sans-serif",
+                      "fontSize": "0.9rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                >
+                  Sent Posts
+                </span>
+              </span>
+            </a>
+          </div>
+          <div
+            style={
+              Object {
+                "display": "inline-block",
+                "margin": "0 42px 0 0",
+                "minWidth": "60px",
+                "textAlign": "center",
+                "transform": "translate(0, 1px)",
+              }
+            }
+          >
+            <a
+              href="#"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "color": "#168eea",
+                  "display": "block",
+                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "outline": "none",
+                  "padding": "18px 13px 17px 13px",
+                  "textDecoration": "none",
+                }
+              }
+              target="_self"
+            >
+              <span
+                onMouseEnter={undefined}
+                onMouseLeave={undefined}
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#59626a",
+                      "fontFamily": "\\"Open Sans\\", sans-serif",
+                      "fontSize": "0.9rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                >
+                  Settings
+                </span>
+              </span>
+            </a>
+          </div>
+          <hr
+            style={
+              Object {
+                "background": "#e6ebef",
+                "border": "none",
+                "boxSizing": "border-box",
+                "height": "0.063rem",
+                "marginBottom": "0",
+                "marginTop": "0",
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "flexGrow": 1,
+            "marginTop": "1rem",
+            "overflowY": "auto",
+            "paddingRight": "1rem",
+          }
+        }
+      />
+    </div>
+  </div>
+</span>
+`;
+
+exports[`Snapshots ProfilePage should render settings 1`] = `
+<span>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexGrow": 1,
+        "height": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "flexBasis": "16rem",
+          "minWidth": "16rem",
+          "width": "16rem",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "background": "#fcfcfc",
+            "borderRight": "0.063rem solid #e6ebef",
+            "boxSizing": "border-box",
+            "display": "flex",
+            "flexDirection": "column",
+            "maxHeight": "100vh",
+            "minHeight": "100vh",
+            "padding": "1rem",
+          }
+        }
+      >
+        <div>
+          <span
+            style={
+              Object {
+                "letterSpacing": "-0.01rem",
+                "marginRight": "0.25rem",
+              }
+            }
+          >
+            <span
+              style={
+                Object {
+                  "color": "#168eea",
+                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "fontSize": "1.25rem",
+                  "fontWeight": 600,
+                }
+              }
+            >
+              Publish
+            </span>
+          </span>
+          <span
+            style={
+              Object {
+                "color": "#59626a",
+                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontSize": "1.25rem",
+                "fontWeight": 400,
+              }
+            }
+          >
+            Free
+          </span>
+          <hr
+            style={
+              Object {
+                "background": "#e6ebef",
+                "border": "none",
+                "boxSizing": "border-box",
+                "height": "0.063rem",
+                "marginBottom": "0.5rem",
+                "marginTop": "1rem",
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+        <div
+          data-hide-scrollbar={true}
+          style={
+            Object {
+              "flexGrow": 1,
+              "overflowY": "scroll",
+            }
+          }
+        >
+          <ul
+            style={
+              Object {
+                "listStyleType": "none",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            <li
+              style={
+                Object {
+                  "listStyle": "none",
+                }
+              }
+            >
+              <a
+                href="#"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "color": "#168eea",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "outline": "none",
+                    "padding": "0",
+                    "textDecoration": "none",
+                  }
+                }
+                target="_self"
+              >
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "opacity": 0.6,
+                      "padding": "0.5rem",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "marginRight": "1rem",
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": "2rem",
+                          "position": "relative",
+                          "width": "2rem",
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        src="https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png"
+                        style={
+                          Object {
+                            "borderRadius": "50%",
+                            "height": "100%",
+                            "marginBottom": undefined,
+                            "marginTop": undefined,
+                            "maxHeight": undefined,
+                            "maxWidth": undefined,
+                            "minHeight": undefined,
+                            "minWidth": undefined,
+                            "objectFit": undefined,
+                            "verticalAlign": "bottom",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "background": "white",
+                            "borderRadius": "50%",
+                            "bottom": "0.05rem",
+                            "height": "0.90rem",
+                            "position": "absolute",
+                            "right": "0.05rem",
+                            "width": "0.90rem",
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "bottom": "0",
+                            "display": "flex",
+                            "height": "1rem",
+                            "position": "absolute",
+                            "right": "0",
+                            "width": "1rem",
+                          }
+                        }
+                      >
+                        <svg
+                          height="100%"
+                          style={
+                            Object {
+                              "fill": "#55acee",
+                              "height": "1rem",
+                              "width": "1rem",
+                            }
+                          }
+                          version="1.1"
+                          viewBox="0 0 16 16"
+                          width="100%"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                        >
+                          <g
+                            className="twitter"
+                          >
+                            <g
+                              fillRule="evenodd"
+                            >
+                              <path
+                                d="M0,8 C0,3.581722 3.59071231,0 8,0 L8,0 C12.418278,0 16,3.59071231 16,8 L16,8 C16,12.418278 12.4092877,16 8,16 L8,16 C3.581722,16 0,12.4092877 0,8 L0,8 Z M12,5.32763533 C11.7037037,5.46723647 11.3888889,5.56695157 11.0555556,5.60683761 C11.3981481,5.38746439 11.6574074,5.03846154 11.7777778,4.62962963 C11.462963,4.82905983 11.1111111,4.97863248 10.7407407,5.05840456 C10.4351852,4.71937322 10.0092593,4.5 9.53703704,4.5 C8.62962963,4.5 7.89814815,5.28774929 7.89814815,6.26495726 C7.89814815,6.4045584 7.90740741,6.54415954 7.93518519,6.67378917 C6.57407407,6.59401709 5.37037037,5.92592593 4.55555556,4.85897436 C4.41666667,5.11823362 4.33333333,5.38746439 4.33333333,5.71652422 C4.33333333,6.32478632 4.62037037,6.86324786 5.06481481,7.18233618 C4.7962963,7.17236467 4.5462963,7.09259259 4.32407407,6.96296296 L4.32407407,6.98290598 C4.32407407,7.84045584 4.88888889,8.55840456 5.63888889,8.71794872 C5.5,8.75783476 5.35185185,8.77777778 5.2037037,8.77777778 C5.10185185,8.77777778 5,8.76780627 4.89814815,8.74786325 C5.10185185,9.44586895 5.71296296,9.96438746 6.42592593,9.97435897 C5.87037037,10.4529915 5.15740741,10.8119658 4.38888889,10.8119658 C4.25925926,10.8119658 4.12962963,10.8019943 4,10.7820513 C4.72222222,11.2806268 5.59259259,11.5 6.51851852,11.5 C9.53703704,11.5 11.1851852,8.80769231 11.1851852,6.47435897 L11.1851852,6.24501425 C11.5,5.9957265 11.7777778,5.68660969 12,5.32763533 L12,5.32763533 Z"
+                              />
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <span
+                    style={
+                      Object {
+                        "color": "#59626a",
+                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontSize": "0.8rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  >
+                    joelgascoigne
+                  </span>
+                  <div
+                    style={
+                      Object {
+                        "flexGrow": 1,
+                        "textAlign": "right",
+                      }
+                    }
+                  >
+                    <span
+                      style={
+                        Object {
+                          "color": "#59626a",
+                          "fontFamily": "\\"Open Sans\\", sans-serif",
+                          "fontSize": "0.9rem",
+                          "fontWeight": 400,
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li
+              style={
+                Object {
+                  "listStyle": "none",
+                }
+              }
+            >
+              <a
+                href="#"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "color": "#168eea",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "outline": "none",
+                    "padding": "0",
+                    "textDecoration": "none",
+                  }
+                }
+                target="_self"
+              >
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "opacity": 0.6,
+                      "padding": "0.5rem",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "marginRight": "1rem",
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": "2rem",
+                          "position": "relative",
+                          "width": "2rem",
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        src="https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png"
+                        style={
+                          Object {
+                            "borderRadius": "50%",
+                            "height": "100%",
+                            "marginBottom": undefined,
+                            "marginTop": undefined,
+                            "maxHeight": undefined,
+                            "maxWidth": undefined,
+                            "minHeight": undefined,
+                            "minWidth": undefined,
+                            "objectFit": undefined,
+                            "verticalAlign": "bottom",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "background": "white",
+                            "borderRadius": "50%",
+                            "bottom": "0.05rem",
+                            "height": "0.90rem",
+                            "position": "absolute",
+                            "right": "0.05rem",
+                            "width": "0.90rem",
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "bottom": "0",
+                            "display": "flex",
+                            "height": "1rem",
+                            "position": "absolute",
+                            "right": "0",
+                            "width": "1rem",
+                          }
+                        }
+                      >
+                        <svg
+                          height="100%"
+                          style={
+                            Object {
+                              "fill": "#3b5998",
+                              "height": "1rem",
+                              "width": "1rem",
+                            }
+                          }
+                          version="1.1"
+                          viewBox="0 0 16 16"
+                          width="100%"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                        >
+                          <g
+                            className="facebook"
+                          >
+                            <g
+                              fillRule="evenodd"
+                            >
+                              <path
+                                d="M0,8 C0,3.581722 3.59071231,0 8,0 L8,0 C12.418278,0 16,3.59071231 16,8 L16,8 C16,12.418278 12.4092877,16 8,16 L8,16 C3.581722,16 0,12.4092877 0,8 L0,8 Z M7.18233349,12 L7.18233349,8.3508456 L6,8.3508456 L6,6.92867987 L7.18233349,6.92867987 L7.18233349,5.87988561 C7.18233349,4.66274759 7.89803602,4 8.94344305,4 C9.44416966,4 9.8745294,4.03873177 10,4.0560322 L10,5.32800198 L9.27491523,5.32835505 C8.70640526,5.32835505 8.59633378,5.60893973 8.59633378,6.0206899 L8.59633378,6.92867987 L9.95220491,6.92867987 L9.77564184,8.3508456 L8.59633378,8.3508456 L8.59633378,12 L7.18233349,12 Z"
+                              />
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <span
+                    style={
+                      Object {
+                        "color": "#59626a",
+                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontSize": "0.8rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  >
+                    Joel Gascoigne
+                  </span>
+                  <div
+                    style={
+                      Object {
+                        "flexGrow": 1,
+                        "textAlign": "right",
+                      }
+                    }
+                  >
+                    <span
+                      style={
+                        Object {
+                          "color": "#59626a",
+                          "fontFamily": "\\"Open Sans\\", sans-serif",
+                          "fontSize": "0.9rem",
+                          "fontWeight": 400,
+                        }
+                      }
+                    >
+                      1
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "margin": "1rem 0 0.5rem 0",
+              }
+            }
+          >
+            <span
+              style={
+                Object {
+                  "color": "#59626a",
+                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "fontSize": "0.8rem",
+                  "fontWeight": 400,
+                }
+              }
+            >
+              Locked Social Accounts
+            </span>
+            <div
+              style={
+                Object {
+                  "marginLeft": "auto",
+                }
+              }
+            >
+              <div
+                aria-describedby="tooltip_LockedSocialAccounts"
+                aria-label="Locked Social Accounts"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                role="tooltip"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "height": "16px",
+                    "position": "relative",
+                    "width": "16px",
+                  }
+                }
+                tabIndex="0"
+              >
+                <svg
+                  height="100%"
+                  style={
+                    Object {
+                      "fill": "#59626a",
+                      "height": "1rem",
+                      "width": "1rem",
+                    }
+                  }
+                  version="1.1"
+                  viewBox="0 0 16 16"
+                  width="100%"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                >
+                  <g
+                    className="shuttleGray"
+                  >
+                    <path
+                      d="M8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 Z M8,14 C11.3137085,14 14,11.3137085 14,8 C14,4.6862915 11.3137085,2 8,2 C4.6862915,2 2,4.6862915 2,8 C2,11.3137085 4.6862915,14 8,14 Z"
+                    />
+                    <path
+                      d="M6.95019531,9.36035156 L6.95019531,8.96289062 C6.95019531,8.61913891 7.02359953,8.32015101 7.17041016,8.06591797 C7.31722079,7.81168493 7.58577279,7.54134258 7.97607422,7.25488281 C8.35205266,6.98632678 8.60001568,6.76790449 8.7199707,6.59960938 C8.83992573,6.43131426 8.89990234,6.24332786 8.89990234,6.03564453 C8.89990234,5.80289597 8.8139657,5.62565165 8.64208984,5.50390625 C8.47021398,5.38216085 8.23030753,5.32128906 7.92236328,5.32128906 C7.38525122,5.32128906 6.77295266,5.49674304 6.08544922,5.84765625 L5.5,4.67138672 C6.2985066,4.22379333 7.14534058,4 8.04052734,4 C8.77816124,4 9.36449978,4.17724432 9.79956055,4.53173828 C10.2346213,4.88623224 10.4521484,5.35888376 10.4521484,5.94970703 C10.4521484,6.34358921 10.3626311,6.68375508 10.1835938,6.97021484 C10.0045564,7.25667461 9.66439053,7.57893701 9.16308594,7.93701172 C8.81933422,8.19124476 8.6018071,8.3846022 8.51049805,8.51708984 C8.419189,8.64957749 8.37353516,8.82324111 8.37353516,9.03808594 L8.37353516,9.36035156 L6.95019531,9.36035156 Z M6.77832031,11.1972656 C6.77832031,10.8964829 6.85888591,10.6691088 7.02001953,10.5151367 C7.18115315,10.3611646 7.41568856,10.2841797 7.72363281,10.2841797 C8.02083482,10.2841797 8.25089437,10.3629549 8.41381836,10.5205078 C8.57674235,10.6780607 8.65820312,10.9036444 8.65820312,11.1972656 C8.65820312,11.4801446 8.57584718,11.7030428 8.41113281,11.8659668 C8.24641845,12.0288908 8.01725407,12.1103516 7.72363281,12.1103516 C7.42285006,12.1103516 7.19010499,12.0306811 7.02539062,11.8713379 C6.86067626,11.7119946 6.77832031,11.4873061 6.77832031,11.1972656 Z"
+                    />
+                  </g>
+                </svg>
+                <div
+                  aria-hidden={true}
+                  id="tooltip_LockedSocialAccounts"
+                  role="tooltip"
+                  style={
+                    Object {
+                      "background": "#2E435E",
+                      "borderRadius": "0.126rem",
+                      "bottom": 0,
+                      "boxShadow": "0 1px 2px 0 rgba(0,0,0,0.50)",
+                      "color": "#fff",
+                      "display": "none",
+                      "left": "100%",
+                      "padding": ".25rem .75rem",
+                      "position": "absolute",
+                      "textAlign": "left",
+                      "transform": "translate(11px, 4px)",
+                      "width": "320px",
+                      "zIndex": 4000,
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderBottomColor": "transparent",
+                        "borderBottomWidth": 7,
+                        "borderLeftColor": "transparent",
+                        "borderLeftWidth": 0,
+                        "borderRightColor": "#2E435E",
+                        "borderRightWidth": 8,
+                        "borderStyle": "solid",
+                        "borderTopColor": "transparent",
+                        "borderTopWidth": 7,
+                        "bottom": "6px",
+                        "height": 0,
+                        "left": -8,
+                        "position": "absolute",
+                        "top": "none",
+                        "transform": "none",
+                        "width": 0,
+                      }
+                    }
+                  />
+                  <span
+                    style={
+                      Object {
+                        "color": "#fff",
+                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontSize": "0.8rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "padding": ".5rem .25rem",
+                        }
+                      }
+                    >
+                      Sorry, the free plan lets you access up to two social accounts at the same time (and any business accounts you’re a team member on). We’ll keep these other ones safe and sound until you’re ready to upgrade!
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr
+            style={
+              Object {
+                "background": "#e6ebef",
+                "border": "none",
+                "boxSizing": "border-box",
+                "height": "0.063rem",
+                "marginBottom": "0.5rem",
+                "marginTop": "0.5rem",
+                "width": "100%",
+              }
+            }
+          />
+          <ul
+            style={
+              Object {
+                "listStyleType": "none",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            <li
+              style={
+                Object {
+                  "listStyle": "none",
+                }
+              }
+            >
+              <a
+                href="#"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "color": "#168eea",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "outline": "none",
+                    "padding": "0",
+                    "textDecoration": "none",
+                  }
+                }
+                target="_self"
+              >
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "opacity": 0.6,
+                      "padding": "0.5rem",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "marginRight": "1rem",
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": "2rem",
+                          "position": "relative",
+                          "width": "2rem",
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        src="https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png"
+                        style={
+                          Object {
+                            "borderRadius": "50%",
+                            "height": "100%",
+                            "marginBottom": undefined,
+                            "marginTop": undefined,
+                            "maxHeight": undefined,
+                            "maxWidth": undefined,
+                            "minHeight": undefined,
+                            "minWidth": undefined,
+                            "objectFit": undefined,
+                            "verticalAlign": "bottom",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "background": "white",
+                            "borderRadius": "50%",
+                            "bottom": "0.05rem",
+                            "height": "0.90rem",
+                            "position": "absolute",
+                            "right": "0.05rem",
+                            "width": "0.90rem",
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "bottom": "0",
+                            "display": "flex",
+                            "height": "1rem",
+                            "position": "absolute",
+                            "right": "0",
+                            "width": "1rem",
+                          }
+                        }
+                      >
+                        <svg
+                          height="100%"
+                          style={
+                            Object {
+                              "fill": "#55acee",
+                              "height": "1rem",
+                              "width": "1rem",
+                            }
+                          }
+                          version="1.1"
+                          viewBox="0 0 16 16"
+                          width="100%"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                        >
+                          <g
+                            className="twitter"
+                          >
+                            <g
+                              fillRule="evenodd"
+                            >
+                              <path
+                                d="M0,8 C0,3.581722 3.59071231,0 8,0 L8,0 C12.418278,0 16,3.59071231 16,8 L16,8 C16,12.418278 12.4092877,16 8,16 L8,16 C3.581722,16 0,12.4092877 0,8 L0,8 Z M12,5.32763533 C11.7037037,5.46723647 11.3888889,5.56695157 11.0555556,5.60683761 C11.3981481,5.38746439 11.6574074,5.03846154 11.7777778,4.62962963 C11.462963,4.82905983 11.1111111,4.97863248 10.7407407,5.05840456 C10.4351852,4.71937322 10.0092593,4.5 9.53703704,4.5 C8.62962963,4.5 7.89814815,5.28774929 7.89814815,6.26495726 C7.89814815,6.4045584 7.90740741,6.54415954 7.93518519,6.67378917 C6.57407407,6.59401709 5.37037037,5.92592593 4.55555556,4.85897436 C4.41666667,5.11823362 4.33333333,5.38746439 4.33333333,5.71652422 C4.33333333,6.32478632 4.62037037,6.86324786 5.06481481,7.18233618 C4.7962963,7.17236467 4.5462963,7.09259259 4.32407407,6.96296296 L4.32407407,6.98290598 C4.32407407,7.84045584 4.88888889,8.55840456 5.63888889,8.71794872 C5.5,8.75783476 5.35185185,8.77777778 5.2037037,8.77777778 C5.10185185,8.77777778 5,8.76780627 4.89814815,8.74786325 C5.10185185,9.44586895 5.71296296,9.96438746 6.42592593,9.97435897 C5.87037037,10.4529915 5.15740741,10.8119658 4.38888889,10.8119658 C4.25925926,10.8119658 4.12962963,10.8019943 4,10.7820513 C4.72222222,11.2806268 5.59259259,11.5 6.51851852,11.5 C9.53703704,11.5 11.1851852,8.80769231 11.1851852,6.47435897 L11.1851852,6.24501425 C11.5,5.9957265 11.7777778,5.68660969 12,5.32763533 L12,5.32763533 Z"
+                              />
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <span
+                    style={
+                      Object {
+                        "color": "#59626a",
+                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontSize": "0.8rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  >
+                    joelfeed
+                  </span>
+                  <div
+                    style={
+                      Object {
+                        "flexGrow": 1,
+                        "textAlign": "right",
+                      }
+                    }
+                  >
+                    <svg
+                      height="100%"
+                      style={
+                        Object {
+                          "fill": "#59626a",
+                          "height": "1rem",
+                          "width": "1rem",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 16 16"
+                      width="100%"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        className="shuttleGray"
+                      >
+                        <path
+                          d="M13,7 L13.9931545,7 C14.5492199,7 15,7.4463114 15,7.99754465 L15,15.0026639 C15,15.5534774 14.5500512,16 13.9931545,16 L2.00684547,16 C1.45078007,16 1,15.5468246 1,15.0026639 L1,7.99754465 C1,7.44661595 1.44994876,7 2.00684547,7 L3,7 L3,4.99668583 C3,2.23709245 5.24419519,0 8,0 C10.7614237,0 13,2.24157855 13,4.99668583 L13,7 Z M11,7 L11,4.99668583 C11,3.34461797 9.6553241,2 8,2 C6.34618032,2 5,3.34424456 5,4.99668583 L5,7 L11,7 Z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li
+              style={
+                Object {
+                  "listStyle": "none",
+                }
+              }
+            >
+              <a
+                href="#"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "color": "#168eea",
+                    "fontFamily": "\\"Open Sans\\", sans-serif",
+                    "outline": "none",
+                    "padding": "0",
+                    "textDecoration": "none",
+                  }
+                }
+                target="_self"
+              >
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "opacity": 0.6,
+                      "padding": "0.5rem",
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "marginRight": "1rem",
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": "2rem",
+                          "position": "relative",
+                          "width": "2rem",
+                        }
+                      }
+                    >
+                      <img
+                        alt=""
+                        src="https://buffer-uploads.s3.amazonaws.com/503a5c8ffc99f72a7f00002e/f49c2ff693f1c307af5e1b3d84e581ca.png"
+                        style={
+                          Object {
+                            "borderRadius": "50%",
+                            "height": "100%",
+                            "marginBottom": undefined,
+                            "marginTop": undefined,
+                            "maxHeight": undefined,
+                            "maxWidth": undefined,
+                            "minHeight": undefined,
+                            "minWidth": undefined,
+                            "objectFit": undefined,
+                            "verticalAlign": "bottom",
+                            "width": "100%",
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "background": "white",
+                            "borderRadius": "50%",
+                            "bottom": "0.05rem",
+                            "height": "0.90rem",
+                            "position": "absolute",
+                            "right": "0.05rem",
+                            "width": "0.90rem",
+                          }
+                        }
+                      />
+                      <div
+                        style={
+                          Object {
+                            "bottom": "0",
+                            "display": "flex",
+                            "height": "1rem",
+                            "position": "absolute",
+                            "right": "0",
+                            "width": "1rem",
+                          }
+                        }
+                      >
+                        <svg
+                          height="100%"
+                          style={
+                            Object {
+                              "fill": "#ff1e1e",
+                              "height": "1rem",
+                              "width": "1rem",
+                            }
+                          }
+                          version="1.1"
+                          viewBox="0 0 16 16"
+                          width="100%"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                        >
+                          <g
+                            className="torchRed"
+                          >
+                            <circle
+                              cx="8"
+                              cy="8"
+                              r="8"
+                            />
+                            <g
+                              transform="translate(3.000000, 3.000000)"
+                            >
+                              <path
+                                d="M4.99843254,0.0031547619 C3.64093254,0.0031547619 3.47071429,0.00890873016 2.93757937,0.033234127 C2.40555556,0.0575 2.04220238,0.142003968 1.72426587,0.265575397 C1.3955754,0.393293651 1.1168254,0.564206349 0.838928571,0.842083333 C0.561051587,1.11998016 0.390138889,1.39873016 0.262420635,1.72742063 C0.138849206,2.04535714 0.0543452381,2.40871032 0.0300793651,2.94073413 C0.00575396825,3.47386905 0,3.6440873 0,5.0015873 C0,6.35906746 0.00575396825,6.52928571 0.0300793651,7.06242063 C0.0543452381,7.59444444 0.138849206,7.95779762 0.262420635,8.27573413 C0.390138889,8.6044246 0.561051587,8.8831746 0.838928571,9.16107143 C1.1168254,9.43894841 1.3955754,9.60986111 1.72426587,9.73759921 C2.04220238,9.86115079 2.40555556,9.94565476 2.93757937,9.96992063 C3.47071429,9.99424603 3.64093254,10 4.99843254,10 C6.3559127,10 6.52613095,9.99424603 7.05926587,9.96992063 C7.59128968,9.94565476 7.95464286,9.86115079 8.27257937,9.73759921 C8.60126984,9.60986111 8.88001984,9.43894841 9.15791667,9.16107143 C9.43579365,8.8831746 9.60670635,8.6044246 9.73444444,8.27573413 C9.85799603,7.95779762 9.9425,7.59444444 9.96676587,7.06242063 C9.99109127,6.52928571 9.99684524,6.35906746 9.99684524,5.0015873 C9.99684524,3.6440873 9.99109127,3.47386905 9.96676587,2.94073413 C9.9425,2.40871032 9.85799603,2.04535714 9.73444444,1.72742063 C9.60670635,1.39873016 9.43579365,1.11998016 9.15791667,0.842083333 C8.88001984,0.564206349 8.60126984,0.393293651 8.27257937,0.265575397 C7.95464286,0.142003968 7.59128968,0.0575 7.05926587,0.033234127 C6.52613095,0.00890873016 6.3559127,0.0031547619 4.99843254,0.0031547619 L4.99843254,0.0031547619 Z M4.99843254,0.903769841 C6.33305556,0.903769841 6.49115079,0.908869048 7.01821429,0.932916667 C7.50555556,0.955138889 7.77021825,1.03656746 7.94634921,1.10501984 C8.1796627,1.19569444 8.34617063,1.30400794 8.52107143,1.47892857 C8.69599206,1.65382937 8.80430556,1.8203373 8.89498016,2.05365079 C8.96343254,2.22978175 9.04486111,2.49444444 9.06708333,2.98178571 C9.09113095,3.50884921 9.09623016,3.66694444 9.09623016,5.0015873 C9.09623016,6.33621032 9.09113095,6.49430556 9.06708333,7.02136905 C9.04486111,7.50871032 8.96343254,7.77337302 8.89498016,7.94950397 C8.80430556,8.18281746 8.69599206,8.3493254 8.52107143,8.52422619 C8.34617063,8.69914683 8.1796627,8.80746032 7.94634921,8.89813492 C7.77021825,8.9665873 7.50555556,9.04801587 7.01821429,9.0702381 C6.49123016,9.09428571 6.33315476,9.09938492 4.99843254,9.09938492 C3.66369048,9.09938492 3.50563492,9.09428571 2.97863095,9.0702381 C2.49128968,9.04801587 2.22662698,8.9665873 2.05049603,8.89813492 C1.81718254,8.80746032 1.6506746,8.69914683 1.47577381,8.52422619 C1.30087302,8.3493254 1.19253968,8.18281746 1.10186508,7.94950397 C1.0334127,7.77337302 0.951984127,7.50871032 0.929761905,7.02136905 C0.905714286,6.49430556 0.900615079,6.33621032 0.900615079,5.0015873 C0.900615079,3.66694444 0.905714286,3.50884921 0.929761905,2.98178571 C0.951984127,2.49444444 1.0334127,2.22978175 1.10186508,2.05365079 C1.19253968,1.8203373 1.30085317,1.65382937 1.47577381,1.47892857 C1.6506746,1.30400794 1.81718254,1.19569444 2.05049603,1.10501984 C2.22662698,1.03656746 2.49128968,0.955138889 2.97863095,0.932916667 C3.50569444,0.908869048 3.66378968,0.903769841 4.99843254,0.903769841 L4.99843254,0.903769841 Z"
+                                fill="#FFFFFF"
+                                mask="url(#mask-2)"
+                              />
+                              <path
+                                d="M4.99843254,6.66771825 C4.07823413,6.66771825 3.33228175,5.92176587 3.33228175,5.0015873 C3.33228175,4.08138889 4.07823413,3.33543651 4.99843254,3.33543651 C5.91861111,3.33543651 6.66456349,4.08138889 6.66456349,5.0015873 C6.66456349,5.92176587 5.91861111,6.66771825 4.99843254,6.66771825 L4.99843254,6.66771825 Z M4.99843254,2.43482143 C3.58083333,2.43482143 2.43166667,3.5839881 2.43166667,5.0015873 C2.43166667,6.41916667 3.58083333,7.56833333 4.99843254,7.56833333 C6.4160119,7.56833333 7.56517857,6.41916667 7.56517857,5.0015873 C7.56517857,3.5839881 6.4160119,2.43482143 4.99843254,2.43482143 L4.99843254,2.43482143 Z"
+                                fill="#FFFFFF"
+                              />
+                              <path
+                                d="M8.26640873,2.3334127 C8.26640873,2.66468254 7.99785714,2.93321429 7.6665873,2.93321429 C7.3353373,2.93321429 7.06678571,2.66468254 7.06678571,2.3334127 C7.06678571,2.00214286 7.3353373,1.73359127 7.6665873,1.73359127 C7.99785714,1.73359127 8.26640873,2.00214286 8.26640873,2.3334127"
+                                fill="#FFFFFF"
+                              />
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <span
+                    style={
+                      Object {
+                        "color": "#59626a",
+                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontSize": "0.8rem",
+                        "fontWeight": 400,
+                      }
+                    }
+                  >
+                    joelgascoigne
+                  </span>
+                  <div
+                    style={
+                      Object {
+                        "flexGrow": 1,
+                        "textAlign": "right",
+                      }
+                    }
+                  >
+                    <svg
+                      height="100%"
+                      style={
+                        Object {
+                          "fill": "#59626a",
+                          "height": "1rem",
+                          "width": "1rem",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 16 16"
+                      width="100%"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        className="shuttleGray"
+                      >
+                        <path
+                          d="M13,7 L13.9931545,7 C14.5492199,7 15,7.4463114 15,7.99754465 L15,15.0026639 C15,15.5534774 14.5500512,16 13.9931545,16 L2.00684547,16 C1.45078007,16 1,15.5468246 1,15.0026639 L1,7.99754465 C1,7.44661595 1.44994876,7 2.00684547,7 L3,7 L3,4.99668583 C3,2.23709245 5.24419519,0 8,0 C10.7614237,0 13,2.24157855 13,4.99668583 L13,7 Z M11,7 L11,4.99668583 C11,3.34461797 9.6553241,2 8,2 C6.34618032,2 5,3.34424456 5,4.99668583 L5,7 L11,7 Z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div
+            style={
+              Object {
+                "marginBottom": "1rem",
+              }
+            }
+          >
+            <hr
+              style={
+                Object {
+                  "background": "#e6ebef",
+                  "border": "none",
+                  "boxSizing": "border-box",
+                  "height": "0.063rem",
+                  "marginBottom": "0.5rem",
+                  "marginTop": "0.5rem",
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+          <button
+            aria-label={null}
+            disabled={undefined}
+            onBlur={[Function]}
+            onClick={undefined}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "border": "0.063rem solid transparent",
+                "borderColor": "#168eea",
+                "borderRadius": "2rem",
+                "color": "#168eea",
+                "cursor": "pointer",
+                "display": "inline-block",
+                "fontFamily": "\\"Open Sans\\", sans-serif",
+                "fontSize": "0.8rem",
+                "fontWeight": 400,
+                "margin": "0",
+                "outline": "none",
+                "padding": "0.5rem 2rem",
+                "transition": "background-color 0.2s linear",
+                "width": "100%",
+              }
+            }
+          >
+            Connect a Social Account
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "column",
+          "flexGrow": 1,
+          "height": "100vh",
+          "marginLeft": "1rem",
+          "marginRight": "1rem",
+        }
+      }
+    >
+      <div
+        id="tabs"
+      >
+        <div>
+          <div
+            style={
+              Object {
+                "display": "inline-block",
+                "margin": "0 42px 0 0",
+                "minWidth": "60px",
+                "textAlign": "center",
+                "transform": "translate(0, 1px)",
+              }
+            }
+          >
+            <a
+              href="#"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "color": "#168eea",
+                  "display": "block",
+                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "outline": "none",
+                  "padding": "18px 13px 17px 13px",
+                  "textDecoration": "none",
+                }
+              }
+              target="_self"
+            >
+              <span
+                onMouseEnter={undefined}
+                onMouseLeave={undefined}
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#59626a",
+                      "fontFamily": "\\"Open Sans\\", sans-serif",
+                      "fontSize": "0.9rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                >
+                  Queue
+                </span>
+              </span>
+            </a>
+          </div>
+          <div
+            style={
+              Object {
+                "display": "inline-block",
+                "margin": "0 42px 0 0",
+                "minWidth": "60px",
+                "textAlign": "center",
+                "transform": "translate(0, 1px)",
+              }
+            }
+          >
+            <a
+              href="#"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "color": "#168eea",
+                  "display": "block",
+                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "outline": "none",
+                  "padding": "18px 13px 17px 13px",
+                  "textDecoration": "none",
+                }
+              }
+              target="_self"
+            >
+              <span
+                onMouseEnter={undefined}
+                onMouseLeave={undefined}
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#59626a",
+                      "fontFamily": "\\"Open Sans\\", sans-serif",
+                      "fontSize": "0.9rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                >
+                  Sent Posts
+                </span>
+              </span>
+            </a>
+          </div>
+          <div
+            style={
+              Object {
+                "borderBottom": "2px solid #168eea",
+                "display": "inline-block",
+                "margin": "0 42px 0 0",
+                "minWidth": "60px",
+                "textAlign": "center",
+                "transform": "translate(0, 1px)",
+              }
+            }
+          >
+            <a
+              href="#"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "color": "#168eea",
+                  "display": "block",
+                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "outline": "none",
+                  "padding": "18px 13px 17px 13px",
+                  "textDecoration": "none",
+                }
+              }
+              target="_self"
+            >
+              <span
+                onMouseEnter={undefined}
+                onMouseLeave={undefined}
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "#000",
+                      "fontFamily": "\\"Open Sans\\", sans-serif",
+                      "fontSize": "0.9rem",
+                      "fontWeight": 400,
+                    }
+                  }
+                >
+                  Settings
+                </span>
+              </span>
+            </a>
+          </div>
+          <hr
+            style={
+              Object {
+                "background": "#e6ebef",
+                "border": "none",
+                "boxSizing": "border-box",
+                "height": "0.063rem",
+                "marginBottom": "0",
+                "marginTop": "0",
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "flexGrow": 1,
+            "marginTop": "1rem",
+            "overflowY": "auto",
+            "paddingRight": "1rem",
+          }
+        }
+      >
+        <div>
+          <div
+            style={
+              Object {
+                "marginBottom": "0.5rem",
+                "width": "100%",
+              }
+            }
+          >
+            <span
+              style={
+                Object {
+                  "color": "#000",
+                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "fontSize": "1rem",
+                  "fontWeight": 400,
+                }
+              }
+            >
+              Your posting schedule
+            </span>
+          </div>
+          <hr
+            style={
+              Object {
+                "background": "#e6ebef",
+                "border": "none",
+                "boxSizing": "border-box",
+                "height": "0.063rem",
+                "marginBottom": "0.5rem",
+                "marginTop": "0.5rem",
+                "width": "100%",
+              }
+            }
+          />
+          <div
+            style={
+              Object {
+                "marginBottom": "1.5rem",
+                "marginTop": "1rem",
+                "width": "100%",
+              }
+            }
+          >
+            <form>
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                    "flex": 1,
+                    "flexDirection": "column",
+                    "marginBottom": "0.5rem",
+                    "width": "200px",
+                  }
+                }
+              >
+                <div
+                  style={
+                    Object {
+                      "display": "flex",
+                      "marginBottom": "0.5rem",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#000",
+                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontSize": "0.8rem",
+                        "fontWeight": 300,
+                      }
+                    }
+                  >
+                    Timezone
+                  </span>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "display": "flex",
+                      "flexGrow": 1,
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "display": "flex",
+                        "flexGrow": 1,
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <div>
+                        <div
+                          style={
+                            Object {
+                              "display": "flex",
+                              "width": "100%",
+                            }
+                          }
+                        >
+                          <input
+                            aria-autocomplete="list"
+                            aria-expanded={false}
+                            autoComplete="off"
+                            id="states-autocomplete"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onClick={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            role="combobox"
+                            style={
+                              Object {
+                                "backgroundColor": "#fff",
+                                "border": "1px solid #e6ebef",
+                                "borderRadius": "2px",
+                                "fontSize": ".8rem",
+                                "margin": "0 0 0 0",
+                                "padding": ".5rem",
+                                "width": "100%",
+                              }
+                            }
+                            value=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <hr
+            style={
+              Object {
+                "background": "#e6ebef",
+                "border": "none",
+                "boxSizing": "border-box",
+                "height": "0.063rem",
+                "marginBottom": "0.5rem",
+                "marginTop": "0.5rem",
+                "width": "100%",
+              }
+            }
+          />
+          <div
+            style={
+              Object {
+                "marginBottom": "1.5rem",
+                "marginTop": "1.5rem",
+                "width": "100%",
+              }
+            }
+          >
+            <form>
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                    "flex": 1,
+                    "flexDirection": "column",
+                    "marginBottom": "0.5rem",
+                  }
+                }
+              >
+                <div
+                  style={
+                    Object {
+                      "display": "flex",
+                      "marginBottom": "0.5rem",
+                      "marginRight": "0.5rem",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#000",
+                        "fontFamily": "\\"Open Sans\\", sans-serif",
+                        "fontSize": "0.8rem",
+                        "fontWeight": 300,
+                      }
+                    }
+                  >
+                    Add a new posting time
+                  </span>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "row",
+                      "flexGrow": 1,
+                    }
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "display": "flex",
+                        "flexGrow": 1,
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "marginRight": "1rem",
+                        }
+                      }
+                    >
+                      <div
+                        style={
+                          Object {
+                            "display": "flex",
+                          }
+                        }
+                      >
+                        <div
+                          style={
+                            Object {
+                              "position": "relative",
+                            }
+                          }
+                        >
+                          <select
+                            aria-label="choose days"
+                            disabled={false}
+                            onChange={[Function]}
+                            style={
+                              Object {
+                                "MozAppearance": "none",
+                                "WebkitAppearance": "none",
+                                "appearance": "none",
+                                "background": "transparent",
+                                "border": "0.063rem solid #e6ebef",
+                                "borderRadius": "0.126rem",
+                                "color": "#59626a",
+                                "fontSize": "0.8rem",
+                                "height": "2rem",
+                                "padding": "0 1.5rem 0 0.5rem",
+                                "width": "100%",
+                              }
+                            }
+                            value={undefined}
+                          >
+                            <option
+                              value="everyday"
+                            >
+                              Every Day
+                            </option>
+                            <option
+                              value="weekdays"
+                            >
+                              Weekdays
+                            </option>
+                            <option
+                              value="weekends"
+                            >
+                              Weekends
+                            </option>
+                            <option
+                              value="mon"
+                            >
+                              Monday
+                            </option>
+                            <option
+                              value="tue"
+                            >
+                              Tuesday
+                            </option>
+                            <option
+                              value="wed"
+                            >
+                              Wednesday
+                            </option>
+                            <option
+                              value="thu"
+                            >
+                              Thursday
+                            </option>
+                            <option
+                              value="fri"
+                            >
+                              Friday
+                            </option>
+                            <option
+                              value="sat"
+                            >
+                              Saturday
+                            </option>
+                            <option
+                              value="sun"
+                            >
+                              Sunday
+                            </option>
+                          </select>
+                          <div
+                            style={
+                              Object {
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "right": "0.5rem",
+                                "top": "0.5rem",
+                              }
+                            }
+                          >
+                            <svg
+                              height="100%"
+                              style={
+                                Object {
+                                  "fill": "#59626a",
+                                  "height": "1rem",
+                                  "width": "1rem",
+                                }
+                              }
+                              version="1.1"
+                              viewBox="0 0 16 16"
+                              width="100%"
+                              xmlns="http://www.w3.org/2000/svg"
+                              xmlnsXlink="http://www.w3.org/1999/xlink"
+                            >
+                              <g
+                                className="shuttleGray"
+                              >
+                                <path
+                                  d="M4.90573685,4.61438297 C4.5159485,4.22537555 4.51510793,3.59709045 4.90996552,3.20500565 L4.90996552,3.20500565 C5.30208929,2.81563546 5.93536183,2.81786315 6.32490003,3.21046581 L11.2750374,8.19954548 C11.6643604,8.59193123 11.6645756,9.22591178 11.2750374,9.61606213 L6.32490003,14.5739785 C5.93557705,14.9639132 5.3048231,14.9648641 4.90996552,14.5699959 L4.90996552,14.5699959 C4.51784174,14.1778616 4.51273549,13.5497061 4.9163418,13.1493324 L8.84038203,9.25672113 C9.03897712,9.05971665 9.04484713,8.74520064 8.84038203,8.54114518 L4.90573685,4.61438297 Z"
+                                  transform="translate(8.089966, 8.890003) scale(-1, 1) rotate(-270.000000) translate(-8.089966, -8.890003) "
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <span
+                      style={
+                        Object {
+                          "color": "#000",
+                          "fontFamily": "\\"Open Sans\\", sans-serif",
+                          "fontSize": "0.8rem",
+                          "fontWeight": 300,
+                        }
+                      }
+                    >
+                      Choose times
+                    </span>
+                    <div
+                      style={
+                        Object {
+                          "marginLeft": "0.5rem",
+                          "marginRight": "1rem",
+                          "width": "11rem",
+                        }
+                      }
+                    >
+                      <div
+                        style={
+                          Object {
+                            "display": "flex",
+                            "width": "100%",
+                          }
+                        }
+                      >
+                        <div
+                          onBlur={[Function]}
+                          onFocus={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          style={
+                            Object {
+                              "flex": 1,
+                              "marginLeft": 0,
+                              "marginRight": 0,
+                              "position": "relative",
+                            }
+                          }
+                        >
+                          <div
+                            style={
+                              Object {
+                                "position": "relative",
+                              }
+                            }
+                          >
+                            <select
+                              aria-label="Hour"
+                              disabled={false}
+                              onChange={[Function]}
+                              style={
+                                Object {
+                                  "MozAppearance": "none",
+                                  "WebkitAppearance": "none",
+                                  "appearance": "none",
+                                  "background": "transparent",
+                                  "border": "0.063rem solid #e6ebef",
+                                  "borderRadius": "0.126rem",
+                                  "color": "#59626a",
+                                  "fontSize": "0.8rem",
+                                  "height": "2rem",
+                                  "padding": "0 1.5rem 0 0.5rem",
+                                  "paddingRight": "1rem",
+                                  "width": "100%",
+                                }
+                              }
+                              value={12}
+                            >
+                              <option
+                                value={12}
+                              >
+                                12
+                              </option>
+                              <option
+                                value={13}
+                              >
+                                01
+                              </option>
+                              <option
+                                value={14}
+                              >
+                                02
+                              </option>
+                              <option
+                                value={15}
+                              >
+                                03
+                              </option>
+                              <option
+                                value={16}
+                              >
+                                04
+                              </option>
+                              <option
+                                value={17}
+                              >
+                                05
+                              </option>
+                              <option
+                                value={18}
+                              >
+                                06
+                              </option>
+                              <option
+                                value={19}
+                              >
+                                07
+                              </option>
+                              <option
+                                value={20}
+                              >
+                                08
+                              </option>
+                              <option
+                                value={21}
+                              >
+                                09
+                              </option>
+                              <option
+                                value={22}
+                              >
+                                10
+                              </option>
+                              <option
+                                value={23}
+                              >
+                                11
+                              </option>
+                            </select>
+                            <div
+                              style={
+                                Object {
+                                  "alignItems": "center",
+                                  "backgroundColor": "#fcfcfc",
+                                  "borderLeft": "0.063rem solid #e6ebef",
+                                  "borderRadiusBottomRight": "0.126rem",
+                                  "borderRadiusTopRight": "0.126rem",
+                                  "display": "flex",
+                                  "flexDirection": "column",
+                                  "height": "1.874rem",
+                                  "pointerEvents": "none",
+                                  "position": "absolute",
+                                  "right": "0.063rem",
+                                  "top": "0.063rem",
+                                  "width": "1rem",
+                                }
+                              }
+                            >
+                              <div
+                                style={
+                                  Object {
+                                    "fontFamily": "none",
+                                    "height": "0.937rem",
+                                  }
+                                }
+                              >
+                                <svg
+                                  height="100%"
+                                  style={
+                                    Object {
+                                      "fill": "#59626a",
+                                      "height": "0.75rem",
+                                      "width": "0.75rem",
+                                    }
+                                  }
+                                  version="1.1"
+                                  viewBox="0 0 16 16"
+                                  width="100%"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                                >
+                                  <g
+                                    className="shuttleGray"
+                                  >
+                                    <path
+                                      d="M4.90573685,3.83437656 C4.5159485,3.44536915 4.51510793,2.81708404 4.90996552,2.42499924 L4.90996552,2.42499924 C5.30208929,2.03562905 5.93536183,2.03785674 6.32490003,2.4304594 L11.2750374,7.41953907 C11.6643604,7.81192483 11.6645756,8.44590538 11.2750374,8.83605572 L6.32490003,13.7939721 C5.93557705,14.1839068 5.3048231,14.1848577 4.90996552,13.7899895 L4.90996552,13.7899895 C4.51784174,13.3978552 4.51273549,12.7696997 4.9163418,12.369326 L8.84038203,8.47671472 C9.03897712,8.27971024 9.04484713,7.96519423 8.84038203,7.76113877 L4.90573685,3.83437656 Z"
+                                      transform="translate(8.089966, 8.109997) scale(-1, -1) rotate(-270.000000) translate(-8.089966, -8.109997) "
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                              <div
+                                style={
+                                  Object {
+                                    "fontFamily": "none",
+                                    "height": "0.937rem",
+                                  }
+                                }
+                              >
+                                <svg
+                                  height="100%"
+                                  style={
+                                    Object {
+                                      "fill": "#59626a",
+                                      "height": "0.75rem",
+                                      "width": "0.75rem",
+                                    }
+                                  }
+                                  version="1.1"
+                                  viewBox="0 0 16 16"
+                                  width="100%"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                                >
+                                  <g
+                                    className="shuttleGray"
+                                  >
+                                    <path
+                                      d="M4.90573685,4.61438297 C4.5159485,4.22537555 4.51510793,3.59709045 4.90996552,3.20500565 L4.90996552,3.20500565 C5.30208929,2.81563546 5.93536183,2.81786315 6.32490003,3.21046581 L11.2750374,8.19954548 C11.6643604,8.59193123 11.6645756,9.22591178 11.2750374,9.61606213 L6.32490003,14.5739785 C5.93557705,14.9639132 5.3048231,14.9648641 4.90996552,14.5699959 L4.90996552,14.5699959 C4.51784174,14.1778616 4.51273549,13.5497061 4.9163418,13.1493324 L8.84038203,9.25672113 C9.03897712,9.05971665 9.04484713,8.74520064 8.84038203,8.54114518 L4.90573685,4.61438297 Z"
+                                      transform="translate(8.089966, 8.890003) scale(-1, 1) rotate(-270.000000) translate(-8.089966, -8.890003) "
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          onBlur={[Function]}
+                          onFocus={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          style={
+                            Object {
+                              "flex": 1,
+                              "marginLeft": "0.25rem",
+                              "marginRight": "0.25rem",
+                              "position": "relative",
+                            }
+                          }
+                        >
+                          <div
+                            style={
+                              Object {
+                                "position": "relative",
+                              }
+                            }
+                          >
+                            <select
+                              aria-label="Minute"
+                              disabled={false}
+                              onChange={[Function]}
+                              style={
+                                Object {
+                                  "MozAppearance": "none",
+                                  "WebkitAppearance": "none",
+                                  "appearance": "none",
+                                  "background": "transparent",
+                                  "border": "0.063rem solid #e6ebef",
+                                  "borderRadius": "0.126rem",
+                                  "color": "#59626a",
+                                  "fontSize": "0.8rem",
+                                  "height": "2rem",
+                                  "padding": "0 1.5rem 0 0.5rem",
+                                  "paddingRight": "1rem",
+                                  "width": "100%",
+                                }
+                              }
+                              value={0}
+                            >
+                              <option
+                                value={0}
+                              >
+                                00
+                              </option>
+                              <option
+                                value={1}
+                              >
+                                01
+                              </option>
+                              <option
+                                value={2}
+                              >
+                                02
+                              </option>
+                              <option
+                                value={3}
+                              >
+                                03
+                              </option>
+                              <option
+                                value={4}
+                              >
+                                04
+                              </option>
+                              <option
+                                value={5}
+                              >
+                                05
+                              </option>
+                              <option
+                                value={6}
+                              >
+                                06
+                              </option>
+                              <option
+                                value={7}
+                              >
+                                07
+                              </option>
+                              <option
+                                value={8}
+                              >
+                                08
+                              </option>
+                              <option
+                                value={9}
+                              >
+                                09
+                              </option>
+                              <option
+                                value={10}
+                              >
+                                10
+                              </option>
+                              <option
+                                value={11}
+                              >
+                                11
+                              </option>
+                              <option
+                                value={12}
+                              >
+                                12
+                              </option>
+                              <option
+                                value={13}
+                              >
+                                13
+                              </option>
+                              <option
+                                value={14}
+                              >
+                                14
+                              </option>
+                              <option
+                                value={15}
+                              >
+                                15
+                              </option>
+                              <option
+                                value={16}
+                              >
+                                16
+                              </option>
+                              <option
+                                value={17}
+                              >
+                                17
+                              </option>
+                              <option
+                                value={18}
+                              >
+                                18
+                              </option>
+                              <option
+                                value={19}
+                              >
+                                19
+                              </option>
+                              <option
+                                value={20}
+                              >
+                                20
+                              </option>
+                              <option
+                                value={21}
+                              >
+                                21
+                              </option>
+                              <option
+                                value={22}
+                              >
+                                22
+                              </option>
+                              <option
+                                value={23}
+                              >
+                                23
+                              </option>
+                              <option
+                                value={24}
+                              >
+                                24
+                              </option>
+                              <option
+                                value={25}
+                              >
+                                25
+                              </option>
+                              <option
+                                value={26}
+                              >
+                                26
+                              </option>
+                              <option
+                                value={27}
+                              >
+                                27
+                              </option>
+                              <option
+                                value={28}
+                              >
+                                28
+                              </option>
+                              <option
+                                value={29}
+                              >
+                                29
+                              </option>
+                              <option
+                                value={30}
+                              >
+                                30
+                              </option>
+                              <option
+                                value={31}
+                              >
+                                31
+                              </option>
+                              <option
+                                value={32}
+                              >
+                                32
+                              </option>
+                              <option
+                                value={33}
+                              >
+                                33
+                              </option>
+                              <option
+                                value={34}
+                              >
+                                34
+                              </option>
+                              <option
+                                value={35}
+                              >
+                                35
+                              </option>
+                              <option
+                                value={36}
+                              >
+                                36
+                              </option>
+                              <option
+                                value={37}
+                              >
+                                37
+                              </option>
+                              <option
+                                value={38}
+                              >
+                                38
+                              </option>
+                              <option
+                                value={39}
+                              >
+                                39
+                              </option>
+                              <option
+                                value={40}
+                              >
+                                40
+                              </option>
+                              <option
+                                value={41}
+                              >
+                                41
+                              </option>
+                              <option
+                                value={42}
+                              >
+                                42
+                              </option>
+                              <option
+                                value={43}
+                              >
+                                43
+                              </option>
+                              <option
+                                value={44}
+                              >
+                                44
+                              </option>
+                              <option
+                                value={45}
+                              >
+                                45
+                              </option>
+                              <option
+                                value={46}
+                              >
+                                46
+                              </option>
+                              <option
+                                value={47}
+                              >
+                                47
+                              </option>
+                              <option
+                                value={48}
+                              >
+                                48
+                              </option>
+                              <option
+                                value={49}
+                              >
+                                49
+                              </option>
+                              <option
+                                value={50}
+                              >
+                                50
+                              </option>
+                              <option
+                                value={51}
+                              >
+                                51
+                              </option>
+                              <option
+                                value={52}
+                              >
+                                52
+                              </option>
+                              <option
+                                value={53}
+                              >
+                                53
+                              </option>
+                              <option
+                                value={54}
+                              >
+                                54
+                              </option>
+                              <option
+                                value={55}
+                              >
+                                55
+                              </option>
+                              <option
+                                value={56}
+                              >
+                                56
+                              </option>
+                              <option
+                                value={57}
+                              >
+                                57
+                              </option>
+                              <option
+                                value={58}
+                              >
+                                58
+                              </option>
+                              <option
+                                value={59}
+                              >
+                                59
+                              </option>
+                            </select>
+                            <div
+                              style={
+                                Object {
+                                  "alignItems": "center",
+                                  "backgroundColor": "#fcfcfc",
+                                  "borderLeft": "0.063rem solid #e6ebef",
+                                  "borderRadiusBottomRight": "0.126rem",
+                                  "borderRadiusTopRight": "0.126rem",
+                                  "display": "flex",
+                                  "flexDirection": "column",
+                                  "height": "1.874rem",
+                                  "pointerEvents": "none",
+                                  "position": "absolute",
+                                  "right": "0.063rem",
+                                  "top": "0.063rem",
+                                  "width": "1rem",
+                                }
+                              }
+                            >
+                              <div
+                                style={
+                                  Object {
+                                    "fontFamily": "none",
+                                    "height": "0.937rem",
+                                  }
+                                }
+                              >
+                                <svg
+                                  height="100%"
+                                  style={
+                                    Object {
+                                      "fill": "#59626a",
+                                      "height": "0.75rem",
+                                      "width": "0.75rem",
+                                    }
+                                  }
+                                  version="1.1"
+                                  viewBox="0 0 16 16"
+                                  width="100%"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                                >
+                                  <g
+                                    className="shuttleGray"
+                                  >
+                                    <path
+                                      d="M4.90573685,3.83437656 C4.5159485,3.44536915 4.51510793,2.81708404 4.90996552,2.42499924 L4.90996552,2.42499924 C5.30208929,2.03562905 5.93536183,2.03785674 6.32490003,2.4304594 L11.2750374,7.41953907 C11.6643604,7.81192483 11.6645756,8.44590538 11.2750374,8.83605572 L6.32490003,13.7939721 C5.93557705,14.1839068 5.3048231,14.1848577 4.90996552,13.7899895 L4.90996552,13.7899895 C4.51784174,13.3978552 4.51273549,12.7696997 4.9163418,12.369326 L8.84038203,8.47671472 C9.03897712,8.27971024 9.04484713,7.96519423 8.84038203,7.76113877 L4.90573685,3.83437656 Z"
+                                      transform="translate(8.089966, 8.109997) scale(-1, -1) rotate(-270.000000) translate(-8.089966, -8.109997) "
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                              <div
+                                style={
+                                  Object {
+                                    "fontFamily": "none",
+                                    "height": "0.937rem",
+                                  }
+                                }
+                              >
+                                <svg
+                                  height="100%"
+                                  style={
+                                    Object {
+                                      "fill": "#59626a",
+                                      "height": "0.75rem",
+                                      "width": "0.75rem",
+                                    }
+                                  }
+                                  version="1.1"
+                                  viewBox="0 0 16 16"
+                                  width="100%"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                                >
+                                  <g
+                                    className="shuttleGray"
+                                  >
+                                    <path
+                                      d="M4.90573685,4.61438297 C4.5159485,4.22537555 4.51510793,3.59709045 4.90996552,3.20500565 L4.90996552,3.20500565 C5.30208929,2.81563546 5.93536183,2.81786315 6.32490003,3.21046581 L11.2750374,8.19954548 C11.6643604,8.59193123 11.6645756,9.22591178 11.2750374,9.61606213 L6.32490003,14.5739785 C5.93557705,14.9639132 5.3048231,14.9648641 4.90996552,14.5699959 L4.90996552,14.5699959 C4.51784174,14.1778616 4.51273549,13.5497061 4.9163418,13.1493324 L8.84038203,9.25672113 C9.03897712,9.05971665 9.04484713,8.74520064 8.84038203,8.54114518 L4.90573685,4.61438297 Z"
+                                      transform="translate(8.089966, 8.890003) scale(-1, 1) rotate(-270.000000) translate(-8.089966, -8.890003) "
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          onBlur={[Function]}
+                          onFocus={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          style={
+                            Object {
+                              "flex": 1,
+                              "marginLeft": 0,
+                              "marginRight": 0,
+                              "position": "relative",
+                            }
+                          }
+                        >
+                          <div
+                            style={
+                              Object {
+                                "position": "relative",
+                              }
+                            }
+                          >
+                            <select
+                              aria-label={null}
+                              disabled={false}
+                              onChange={[Function]}
+                              style={
+                                Object {
+                                  "MozAppearance": "none",
+                                  "WebkitAppearance": "none",
+                                  "appearance": "none",
+                                  "background": "transparent",
+                                  "border": "0.063rem solid #e6ebef",
+                                  "borderRadius": "0.126rem",
+                                  "color": "#59626a",
+                                  "fontSize": "0.8rem",
+                                  "height": "2rem",
+                                  "padding": "0 1.5rem 0 0.5rem",
+                                  "paddingRight": "1rem",
+                                  "width": "100%",
+                                }
+                              }
+                              value="PM"
+                            >
+                              <option
+                                value="AM"
+                              >
+                                AM
+                              </option>
+                              <option
+                                value="PM"
+                              >
+                                PM
+                              </option>
+                            </select>
+                            <div
+                              style={
+                                Object {
+                                  "alignItems": "center",
+                                  "backgroundColor": "#fcfcfc",
+                                  "borderLeft": "0.063rem solid #e6ebef",
+                                  "borderRadiusBottomRight": "0.126rem",
+                                  "borderRadiusTopRight": "0.126rem",
+                                  "display": "flex",
+                                  "flexDirection": "column",
+                                  "height": "1.874rem",
+                                  "pointerEvents": "none",
+                                  "position": "absolute",
+                                  "right": "0.063rem",
+                                  "top": "0.063rem",
+                                  "width": "1rem",
+                                }
+                              }
+                            >
+                              <div
+                                style={
+                                  Object {
+                                    "fontFamily": "none",
+                                    "height": "0.937rem",
+                                  }
+                                }
+                              >
+                                <svg
+                                  height="100%"
+                                  style={
+                                    Object {
+                                      "fill": "#59626a",
+                                      "height": "0.75rem",
+                                      "width": "0.75rem",
+                                    }
+                                  }
+                                  version="1.1"
+                                  viewBox="0 0 16 16"
+                                  width="100%"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                                >
+                                  <g
+                                    className="shuttleGray"
+                                  >
+                                    <path
+                                      d="M4.90573685,3.83437656 C4.5159485,3.44536915 4.51510793,2.81708404 4.90996552,2.42499924 L4.90996552,2.42499924 C5.30208929,2.03562905 5.93536183,2.03785674 6.32490003,2.4304594 L11.2750374,7.41953907 C11.6643604,7.81192483 11.6645756,8.44590538 11.2750374,8.83605572 L6.32490003,13.7939721 C5.93557705,14.1839068 5.3048231,14.1848577 4.90996552,13.7899895 L4.90996552,13.7899895 C4.51784174,13.3978552 4.51273549,12.7696997 4.9163418,12.369326 L8.84038203,8.47671472 C9.03897712,8.27971024 9.04484713,7.96519423 8.84038203,7.76113877 L4.90573685,3.83437656 Z"
+                                      transform="translate(8.089966, 8.109997) scale(-1, -1) rotate(-270.000000) translate(-8.089966, -8.109997) "
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                              <div
+                                style={
+                                  Object {
+                                    "fontFamily": "none",
+                                    "height": "0.937rem",
+                                  }
+                                }
+                              >
+                                <svg
+                                  height="100%"
+                                  style={
+                                    Object {
+                                      "fill": "#59626a",
+                                      "height": "0.75rem",
+                                      "width": "0.75rem",
+                                    }
+                                  }
+                                  version="1.1"
+                                  viewBox="0 0 16 16"
+                                  width="100%"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                                >
+                                  <g
+                                    className="shuttleGray"
+                                  >
+                                    <path
+                                      d="M4.90573685,4.61438297 C4.5159485,4.22537555 4.51510793,3.59709045 4.90996552,3.20500565 L4.90996552,3.20500565 C5.30208929,2.81563546 5.93536183,2.81786315 6.32490003,3.21046581 L11.2750374,8.19954548 C11.6643604,8.59193123 11.6645756,9.22591178 11.2750374,9.61606213 L6.32490003,14.5739785 C5.93557705,14.9639132 5.3048231,14.9648641 4.90996552,14.5699959 L4.90996552,14.5699959 C4.51784174,14.1778616 4.51273549,13.5497061 4.9163418,13.1493324 L8.84038203,9.25672113 C9.03897712,9.05971665 9.04484713,8.74520064 8.84038203,8.54114518 L4.90573685,4.61438297 Z"
+                                      transform="translate(8.089966, 8.890003) scale(-1, 1) rotate(-270.000000) translate(-8.089966, -8.890003) "
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      style={
+                        Object {
+                          "display": "flex",
+                          "flexGrow": 1,
+                        }
+                      }
+                    >
+                      <button
+                        aria-label={null}
+                        disabled={false}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onFocus={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "#168eea",
+                            "border": "0.063rem solid transparent",
+                            "borderRadius": "2rem",
+                            "color": "#fff",
+                            "cursor": "pointer",
+                            "display": "inline-block",
+                            "fontFamily": "\\"Open Sans\\", sans-serif",
+                            "fontSize": "0.8rem",
+                            "fontWeight": 400,
+                            "margin": "0",
+                            "outline": "none",
+                            "padding": "0.5rem 2rem",
+                            "transition": "background-color 0.2s linear",
+                          }
+                        }
+                      >
+                        Add Posting Time
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <hr
+            style={
+              Object {
+                "background": "#e6ebef",
+                "border": "none",
+                "boxSizing": "border-box",
+                "height": "0.063rem",
+                "marginBottom": "0.5rem",
+                "marginTop": "0.5rem",
+                "width": "100%",
+              }
+            }
+          />
+          <div
+            style={
+              Object {
+                "marginBottom": "1.5rem",
+                "marginTop": "1.5rem",
+                "width": "100%",
+              }
+            }
+          >
+            <span
+              style={
+                Object {
+                  "color": "#000",
+                  "fontFamily": "\\"Open Sans\\", sans-serif",
+                  "fontSize": "0.8rem",
+                  "fontWeight": 300,
+                }
+              }
+            >
+              Posting times
+              <div
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "left": "5px",
+                    "position": "relative",
+                    "top": "4px",
+                  }
+                }
+              >
+                <div
+                  aria-describedby="tooltip_PostingTimes"
+                  aria-label="Posting Times"
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="tooltip"
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "height": "16px",
+                      "position": "relative",
+                      "width": "16px",
+                    }
+                  }
+                  tabIndex="0"
+                >
+                  <svg
+                    height="100%"
+                    style={
+                      Object {
+                        "fill": "#59626a",
+                        "height": "1rem",
+                        "width": "1rem",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 16 16"
+                    width="100%"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      className="shuttleGray"
+                    >
+                      <path
+                        d="M8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 Z M8,14 C11.3137085,14 14,11.3137085 14,8 C14,4.6862915 11.3137085,2 8,2 C4.6862915,2 2,4.6862915 2,8 C2,11.3137085 4.6862915,14 8,14 Z"
+                      />
+                      <path
+                        d="M6.95019531,9.36035156 L6.95019531,8.96289062 C6.95019531,8.61913891 7.02359953,8.32015101 7.17041016,8.06591797 C7.31722079,7.81168493 7.58577279,7.54134258 7.97607422,7.25488281 C8.35205266,6.98632678 8.60001568,6.76790449 8.7199707,6.59960938 C8.83992573,6.43131426 8.89990234,6.24332786 8.89990234,6.03564453 C8.89990234,5.80289597 8.8139657,5.62565165 8.64208984,5.50390625 C8.47021398,5.38216085 8.23030753,5.32128906 7.92236328,5.32128906 C7.38525122,5.32128906 6.77295266,5.49674304 6.08544922,5.84765625 L5.5,4.67138672 C6.2985066,4.22379333 7.14534058,4 8.04052734,4 C8.77816124,4 9.36449978,4.17724432 9.79956055,4.53173828 C10.2346213,4.88623224 10.4521484,5.35888376 10.4521484,5.94970703 C10.4521484,6.34358921 10.3626311,6.68375508 10.1835938,6.97021484 C10.0045564,7.25667461 9.66439053,7.57893701 9.16308594,7.93701172 C8.81933422,8.19124476 8.6018071,8.3846022 8.51049805,8.51708984 C8.419189,8.64957749 8.37353516,8.82324111 8.37353516,9.03808594 L8.37353516,9.36035156 L6.95019531,9.36035156 Z M6.77832031,11.1972656 C6.77832031,10.8964829 6.85888591,10.6691088 7.02001953,10.5151367 C7.18115315,10.3611646 7.41568856,10.2841797 7.72363281,10.2841797 C8.02083482,10.2841797 8.25089437,10.3629549 8.41381836,10.5205078 C8.57674235,10.6780607 8.65820312,10.9036444 8.65820312,11.1972656 C8.65820312,11.4801446 8.57584718,11.7030428 8.41113281,11.8659668 C8.24641845,12.0288908 8.01725407,12.1103516 7.72363281,12.1103516 C7.42285006,12.1103516 7.19010499,12.0306811 7.02539062,11.8713379 C6.86067626,11.7119946 6.77832031,11.4873061 6.77832031,11.1972656 Z"
+                      />
+                    </g>
+                  </svg>
+                  <div
+                    aria-hidden={true}
+                    id="tooltip_PostingTimes"
+                    role="tooltip"
+                    style={
+                      Object {
+                        "background": "#2E435E",
+                        "borderRadius": "0.126rem",
+                        "boxShadow": "0 1px 2px 0 rgba(0,0,0,0.50)",
+                        "color": "#fff",
+                        "display": "none",
+                        "left": "100%",
+                        "padding": ".25rem .75rem",
+                        "position": "absolute",
+                        "textAlign": "left",
+                        "top": 0,
+                        "transform": "translate(11px, -4px)",
+                        "width": "320px",
+                        "zIndex": 4000,
+                      }
+                    }
+                  >
+                    <span
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderBottomColor": "transparent",
+                          "borderBottomWidth": 7,
+                          "borderLeftColor": "transparent",
+                          "borderLeftWidth": 0,
+                          "borderRightColor": "#2E435E",
+                          "borderRightWidth": 8,
+                          "borderStyle": "solid",
+                          "borderTopColor": "transparent",
+                          "borderTopWidth": 7,
+                          "height": 0,
+                          "left": -8,
+                          "position": "absolute",
+                          "top": "6px",
+                          "transform": "none",
+                          "width": 0,
+                        }
+                      }
+                    />
+                    <span
+                      style={
+                        Object {
+                          "color": "#fff",
+                          "fontFamily": "\\"Open Sans\\", sans-serif",
+                          "fontSize": "0.8rem",
+                          "fontWeight": 400,
+                        }
+                      }
+                    >
+                      <div
+                        style={
+                          Object {
+                            "padding": ".5rem .25rem",
+                          }
+                        }
+                      >
+                        Your posting schedule tells Buffer when to send out posts in your Queue. 
+                        <br />
+                        <br />
+                        For example, the next 10 posts you add to your Queue will go out in the next 10 upcoming time/date slots you decide below. You can change this schedule at any time!
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </span>
+            <hr
+              style={
+                Object {
+                  "background": "#fff",
+                  "border": "none",
+                  "boxSizing": "border-box",
+                  "height": "0.063rem",
+                  "marginBottom": "0.5rem",
+                  "marginTop": "0.5rem",
+                  "width": "100%",
+                }
+              }
+            />
+            <div
+              style={
+                Object {
+                  "border": "0.063rem solid #e6ebef",
+                  "borderRadius": "0.126rem",
+                  "display": "flex",
+                  "overflow": "hidden",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</span>
+`;
