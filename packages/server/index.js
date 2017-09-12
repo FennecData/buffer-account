@@ -11,7 +11,6 @@ const { apiError } = require('./middleware');
 const session = require('./lib/session');
 const controller = require('./lib/controller');
 const rpc = require('./rpc');
-const pusher = require('./lib/pusher');
 
 const app = express();
 const server = http.createServer(app);
@@ -56,7 +55,7 @@ const getHtml = () => fs.readFileSync(join(__dirname, 'index.html'), 'utf8')
                                     .replace('{{{bundle}}}', staticAssets['bundle.js'])
                                     .replace('{{{bugsnagScript}}}', bugsnagScript);
 
-app.use(logMiddleware({ name: 'BufferPublish' }));
+app.use(logMiddleware({ name: 'BufferAccounts' }));
 app.use(cookieParser());
 
 app.post('/rpc', (req, res, next) => {
@@ -84,18 +83,6 @@ app.route('/login/tfa')
 app.post('/signout', controller.signout);
 
 app.get('/health-check', controller.healthCheck);
-
-// Pusher Auth
-app.post('/pusher/auth',
-  bodyParser.json(),
-  bodyParser.urlencoded({ extended: false }),
-  (req, res) => {
-    const socketId = req.body.socket_id;
-    const channel = req.body.channel_name;
-    const auth = pusher.authenticate(socketId, channel);
-    res.send(auth);
-  },
-);
 
 app.use(apiError);
 
