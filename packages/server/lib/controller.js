@@ -1,3 +1,4 @@
+const ejs = require('ejs');
 const { join } = require('path');
 const RPCClient = require('micro-rpc-client');
 const { isShutingDown } = require('@bufferapp/shutdown-helper');
@@ -7,7 +8,13 @@ const sessionUtils = require('./session');
 const controller = module.exports;
 
 controller.login = (req, res) => {
-  res.sendFile(join(__dirname, '../views/login.html'));
+  const { redirect } = req.query;
+  ejs.renderFile(
+    join(__dirname, '../views/login.html'),
+    { redirect },
+    (err, html) => {
+      res.send(html);
+    });
 };
 
 controller.handleLogin = (req, res, next) => {
@@ -31,7 +38,14 @@ controller.handleLogin = (req, res, next) => {
     })
     .then(({ session, token }) => {
       sessionUtils.writeCookie(token, res);
-      const redirectURL = session.tfa ? '/login/tfa' : '/';
+      let redirectURL = '/';
+      if (session.tfa) {
+        redirectURL = req.body.redirect ?
+          `/login/tfa?redirect=${req.body.redirect}` :
+          '/login/tfa';
+      } else if (req.body.redirect) {
+        redirectURL = req.body.redirect;
+      }
       res.redirect(redirectURL);
     })
     .catch(next);
