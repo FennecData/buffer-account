@@ -16,13 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bufferapp/buffer-accounts.git"
+    "url": "git+https://github.com/bufferapp/buffer-account.git"
   },
   "author": "Harrison Harnisch <hharnisc@gmail.com> (http://hharnisc.github.io)",
   "bugs": {
-    "url": "https://github.com/bufferapp/buffer-accounts/issues"
+    "url": "https://github.com/bufferapp/buffer-account/issues"
   },
-  "homepage": "https://github.com/bufferapp/buffer-accounts#readme",
+  "homepage": "https://github.com/bufferapp/buffer-account#readme",
   "devDependencies": {
     "axe-core": "2.2.0",
     "babel-core": "6.24.0",

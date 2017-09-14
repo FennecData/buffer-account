@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: accounts-app
-        image: bufferapp/buffer-accounts:test-1
+        image: bufferapp/buffer-account:test-1
         ports:
         - containerPort: 80
         # env:
