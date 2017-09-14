@@ -7,5 +7,5 @@ export default () =>
       textAlign: 'center',
     }}
   >
-    Welcome To Buffer Accounts
+    Welcome To Buffer Account
   </div>;

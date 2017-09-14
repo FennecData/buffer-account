@@ -55,7 +55,7 @@ const getHtml = () => fs.readFileSync(join(__dirname, 'index.html'), 'utf8')
                                     .replace('{{{bundle}}}', staticAssets['bundle.js'])
                                     .replace('{{{bugsnagScript}}}', bugsnagScript);
 
-app.use(logMiddleware({ name: 'BufferAccounts' }));
+app.use(logMiddleware({ name: 'Bufferaccount' }));
 app.use(cookieParser());
 
 app.post('/rpc', (req, res, next) => {

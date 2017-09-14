@@ -25,7 +25,7 @@ exports[`Snapshots App should render application 1`] = `
           }
         }
       >
-        Welcome To Buffer Accounts
+        Welcome To Buffer Account
       </div>
     </div>
     <div

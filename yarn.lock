@@ -593,8 +593,8 @@ axe-core@2.2.0:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-2.2.0.tgz#00b410b3fc899207d4f2f8e3753cff150d34e4bb"
 
 axe-core@^2.0.7:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-2.4.0.tgz#7c5bed90641f6d2cf06cb7efafc2c4678744d7cc"
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-2.4.1.tgz#55b6ceaa847cb1eaef5d559b6c41035dc3e07dbf"
 
 babel-code-frame@^6.11.0, babel-code-frame@^6.16.0, babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
   version "6.26.0"
@@ -3309,8 +3309,8 @@ esutils@^2.0.2:
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
 
 etag@~1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.0.tgz#6f631aef336d6c46362b51764044ce216be3c051"
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
 
 event-emitter@~0.3.5:
   version "0.3.5"
@@ -3847,8 +3847,8 @@ glamor@^2.20.40:
     through "^2.3.8"
 
 glamorous@^4.1.2:
-  version "4.8.0"
-  resolved "https://registry.yarnpkg.com/glamorous/-/glamorous-4.8.0.tgz#3c7416cd1045ed992953d545b6241d43dbbbbc75"
+  version "4.9.1"
+  resolved "https://registry.yarnpkg.com/glamorous/-/glamorous-4.9.1.tgz#41cc6cbafe917e52966dad98101f2ef9344ec118"
   dependencies:
     brcast "^3.0.0"
     fast-memoize "^2.2.7"

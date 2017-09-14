@@ -1,5 +1,5 @@
 {
-  "name": "@bufferapp/accounts-web",
+  "name": "@bufferapp/account-web",
   "version": "0.5.34",
   "description": "Buffer Web Dashboard",
   "main": "index.jsx",
@@ -12,7 +12,7 @@
   "dependencies": {
     "@bufferapp/async-data-fetch": "0.5.25",
     "@bufferapp/notifications": "0.5.34",
-    "@bufferapp/accounts-store": "0.5.34"
+    "@bufferapp/account-store": "0.5.34"
   },
   "author": "Harrison Harnisch <hharnisc@gmail.com> (http://hharnisc.github.io)",
   "devDependencies": {

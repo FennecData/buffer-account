@@ -2,9 +2,9 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   namespace: buffer
-  name: accounts-app
+  name: account-app
   labels:
-    app: accounts
+    app: account
     service: app
     track: stable
 spec:
@@ -16,12 +16,12 @@ spec:
   template:
     metadata:
       labels:
-        app: accounts
+        app: account
         service: app
         track: stable
     spec:
       containers:
-      - name: accounts-app
+      - name: account-app
         image: bufferapp/buffer-account:test-1
         ports:
         - containerPort: 80
@@ -30,7 +30,7 @@ spec:
         #   valueFrom:
         #     secretKeyRef:
         #       key: session-cookie-secret
-        #       name: accounts-app
+        #       name: account-app
         # livenessProbe:
         #   httpGet:
         #     path: /health-check
@@ -51,13 +51,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: accounts-app
+  name: account-app
   namespace: buffer
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:us-west-2:980620087509:certificate/823c1d82-bbdd-4a3b-b1b3-e0a78e5ba6ff
     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
   labels:
-    app: accounts
+    app: account
     service: web
     track: stable
 spec:
@@ -67,6 +67,6 @@ spec:
       protocol: TCP
       name: https
   selector:
-    app: accounts
+    app: account
     service: app
   type: LoadBalancer

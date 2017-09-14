@@ -1,5 +1,5 @@
 {
-  "name": "@bufferapp/accounts-store",
+  "name": "@bufferapp/account-store",
   "version": "0.5.34",
   "description": "",
   "main": "index.js",

@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import createStore, { history } from '@bufferapp/accounts-store';
+import createStore, { history } from '@bufferapp/account-store';
 import { Provider } from 'react-redux';
 import {
   ConnectedRouter as Router,

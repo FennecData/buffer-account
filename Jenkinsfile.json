@@ -2,7 +2,7 @@
   "app": {
     "name": "buffer-account",
     "namespace": "buffer",
-    "deployment_url": "accounts.buffer.com",
+    "deployment_url": "account.buffer.com",
     "test": true
   },
   "container_repo": {
