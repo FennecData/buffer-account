@@ -1,8 +1,8 @@
-const jwt = require('jsonwebtoken');
 const RPCClient = require('micro-rpc-client');
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 const COOKIE_NAME = 'session';
+
   // isDevelopment ?
   // 'buffer-session-2-local' :
   // 'buffer-session-2';
@@ -13,6 +13,8 @@ const client = new RPCClient({
 
 exports = module.exports;
 
+exports.BUFFER_WEB_COOKIE_NAME = `${isDevelopment ? 'local' : ''}bufferapp_ci_session`;
+
 // returns the encoded session jwt
 exports.create = session =>
   client.call('create', { session })
@@ -20,8 +22,7 @@ exports.create = session =>
 
 // Given a jwt return the session object
 exports.get = sessionCookie =>
-  client.call('get', { token: sessionCookie })
-    .then(({ token }) => jwt.decode(token));
+  client.call('get', { token: sessionCookie });
 
 exports.update = ({ token, session }) =>
   client.call('update', { token, session });
@@ -38,6 +39,7 @@ exports.writeCookie = (token, res) => {
 };
 
 exports.getCookie = req => req.cookies[COOKIE_NAME];
+exports.getBufferWebCookie = req => req.cookies[exports.BUFFER_WEB_COOKIE_NAME];
 
 exports.middleware = (req, res, next) => {
   const sessionCookie = exports.getCookie(req);
@@ -46,8 +48,10 @@ exports.middleware = (req, res, next) => {
   }
 
   exports.get(sessionCookie)
-    .then((decodedSession) => {
-      req.session = decodedSession;
+    .then((session) => {
+      if (session) {
+        req.session = session;
+      }
       next();
     })
     .catch(next);

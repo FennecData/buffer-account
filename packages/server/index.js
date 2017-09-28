@@ -55,8 +55,11 @@ const getHtml = () => fs.readFileSync(join(__dirname, 'index.html'), 'utf8')
                                     .replace('{{{bundle}}}', staticAssets['bundle.js'])
                                     .replace('{{{bugsnagScript}}}', bugsnagScript);
 
-app.use(logMiddleware({ name: 'Bufferaccount' }));
+app.use(logMiddleware({ name: 'BufferAccount' }));
 app.use(cookieParser());
+
+// All routes after this have access to the user session
+app.use(session.middleware);
 
 app.post('/rpc', (req, res, next) => {
   rpc(req, res)
@@ -64,14 +67,12 @@ app.post('/rpc', (req, res, next) => {
     .catch(err => next(err));
 });
 
-// All routes after this have access to the user session
-app.use(session.middleware);
-
 app.get('/', (req, res) => {
-  if (!req.session || !req.session.accessToken) {
-    return res.redirect('/login');
+  if (req.session && req.session.account && req.session.account.accessToken) {
+    res.send(getHtml());
+  } else {
+    res.redirect('/login');
   }
-  res.send(getHtml());
 });
 
 app.route('/login')

@@ -4,13 +4,18 @@ const BUFFER_API_ADDR = process.env.API_ADDR;
 
 const bufferApi = module.exports;
 
-bufferApi.signin = ({ email, password }) => rp({
+bufferApi.signin = ({
+  email,
+  password,
+  clientId,
+  clientSecret,
+}) => rp({
   uri: `${BUFFER_API_ADDR}/1/user/signin.json`,
   method: 'POST',
   strictSSL: false, // TODO - In prod this should be secure
   form: {
-    client_id: process.env.CLIENT_ID,
-    client_secret: process.env.CLIENT_SECRET,
+    client_id: clientId,
+    client_secret: clientSecret,
     email,
     password,
   },
@@ -28,6 +33,25 @@ bufferApi.tfa = ({ userId, code }) => rp({
     client_secret: process.env.CLIENT_SECRET,
     user_id: userId,
     code,
+  },
+  json: true,
+});
+
+
+bufferApi.convertSession = ({
+  accessToken,
+  clientId,
+  clientSecret,
+  bufferSession,
+}) => rp({
+  uri: `${BUFFER_API_ADDR}/1/user/convert_access_token.json`,
+  method: 'POST',
+  strictSSL: false, // TODO - In prod this should be secure
+  form: {
+    client_id: clientId,
+    client_secret: clientSecret,
+    access_token: accessToken,
+    buffer_session: bufferSession,
   },
   json: true,
 });
