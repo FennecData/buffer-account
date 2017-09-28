@@ -51,6 +51,26 @@ spec:
             secretKeyRef:
               key: client-secret
               name: buffer-publish-buffer-api-client
+        - name: PUBLISH_CLIENT_ID
+          valueFrom:
+            secretKeyRef:
+              key: client-id
+              name: buffer-publish-buffer-api-client
+        - name: PUBLISH_CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              key: client-secret
+              name: buffer-publish-buffer-api-client
+        - name: ANALYZE_CLIENT_ID
+          valueFrom:
+            secretKeyRef:
+              key: client-id
+              name: buffer-publish-buffer-api-client
+        - name: ANALYZE_CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              key: client-secret
+              name: buffer-publish-buffer-api-client
         - name: API_ADDR
           value: https://api.bufferapp.com
         livenessProbe:
