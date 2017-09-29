@@ -220,12 +220,12 @@ controller.tfa = (req, res) => {
 controller.handleTfa = (req, res, next) => {
   const { redirect, code } = req.body;
   if (!(
-    res.session &&
+    req.session &&
     req.session.global &&
     req.session.global.tfa &&
     req.session.global.userId
   )) {
-    res.redirect(`/login/${redirect ? `?redirect=${redirect}` : ''}`);
+    return res.redirect(`/login/${redirect ? `?redirect=${redirect}` : ''}`);
   }
   if (!code) {
     return res.send('missing required fields');
