@@ -5,5 +5,8 @@
 
 <form action="/login/tfa" method="post">
   <input type="text" name="code" value="" placeholder="" required>
+  <% if (redirect) { %>
+    <input type="hidden" name="redirect" value="<%= redirect %>">
+  <% } %>
   <button type="submit">Complete Login</button>
 </form>

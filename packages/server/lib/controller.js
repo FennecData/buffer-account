@@ -102,7 +102,6 @@ const autoLoginWithBufferSession = ({
   const { clientId, clientSecret, sessionKey } = selectClient({
     app: parseAppFromUrl({ url }),
   });
-  // console.log('bufferSession', bufferSession);
   bufferApi.convertSession({
     bufferSession,
     clientId,
@@ -179,12 +178,13 @@ controller.handleLogin = (req, res, next) => {
         global: {
           userId: user._id,
         },
-        [sessionKey]: {
-          accessToken: token,
-        },
       };
       if (twostep) {
-        newSession.tfa = twostep;
+        newSession.global.tfa = twostep;
+      } else {
+        newSession[sessionKey] = {
+          accessToken: token,
+        };
       }
       return sessionUtils.create(newSession);
     })
@@ -203,33 +203,60 @@ controller.handleLogin = (req, res, next) => {
     .catch(next);
 };
 
-// TODO: UPDATE this to handle redirect
 controller.tfa = (req, res) => {
-  if (!req.session.tfa) {
-    return res.redirect('/');
+  const { redirect } = req.query;
+  if (!(req.session && req.session.global && req.session.global.tfa)) {
+    res.redirect(`/login/${redirect ? `?redirect=${redirect}` : ''}`);
+  } else {
+    ejs.renderFile(
+      join(__dirname, '../views/tfa.html'),
+      { redirect },
+      (err, html) => {
+        res.send(html);
+      });
   }
-  res.sendFile(join(__dirname, '../views/tfa.html'));
 };
 
 controller.handleTfa = (req, res, next) => {
-  if (!req.session.tfa || (req.session.tfa && !req.session.userId)) {
-    return res.redirect('/login');
+  const { redirect, code } = req.body;
+  if (!(
+    res.session &&
+    req.session.global &&
+    req.session.global.tfa &&
+    req.session.global.userId
+  )) {
+    res.redirect(`/login/${redirect ? `?redirect=${redirect}` : ''}`);
   }
-  if (!req.body.code) {
+  if (!code) {
     return res.send('missing required fields');
   }
 
+  const url = redirect ? parse(redirect).hostname : undefined;
+  const { clientId, clientSecret, sessionKey } = selectClient({
+    app: parseAppFromUrl({ url }),
+  });
+
   bufferApi.tfa({
-    userId: req.session.userId,
-    code: req.body.code,
+    userId: req.session.global.userId,
+    code,
+    clientId,
+    clientSecret,
   })
     .then(({ token }) => {
-      req.session.accessToken = token;
-      delete req.session.tfa;
-      const sessionToken = sessionUtils.getCookie(req);
-      return sessionUtils.update({ token: sessionToken, session: req.session });
+      const updatedSession = {
+        global: {
+          userId: req.session.global.userId,
+        },
+        [sessionKey]: {
+          accessToken: token,
+        },
+      };
+      return sessionUtils.update({
+        token: sessionUtils.getCookie(req),
+        session: updatedSession,
+      });
     })
-    .then(() => res.redirect('/'))
+    .then(() => res.redirect(redirect || '/'))
     .catch(next);
 };
 

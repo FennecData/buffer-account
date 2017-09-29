@@ -24,13 +24,18 @@ bufferApi.signin = ({
 
 // TODO - Add backup phone number usage
 // TODO - Add visitor_id linking when session is used on marketing
-bufferApi.tfa = ({ userId, code }) => rp({
+bufferApi.tfa = ({
+  userId,
+  code,
+  clientId,
+  clientSecret,
+}) => rp({
   uri: `${BUFFER_API_ADDR}/1/user/twostep.json`,
   method: 'POST',
   strictSSL: false, // TODO - In prod this should be secure
   form: {
-    client_id: process.env.CLIENT_ID,
-    client_secret: process.env.CLIENT_SECRET,
+    client_id: clientId,
+    client_secret: clientSecret,
     user_id: userId,
     code,
   },
