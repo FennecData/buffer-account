@@ -191,7 +191,7 @@ controller.handleLogin = (req, res, next) => {
     .then(({ session, token }) => {
       sessionUtils.writeCookie(token, res);
       let redirectURL = '/';
-      if (session.tfa) {
+      if (session.global.tfa) {
         redirectURL = req.body.redirect ?
           `/login/tfa?redirect=${req.body.redirect}` :
           '/login/tfa';
