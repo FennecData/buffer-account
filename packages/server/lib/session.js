@@ -22,7 +22,10 @@ exports.create = session =>
 
 // Given a jwt return the session object
 exports.get = sessionCookie =>
-  client.call('get', { token: sessionCookie });
+  client.call('get', {
+    token: sessionCookie,
+    keys: ['*'],
+  });
 
 exports.update = ({ token, session }) =>
   client.call('update', { token, session });
