@@ -41,6 +41,15 @@ exports.writeCookie = (token, res) => {
   });
 };
 
+exports.writeBufferWebCookie = ({ value, res }) => {
+  res.cookie(exports.BUFFER_WEB_COOKIE_NAME, value, {
+    domain: '.buffer.com', // Buffer Web gets confused if this is any other value
+    maxAge: 365 * 24 * 60 * 60 * 1000,
+    httpOnly: true,
+    secure: true,
+  });
+};
+
 exports.getCookie = req => req.cookies[COOKIE_NAME];
 exports.getBufferWebCookie = req => req.cookies[exports.BUFFER_WEB_COOKIE_NAME];
 

@@ -107,7 +107,8 @@ const autoLoginWithBufferSession = ({
     clientId,
     clientSecret,
   })
-    .then(({ user, token }) => {
+    .then((response) => {
+      const { user, token } = response;
       const newSession = {
         global: {
           userId: user._id,
@@ -155,6 +156,24 @@ controller.login = (req, res, next) => {
   }
 };
 
+const parseBufferWebCookie = ({ apiRes }) =>
+  (apiRes.headers['set-cookie'] || []).reduce((cookieValue, currentCookie) => {
+    // no cookie to look at
+    if (!currentCookie) {
+      return cookieValue;
+    }
+    // cookie is not a bufferapp_ci_session cookie
+    if (!(currentCookie.includes('bufferapp_ci_session'))) {
+      return cookieValue;
+    }
+    // if we have a duplicate cookie - choose the cookie with more information
+    const cookie = decodeURIComponent(currentCookie.split('; ')[0].split('=')[1]);
+    if (cookieValue && cookieValue.length > cookie.length) {
+      return cookieValue;
+    }
+    return cookie;
+  }, undefined);
+
 // if the user makes it here that means the user is signing
 // in for the first time anywhere
 controller.handleLogin = (req, res, next) => {
@@ -170,10 +189,19 @@ controller.handleLogin = (req, res, next) => {
   bufferApi.signin({
     email: req.body.email,
     password: req.body.password,
+    createSession: true,
     clientId,
     clientSecret,
   })
-    .then(({ token, user, twostep }) => {
+    .then((apiRes) => {
+      const bufferWebCookie = parseBufferWebCookie({ apiRes });
+      if (bufferWebCookie) {
+        sessionUtils.writeBufferWebCookie({
+          res,
+          value: bufferWebCookie,
+        });
+      }
+      const { token, user, twostep } = apiRes.toJSON().body;
       const newSession = {
         global: {
           userId: user._id,

@@ -9,6 +9,7 @@ bufferApi.signin = ({
   password,
   clientId,
   clientSecret,
+  createSession,
 }) => rp({
   uri: `${BUFFER_API_ADDR}/1/user/signin.json`,
   method: 'POST',
@@ -18,8 +19,10 @@ bufferApi.signin = ({
     client_secret: clientSecret,
     email,
     password,
+    create_session: createSession,
   },
   json: true,
+  resolveWithFullResponse: true,
 });
 
 // TODO - Add backup phone number usage
