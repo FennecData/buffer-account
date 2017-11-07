@@ -8,6 +8,24 @@ const sessionUtils = require('./session');
 
 const controller = module.exports;
 
+const parseBufferWebCookie = ({ apiRes }) =>
+  (apiRes.headers['set-cookie'] || []).reduce((cookieValue, currentCookie) => {
+    // no cookie to look at
+    if (!currentCookie) {
+      return cookieValue;
+    }
+    // cookie is not a bufferapp_ci_session cookie
+    if (!(currentCookie.includes('bufferapp_ci_session'))) {
+      return cookieValue;
+    }
+    // if we have a duplicate cookie - choose the cookie with more information
+    const cookie = decodeURIComponent(currentCookie.split('; ')[0].split('=')[1]);
+    if (cookieValue && cookieValue.length > cookie.length) {
+      return cookieValue;
+    }
+    return cookie;
+  }, undefined);
+
 const selectClient = ({
   app,
 }) => {
@@ -63,6 +81,7 @@ const getAnyAccessToken = ({
 
 const autoLoginWithAccessToken = ({
   accessToken,
+  bufferSession,
   redirect,
   req,
   res,
@@ -74,10 +93,19 @@ const autoLoginWithAccessToken = ({
   });
   bufferApi.convertSession({
     accessToken,
+    createSession: !bufferSession,
     clientId,
     clientSecret,
   })
-    .then(({ token }) => {
+    .then((apiRes) => {
+      const bufferWebCookie = parseBufferWebCookie({ apiRes });
+      if (bufferWebCookie) {
+        sessionUtils.writeBufferWebCookie({
+          res,
+          value: bufferWebCookie,
+        });
+      }
+      const { token } = apiRes.toJSON().body;
       const newSession = {
         [sessionKey]: {
           accessToken: token,
@@ -107,8 +135,15 @@ const autoLoginWithBufferSession = ({
     clientId,
     clientSecret,
   })
-    .then((response) => {
-      const { user, token } = response;
+    .then((apiRes) => {
+      const bufferWebCookie = parseBufferWebCookie({ apiRes });
+      if (bufferWebCookie) {
+        sessionUtils.writeBufferWebCookie({
+          res,
+          value: bufferWebCookie,
+        });
+      }
+      const { user, token } = apiRes.toJSON().body;
       const newSession = {
         global: {
           userId: user._id,
@@ -133,6 +168,7 @@ controller.login = (req, res, next) => {
   if (accessToken) {
     autoLoginWithAccessToken({
       accessToken,
+      bufferSession,
       redirect,
       req,
       res,
@@ -155,24 +191,6 @@ controller.login = (req, res, next) => {
       });
   }
 };
-
-const parseBufferWebCookie = ({ apiRes }) =>
-  (apiRes.headers['set-cookie'] || []).reduce((cookieValue, currentCookie) => {
-    // no cookie to look at
-    if (!currentCookie) {
-      return cookieValue;
-    }
-    // cookie is not a bufferapp_ci_session cookie
-    if (!(currentCookie.includes('bufferapp_ci_session'))) {
-      return cookieValue;
-    }
-    // if we have a duplicate cookie - choose the cookie with more information
-    const cookie = decodeURIComponent(currentCookie.split('; ')[0].split('=')[1]);
-    if (cookieValue && cookieValue.length > cookie.length) {
-      return cookieValue;
-    }
-    return cookie;
-  }, undefined);
 
 // if the user makes it here that means the user is signing
 // in for the first time anywhere
@@ -269,8 +287,17 @@ controller.handleTfa = (req, res, next) => {
     code,
     clientId,
     clientSecret,
+    createSession: true,
   })
-    .then(({ token }) => {
+    .then((apiRes) => {
+      const bufferWebCookie = parseBufferWebCookie({ apiRes });
+      if (bufferWebCookie) {
+        sessionUtils.writeBufferWebCookie({
+          res,
+          value: bufferWebCookie,
+        });
+      }
+      const { token } = apiRes.toJSON().body;
       const updatedSession = {
         global: {
           userId: req.session.global.userId,
