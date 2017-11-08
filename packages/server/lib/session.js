@@ -35,9 +35,8 @@ exports.writeCookie = (token, res) => {
   res.cookie(COOKIE_NAME, token, {
     domain: COOKIE_DOMAIN,
     maxAge: 365 * 24 * 60 * 60 * 1000, // 1 year
-    // NOTE - We should enable httpOnly if we skip manually sending the cookie on the front-end
-    // httpOnly: true,
-    // secure: true, // TODO :)
+    httpOnly: true,
+    secure: true,
   });
 };
 
