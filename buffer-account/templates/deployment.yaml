@@ -8,7 +8,6 @@ metadata:
     track: {{ .Values.track }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
     branch: {{ .Values.branchName }}
-  namespace: buffer
 spec:
   minReadySeconds: 10
   replicas: {{ .Values.replicaCount }}
