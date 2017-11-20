@@ -1,10 +1,16 @@
 const ejs = require('ejs');
+const ObjectPath = require('object-path');
 const { join } = require('path');
 const { parse } = require('url');
 const RPCClient = require('micro-rpc-client');
 const { isShutingDown } = require('@bufferapp/shutdown-helper');
 const bufferApi = require('./bufferApi');
-const sessionUtils = require('./session');
+const {
+  writeCookie,
+  createSession,
+  updateSession,
+  getCookie,
+} = require('@bufferapp/session-manager');
 
 const controller = module.exports;
 
@@ -25,6 +31,23 @@ const parseBufferWebCookie = ({ apiRes }) =>
     }
     return cookie;
   }, undefined);
+
+const passThroughBufferWebCookie = ({
+  apiRes,
+  res,
+  production,
+}) => {
+  // pass through buffer web session
+  const bufferWebCookie = parseBufferWebCookie({ apiRes });
+  if (bufferWebCookie) {
+    writeCookie({
+      name: `${production ? '' : 'local'}bufferapp_ci_session`,
+      value: bufferWebCookie,
+      domain: '.buffer.com',
+      res,
+    });
+  }
+};
 
 const selectClient = ({
   app,
@@ -79,7 +102,7 @@ const getAnyAccessToken = ({
   return accessToken;
 }, undefined);
 
-const autoLoginWithAccessToken = ({
+const autoLoginWithAccessToken = async ({
   accessToken,
   bufferSession,
   redirect,
@@ -87,84 +110,105 @@ const autoLoginWithAccessToken = ({
   res,
   next,
 }) => {
+  const production = req.app.get('isProduction');
+  const sessionClient = req.app.get('sessionClient');
   const url = redirect ? parse(redirect).hostname : undefined;
   const { clientId, clientSecret, sessionKey } = selectClient({
     app: parseAppFromUrl({ url }),
   });
-  bufferApi.convertSession({
-    accessToken,
-    createSession: !bufferSession,
-    clientId,
-    clientSecret,
-  })
-    .then((apiRes) => {
-      const bufferWebCookie = parseBufferWebCookie({ apiRes });
-      if (bufferWebCookie) {
-        sessionUtils.writeBufferWebCookie({
-          res,
-          value: bufferWebCookie,
-        });
-      }
-      const { token } = apiRes.toJSON().body;
-      const newSession = {
-        [sessionKey]: {
-          accessToken: token,
-        },
-      };
-      return sessionUtils.update({
-        token: sessionUtils.getCookie(req),
-        session: newSession,
-      });
-    })
-    .then(() => res.redirect(redirect || '/'))
-    .catch(next);
+
+  try {
+    const apiRes = await bufferApi.convertSession({
+      accessToken,
+      createSession: !bufferSession,
+      clientId,
+      clientSecret,
+    });
+
+    passThroughBufferWebCookie({
+      res,
+      apiRes,
+      production,
+    });
+
+    // update the session
+    const { token } = apiRes.toJSON().body;
+    const session = {
+      [sessionKey]: {
+        accessToken: token,
+      },
+    };
+    await updateSession({
+      session,
+      req,
+      sessionClient,
+      production,
+    });
+    res.redirect(redirect || '/');
+  } catch (err) {
+    next(err);
+  }
 };
 
-const autoLoginWithBufferSession = ({
+const autoLoginWithBufferSession = async ({
   redirect,
   bufferSession,
+  req,
   res,
   next,
 }) => {
+  const production = req.app.get('isProduction');
+  const sessionClient = req.app.get('sessionClient');
   const url = redirect ? parse(redirect).hostname : undefined;
   const { clientId, clientSecret, sessionKey } = selectClient({
     app: parseAppFromUrl({ url }),
   });
-  bufferApi.convertSession({
-    bufferSession,
-    clientId,
-    clientSecret,
-  })
-    .then((apiRes) => {
-      const bufferWebCookie = parseBufferWebCookie({ apiRes });
-      if (bufferWebCookie) {
-        sessionUtils.writeBufferWebCookie({
-          res,
-          value: bufferWebCookie,
-        });
-      }
-      const { user, token } = apiRes.toJSON().body;
-      const newSession = {
-        global: {
-          userId: user._id,
-        },
-        [sessionKey]: {
-          accessToken: token,
-        },
-      };
-      return sessionUtils.create(newSession);
-    })
-    .then(({ token }) => {
-      sessionUtils.writeCookie(token, res);
-      res.redirect(redirect || '/');
-    })
-    .catch(next);
+
+  try {
+    const apiRes = await bufferApi.convertSession({
+      bufferSession,
+      clientId,
+      clientSecret,
+    });
+
+    passThroughBufferWebCookie({
+      res,
+      apiRes,
+      production,
+    });
+
+    // create a new session
+    const { user, token } = apiRes.toJSON().body;
+    const session = {
+      global: {
+        userId: user._id,
+      },
+      [sessionKey]: {
+        accessToken: token,
+      },
+    };
+    await createSession({
+      session,
+      production,
+      res,
+      sessionClient,
+    });
+
+    // redirect the user back to the right place
+    res.redirect(redirect || '/');
+  } catch (err) {
+    next(err);
+  }
 };
 
 controller.login = (req, res, next) => {
+  const production = req.app.get('isProduction');
   const { redirect } = req.query;
   const accessToken = getAnyAccessToken({ session: req.session || {} });
-  const bufferSession = sessionUtils.getBufferWebCookie(req);
+  const bufferSession = getCookie({
+    req,
+    name: `${production ? '' : 'local'}bufferapp_ci_session`,
+  });
   if (accessToken) {
     autoLoginWithAccessToken({
       accessToken,
@@ -194,64 +238,75 @@ controller.login = (req, res, next) => {
 
 // if the user makes it here that means the user is signing
 // in for the first time anywhere
-controller.handleLogin = (req, res, next) => {
-  if (!req.body.email || !req.body.password) {
+controller.handleLogin = async (req, res, next) => {
+  if (
+    !ObjectPath.has(req, 'body.email') ||
+    !ObjectPath.has(req, 'body.password')
+  ) {
     return res.send('missing required fields');
   }
 
+  const production = req.app.get('isProduction');
+  const sessionClient = req.app.get('sessionClient');
   const url = req.body.redirect ? parse(req.body.redirect).hostname : undefined;
   const { clientId, clientSecret, sessionKey } = selectClient({
     app: parseAppFromUrl({ url }),
   });
 
-  bufferApi.signin({
-    email: req.body.email,
-    password: req.body.password,
-    createSession: true,
-    clientId,
-    clientSecret,
-  })
-    .then((apiRes) => {
-      const bufferWebCookie = parseBufferWebCookie({ apiRes });
-      if (bufferWebCookie) {
-        sessionUtils.writeBufferWebCookie({
-          res,
-          value: bufferWebCookie,
-        });
-      }
-      const { token, user, twostep } = apiRes.toJSON().body;
-      const newSession = {
-        global: {
-          userId: user._id,
-        },
+  try {
+    const apiRes = await bufferApi.signin({
+      email: req.body.email,
+      password: req.body.password,
+      createSession: true,
+      clientId,
+      clientSecret,
+    });
+
+    passThroughBufferWebCookie({
+      res,
+      apiRes,
+      production,
+    });
+
+    // create new session
+    const { token: accessToken, user, twostep } = apiRes.toJSON().body;
+    const session = {
+      global: {
+        userId: user._id,
+      },
+    };
+    if (twostep) {
+      session.global.tfa = twostep;
+    } else {
+      session[sessionKey] = {
+        accessToken,
       };
-      if (twostep) {
-        newSession.global.tfa = twostep;
-      } else {
-        newSession[sessionKey] = {
-          accessToken: token,
-        };
-      }
-      return sessionUtils.create(newSession);
-    })
-    .then(({ session, token }) => {
-      sessionUtils.writeCookie(token, res);
-      let redirectURL = '/';
-      if (session.global.tfa) {
-        redirectURL = req.body.redirect ?
-          `/login/tfa?redirect=${req.body.redirect}` :
-          '/login/tfa';
-      } else if (req.body.redirect) {
-        redirectURL = req.body.redirect;
-      }
-      res.redirect(redirectURL);
-    })
-    .catch(next);
+    }
+    await createSession({
+      session,
+      production,
+      res,
+      sessionClient,
+    });
+
+    // redirect to the right place
+    let redirectURL = '/';
+    if (session.global.tfa) {
+      redirectURL = req.body.redirect ?
+        `/login/tfa?redirect=${req.body.redirect}` :
+        '/login/tfa';
+    } else if (req.body.redirect) {
+      redirectURL = req.body.redirect;
+    }
+    res.redirect(redirectURL);
+  } catch (e) {
+    next(e);
+  }
 };
 
 controller.tfa = (req, res) => {
   const { redirect } = req.query;
-  if (!(req.session && req.session.global && req.session.global.tfa)) {
+  if (!ObjectPath.has(req, 'session.global.tfa')) {
     res.redirect(`/login/${redirect ? `?redirect=${redirect}` : ''}`);
   } else {
     ejs.renderFile(
@@ -263,56 +318,61 @@ controller.tfa = (req, res) => {
   }
 };
 
-controller.handleTfa = (req, res, next) => {
+controller.handleTfa = async (req, res, next) => {
   const { redirect, code } = req.body;
-  if (!(
-    req.session &&
-    req.session.global &&
-    req.session.global.tfa &&
-    req.session.global.userId
-  )) {
+  if (
+    !ObjectPath.has(req, 'session.global.tfa') ||
+    !ObjectPath.has(req, 'session.global.userId')
+  ) {
     return res.redirect(`/login/${redirect ? `?redirect=${redirect}` : ''}`);
   }
   if (!code) {
     return res.send('missing required fields');
   }
 
+  const production = req.app.get('isProduction');
+  const sessionClient = req.app.get('sessionClient');
+
   const url = redirect ? parse(redirect).hostname : undefined;
   const { clientId, clientSecret, sessionKey } = selectClient({
     app: parseAppFromUrl({ url }),
   });
 
-  bufferApi.tfa({
-    userId: req.session.global.userId,
-    code,
-    clientId,
-    clientSecret,
-    createSession: true,
-  })
-    .then((apiRes) => {
-      const bufferWebCookie = parseBufferWebCookie({ apiRes });
-      if (bufferWebCookie) {
-        sessionUtils.writeBufferWebCookie({
-          res,
-          value: bufferWebCookie,
-        });
-      }
-      const { token } = apiRes.toJSON().body;
-      const updatedSession = {
-        global: {
-          userId: req.session.global.userId,
-        },
-        [sessionKey]: {
-          accessToken: token,
-        },
-      };
-      return sessionUtils.update({
-        token: sessionUtils.getCookie(req),
-        session: updatedSession,
-      });
-    })
-    .then(() => res.redirect(redirect || '/'))
-    .catch(next);
+  try {
+    const apiRes = await bufferApi.tfa({
+      userId: req.session.global.userId,
+      code,
+      clientId,
+      clientSecret,
+      createSession: true,
+    });
+
+    passThroughBufferWebCookie({
+      res,
+      apiRes,
+      production,
+    });
+
+    const { token } = apiRes.toJSON().body;
+    const session = {
+      global: {
+        userId: req.session.global.userId,
+      },
+      [sessionKey]: {
+        accessToken: token,
+      },
+    };
+
+    await updateSession({
+      session,
+      req,
+      sessionClient,
+      production,
+    });
+    res.redirect(redirect || '/');
+  } catch (err) {
+    next(err);
+  }
 };
 
 controller.signout = (req, res) => {

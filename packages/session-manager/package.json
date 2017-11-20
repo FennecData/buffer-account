@@ -1,7 +1,7 @@
 {
-  "name": "@bufferapp/account-store",
+  "name": "@bufferapp/session-manager",
   "version": "0.5.36",
-  "description": "",
+  "description": "Buffer session manager",
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ignore-pattern coverage node_modules",
@@ -10,8 +10,8 @@
   },
   "author": "hharnisc@gmail.com",
   "dependencies": {
-    "@bufferapp/async-data-fetch": "0.5.25",
-    "@bufferapp/notifications": "0.5.34"
+    "micro-rpc-client": "0.1.2",
+    "object-path": "0.11.4"
   },
   "devDependencies": {
     "eslint": "3.19.0",
