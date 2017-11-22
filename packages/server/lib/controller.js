@@ -10,6 +10,7 @@ const {
   createSession,
   updateSession,
   getCookie,
+  destroySession,
 } = require('@bufferapp/session-manager');
 
 const controller = module.exports;
@@ -375,8 +376,22 @@ controller.handleTfa = async (req, res, next) => {
   }
 };
 
-controller.signout = (req, res) => {
-  res.send('signout page');
+controller.logout = async (req, res, next) => {
+  try {
+    const { redirect } = req.query;
+    const production = req.app.get('isProduction');
+    await destroySession({
+      req,
+      res,
+      production,
+    });
+    const accountUrl = `https://account${production ? '' : '.local'}.buffer.com/login/`;
+    res.redirect(
+      `${accountUrl}${redirect ? `?redirect=${redirect}` : ''}`,
+    );
+  } catch (err) {
+    next(err);
+  }
 };
 
 controller.healthCheck = (req, res) => {

@@ -65,6 +65,26 @@ sessionExports.updateSession = async ({
     }),
   });
 
+sessionExports.destroySession = async({
+  req,
+  res,
+  production,
+}) => {
+  const cookieName = sessionExports.cookieName({ production });
+  await sessionClient.call('destroy', {
+    token: sessionExports.getCookie({
+      name: cookieName,
+      req,
+    }),
+  });
+  res.clearCookie(cookieName, {
+    domain: sessionExports.cookieDomain({ production }),
+  });
+  res.clearCookie(`${production ? '' : 'local'}bufferapp_ci_session`, {
+    domain: '.buffer.com',
+  });
+};
+
 const getSession = ({
   production,
   sessionKeys,

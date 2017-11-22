@@ -25,6 +25,11 @@ RPCClient.prototype.call = jest.fn((name, args) => {
       return Promise.reject(new Error(RPCClient.fakeErrorMessage));
     }
     return Promise.resolve('OK');
+  } else if (name === 'destroy') {
+    if (args.token === 'brokenToken') {
+      return Promise.reject(new Error(RPCClient.fakeErrorMessage));
+    }
+    return Promise.resolve('OK');
   }
 });
 module.exports = RPCClient;

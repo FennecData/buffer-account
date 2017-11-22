@@ -8,6 +8,7 @@ import {
   cookieName,
   createSession,
   updateSession,
+  destroySession,
 } from './';
 
 describe('SessionManager', () => {
@@ -427,6 +428,97 @@ describe('SessionManager', () => {
             httpOnly: true,
             secure: true,
           });
+    });
+  });
+
+  describe('destroySession', () => {
+    it('should destroy a session', async () => {
+      const name = 'buffer_session';
+      const value = 'coooooookies';
+      const req = {
+        cookies: {
+          [name]: value,
+        },
+      };
+      const res = {
+        clearCookie: jest.fn(),
+        send: jest.fn(),
+      };
+      const sessionClient = new RPCClient({ url: 'sometesturl' });
+      await destroySession({
+        req,
+        res,
+        sessionClient,
+        production: true,
+      });
+      expect(RPCClient.prototype.call)
+        .toBeCalledWith('destroy', {
+          token: value,
+        });
+      expect(res.clearCookie)
+        .toBeCalledWith('buffer_session', {
+          domain: '.buffer.com',
+        });
+      expect(res.clearCookie)
+        .toBeCalledWith('bufferapp_ci_session', {
+          domain: '.buffer.com',
+        });
+    });
+
+    it('should destroy a dev session', async () => {
+      const name = 'local_buffer_session';
+      const value = 'coooooookies';
+      const req = {
+        cookies: {
+          [name]: value,
+        },
+      };
+      const res = {
+        clearCookie: jest.fn(),
+        send: jest.fn(),
+      };
+      const sessionClient = new RPCClient({ url: 'sometesturl' });
+      await destroySession({
+        req,
+        res,
+        sessionClient,
+        production: false,
+      });
+      expect(RPCClient.prototype.call)
+        .toBeCalledWith('destroy', {
+          token: value,
+        });
+      expect(res.clearCookie)
+        .toBeCalledWith(name, {
+          domain: '.local.buffer.com',
+        });
+      expect(res.clearCookie)
+        .toBeCalledWith('localbufferapp_ci_session', {
+          domain: '.buffer.com',
+        });
+    });
+
+    it('should handle destory session failure', async () => {
+      const name = 'buffer_session';
+      const req = {
+        cookies: {
+          [name]: 'brokenToken',
+        },
+      };
+      const res = {};
+      const sessionClient = new RPCClient({ url: 'sometesturl' });
+      try {
+        await destroySession({
+          res,
+          req,
+          sessionClient,
+          production: true,
+        });
+        throw new Error('This should break');
+      } catch (err) {
+        expect(err.message)
+          .toBe(RPCClient.fakeErrorMessage);
+      }
     });
   });
 });

@@ -88,9 +88,9 @@ app.post('/rpc', (req, res, next) => {
     .catch(err => next(err));
 });
 
-app.get('/', (req, res) => res.send(getHtml()));
+app.get('/logout', controller.logout);
 
-app.post('/signout', controller.signout);
+app.get('/', (req, res) => res.send(getHtml()));
 
 app.use(apiError);
 
