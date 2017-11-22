@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/account-web",
-  "version": "0.5.36",
+  "version": "0.5.37",
   "description": "Buffer Web Dashboard",
   "main": "index.jsx",
   "scripts": {
@@ -10,7 +10,7 @@
     "test-update": "jest -u --config=../../.jestrc.json"
   },
   "dependencies": {
-    "@bufferapp/account-store": "0.5.36",
+    "@bufferapp/account-store": "0.5.37",
     "@bufferapp/async-data-fetch": "0.5.25",
     "@bufferapp/notifications": "0.5.34"
   },
