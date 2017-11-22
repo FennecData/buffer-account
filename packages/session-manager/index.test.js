@@ -9,6 +9,7 @@ import {
   createSession,
   updateSession,
   destroySession,
+  serviceUrl,
 } from './';
 
 describe('SessionManager', () => {
@@ -519,6 +520,20 @@ describe('SessionManager', () => {
         expect(err.message)
           .toBe(RPCClient.fakeErrorMessage);
       }
+    });
+  });
+
+  describe('serviceUrl', () => {
+    it('should return production service url', () => {
+      const expectedServiceUrl = 'https://account.buffer.com';
+      expect(serviceUrl({ production: true }))
+        .toBe(expectedServiceUrl);
+    });
+
+    it('should return dev service url', () => {
+      const expectedServiceUrl = 'https://account.local.buffer.com';
+      expect(serviceUrl({ production: false }))
+        .toBe(expectedServiceUrl);
     });
   });
 });

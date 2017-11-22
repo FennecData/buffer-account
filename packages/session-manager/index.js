@@ -5,6 +5,8 @@ const sessionExports = module.exports;
 
 const sessionClient = new RPCClient({ url: `http://${process.env.SESSION_SVC_HOST}` });
 
+sessionExports.serviceUrl = ({ production }) => `https://account${production ? '' : '.local'}.buffer.com`;
+
 sessionExports.cookieName = ({ production }) =>
   (production ? 'buffer_session' : 'local_buffer_session');
 
@@ -124,9 +126,9 @@ const validateSession = ({
     return next();
   }
   const redirect = encodeURIComponent(`https://${req.get('host')}${req.originalUrl}`);
-  const accountUrl =
-    `https://account${production ? '' : '.local'}.buffer.com/login/`;
-  res.redirect(`${accountUrl}?redirect=${redirect}`);
+  const baseUrl =
+    `${sessionExports.serviceUrl({ production })}/login/`;
+  res.redirect(`${baseUrl}?redirect=${redirect}`);
 };
 
 sessionExports.middleware = {

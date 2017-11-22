@@ -11,6 +11,7 @@ const {
   updateSession,
   getCookie,
   destroySession,
+  serviceUrl,
 } = require('@bufferapp/session-manager');
 
 const controller = module.exports;
@@ -385,9 +386,9 @@ controller.logout = async (req, res, next) => {
       res,
       production,
     });
-    const accountUrl = `https://account${production ? '' : '.local'}.buffer.com/login/`;
+    const baseUrl = `${serviceUrl({ production })}/login/`;
     res.redirect(
-      `${accountUrl}${redirect ? `?redirect=${redirect}` : ''}`,
+      `${baseUrl}${redirect ? `?redirect=${redirect}` : ''}`,
     );
   } catch (err) {
     next(err);
