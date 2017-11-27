@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, InputPassword } from '@bufferapp/components';
 import { Field, reduxForm } from 'redux-form';
-import { validate } from './validate.jsx';
+import validate from './validate.jsx';
 
 const currentPasswordStyle = {
   marginBottom: '30px'
