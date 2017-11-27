@@ -17,5 +17,9 @@ storiesOf('PasswordReset')
     </Provider>,
   )
   .add('default', () => (
-    <PasswordReset onSaveClick={action('saveButtonClick')} />
+    <PasswordReset
+      handleSubmit={action('on-submit-action')} 
+      onSaveClick={action('on-save-action')}
+      onChange={action('on-change-action')}
+    />
   ));

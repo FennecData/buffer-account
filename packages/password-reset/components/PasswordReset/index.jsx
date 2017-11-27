@@ -1,9 +1,10 @@
 import React from 'react';
-import {Button, InputPassword} from '@bufferapp/components';
+import { Button, InputPassword } from '@bufferapp/components';
 import { Field, reduxForm } from 'redux-form';
+import { validate } from './validate.jsx';
 
-const PasswordReset = ({onSaveClick}) =>
-  <div>
+const PasswordReset = ({handleSubmit, onSaveClick}) =>
+  <form onSubmit={handleSubmit}>
     <Field
       name={'currentPassword'}
       component={InputPassword}
@@ -18,9 +19,8 @@ const PasswordReset = ({onSaveClick}) =>
       name={'confirmPassword'}
       component={InputPassword}
     />
+    <Button type={'submit'} onClick={onSaveClick}>Save</Button>
+  </form>;
 
-    <Button onClick={onSaveClick}>Save</Button>
-  </div>;
-
-const formConfig = { form: 'password-reset' };
+const formConfig = { form: 'password-reset', validate };
 export default reduxForm(formConfig)(PasswordReset);
