@@ -15,8 +15,8 @@ const buttonStyle = {
   marginTop: '30px'
 };
 
-const PasswordReset = ({handleSubmit, onSaveClick}) =>
-  <form onSubmit={handleSubmit}>
+const PasswordReset = ({handleSubmit}) =>
+  <form>
     <div style={currentPasswordStyle}>
       <Field
         name={'currentPassword'}
@@ -36,7 +36,7 @@ const PasswordReset = ({handleSubmit, onSaveClick}) =>
       component={InputPassword}
     />
     <div style={buttonStyle}>
-      <Button type={'submit'} onClick={onSaveClick}>Save</Button>
+      <Button type={'submit'} onClick={handleSubmit}>Save</Button>
     </div>
   </form>;
 

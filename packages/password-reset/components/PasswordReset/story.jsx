@@ -18,8 +18,7 @@ storiesOf('PasswordReset')
   )
   .add('default', () => (
     <PasswordReset
-      handleSubmit={action('on-submit-action')} 
-      onSaveClick={action('on-save-action')}
+      onSubmit={action('on-submit-action')} 
       onChange={action('on-change-action')}
     />
   ));
