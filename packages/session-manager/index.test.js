@@ -10,6 +10,7 @@ import {
   updateSession,
   destroySession,
   serviceUrl,
+  logoutUrl,
 } from './';
 
 describe('SessionManager', () => {
@@ -534,6 +535,22 @@ describe('SessionManager', () => {
       const expectedServiceUrl = 'https://account.local.buffer.com';
       expect(serviceUrl({ production: false }))
         .toBe(expectedServiceUrl);
+    });
+  });
+
+  describe('logoutUrl', () => {
+    it('should return expected logoutUrl', () => {
+      const expectedHref = 'about:blank';
+      global.window.location.href = expectedHref;
+      expect(logoutUrl({ production: true }))
+        .toBe(`https://account.buffer.com/logout/?redirect=${expectedHref}`);
+    });
+
+    it('should return expected logoutUrl in dev', () => {
+      const expectedHref = 'about:blank';
+      global.window.location.href = expectedHref;
+      expect(logoutUrl({ production: false }))
+        .toBe(`https://account.local.buffer.com/logout/?redirect=${expectedHref}`);
     });
   });
 });

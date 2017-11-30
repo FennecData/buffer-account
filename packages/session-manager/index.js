@@ -7,6 +7,11 @@ const sessionClient = new RPCClient({ url: `http://${process.env.SESSION_SVC_HOS
 
 sessionExports.serviceUrl = ({ production }) => `https://account${production ? '' : '.local'}.buffer.com`;
 
+const currentUrl = () => window.location.href;
+
+sessionExports.logoutUrl = ({ production }) =>
+  `${sessionExports.serviceUrl({ production })}/logout/?redirect=${currentUrl()}`;
+
 sessionExports.cookieName = ({ production }) =>
   (production ? 'buffer_session' : 'local_buffer_session');
 
