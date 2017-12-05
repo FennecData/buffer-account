@@ -7,6 +7,7 @@ import { routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createHashHistory';
 import { middleware as asyncDataFetchMiddleware } from '@bufferapp/async-data-fetch';
 import { middleware as notificationsMiddleware } from '@bufferapp/notifications';
+import { middleware as passwordResetMiddleware } from '@bufferapp/account-password-reset';
 import reducers from './reducers';
 
 export const history = createHistory();
@@ -25,6 +26,7 @@ const configureStore = (initialstate) => {
         routerMiddleware(history),
         asyncDataFetchMiddleware,
         notificationsMiddleware,
+        passwordResetMiddleware,
       ),
     ),
   );
