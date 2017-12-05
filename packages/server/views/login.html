@@ -3,8 +3,8 @@
 <form action="/login" method="post">
   <input type="email" name="email" value="" placeholder="your email" required>
   <input type="password" name="password" value="" placeholder="your password" required>
-  <% if (redirect) { %>
-    <input type="hidden" name="redirect" value="<%= redirect %>">
-  <% } %>
+  {{#if redirect}}
+    <input type="hidden" name="redirect" value="{{redirect}}">
+  {{/if}}
   <button type="submit">Login</button>
 </form>

@@ -1,4 +1,6 @@
-const ejs = require('ejs');
+const { readFile } = require('fs');
+const { promisify } = require('util');
+const { compile } = require('handlebars');
 const ObjectPath = require('object-path');
 const { join } = require('path');
 const { parse } = require('url');
@@ -14,7 +16,33 @@ const {
   serviceUrl,
 } = require('@bufferapp/session-manager');
 
+const readFileAsync = promisify(readFile);
+
 const controller = module.exports;
+
+let cachedLoginTemplate;
+const loginTemplate = async () => {
+  if (cachedLoginTemplate) {
+    return cachedLoginTemplate;
+  }
+  const template = await readFileAsync(join(__dirname, '../views/login.html'));
+  cachedLoginTemplate = compile(template.toString());
+  return cachedLoginTemplate;
+};
+// call this before any request to load it into memory
+loginTemplate();
+
+let cachedTFATemplate;
+const tfaTemplate = async () => {
+  if (cachedTFATemplate) {
+    return cachedTFATemplate;
+  }
+  const template = await readFileAsync(join(__dirname, '../views/tfa.html'));
+  cachedTFATemplate = compile(template.toString());
+  return cachedTFATemplate;
+};
+// call this before any request to load it into memory
+tfaTemplate();
 
 const parseBufferWebCookie = ({ apiRes }) =>
   (apiRes.headers['set-cookie'] || []).reduce((cookieValue, currentCookie) => {
@@ -203,7 +231,7 @@ const autoLoginWithBufferSession = async ({
   }
 };
 
-controller.login = (req, res, next) => {
+controller.login = async (req, res, next) => {
   const production = req.app.get('isProduction');
   const { redirect } = req.query;
   const accessToken = getAnyAccessToken({ session: req.session || {} });
@@ -229,12 +257,8 @@ controller.login = (req, res, next) => {
       next,
     });
   } else {
-    ejs.renderFile(
-      join(__dirname, '../views/login.html'),
-      { redirect },
-      (err, html) => {
-        res.send(html);
-      });
+    const template = await loginTemplate();
+    res.send(template({ redirect }));
   }
 };
 
@@ -306,17 +330,13 @@ controller.handleLogin = async (req, res, next) => {
   }
 };
 
-controller.tfa = (req, res) => {
+controller.tfa = async (req, res) => {
   const { redirect } = req.query;
   if (!ObjectPath.has(req, 'session.global.tfa')) {
     res.redirect(`/login/${redirect ? `?redirect=${redirect}` : ''}`);
   } else {
-    ejs.renderFile(
-      join(__dirname, '../views/tfa.html'),
-      { redirect },
-      (err, html) => {
-        res.send(html);
-      });
+    const template = await tfaTemplate();
+    res.send(template({ redirect }));
   }
 };
 
