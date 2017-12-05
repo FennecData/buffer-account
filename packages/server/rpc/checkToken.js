@@ -1,41 +1,25 @@
-const jwt = require('jsonwebtoken');
+const ObjectPath = require('object-path');
 const {
   json,
   createError,
 } = require('micro');
-const RPCClient = require('micro-rpc-client');
 
-const rpcClient = new RPCClient({
-  url: `http://${process.env.SESSION_SVC_HOST}`,
-});
 
 const whitelistedRPCNames = [
-  'login',
   'methods',
+  'passwordReset',
 ];
 
 module.exports = next => async (req, res) => {
   const data = await json(req);
-  const { name, args } = data;
-  const parsedArgs = args ? JSON.parse(args) : undefined;
-  if (whitelistedRPCNames.includes(name)) {
+  const { name } = data;
+  if (
+    whitelistedRPCNames.includes(name) ||
+    ObjectPath.has(req, 'session.account')
+  ) {
     return next(req, res);
   }
-  if (!parsedArgs.token) {
-    const errorMessage = 'Missing session token';
-    res.statusMessage = errorMessage;
-    throw createError(401, errorMessage);
-  }
-  try {
-    const { token } = await rpcClient.call('get', {
-      token: parsedArgs.token,
-    });
-    const session = jwt.decode(token);
-    req.session = session;
-    return next(req, res);
-  } catch (err) {
-    const errorMessage = err.message;
-    res.statusMessage = errorMessage;
-    throw createError(401, errorMessage);
-  }
+  const errorMessage = 'Unauthorized';
+  res.statusMessage = errorMessage;
+  throw createError(401, errorMessage);
 };
