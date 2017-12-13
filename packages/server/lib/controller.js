@@ -44,6 +44,17 @@ const tfaTemplate = async () => {
 // call this before any request to load it into memory
 tfaTemplate();
 
+let cachedMainTemplate;
+const mainTemplate = async () => {
+  if (cachedMainTemplate) {
+    return cachedMainTemplate;
+  }
+  const template = await readFileAsync(join(__dirname, '../views/main.html'));
+  cachedMainTemplate = compile(template.toString());
+  return cachedMainTemplate;
+};
+mainTemplate();
+
 const parseBufferWebCookie = ({ apiRes }) =>
   (apiRes.headers['set-cookie'] || []).reduce((cookieValue, currentCookie) => {
     // no cookie to look at
@@ -257,8 +268,10 @@ controller.login = async (req, res, next) => {
       next,
     });
   } else {
-    const template = await loginTemplate();
-    res.send(template({ redirect }));
+    const tmplt = await loginTemplate();
+    const renderedLoginTemplate = tmplt({ redirect });
+    const mainTmplt = await mainTemplate();
+    res.send(mainTmplt({ body: renderedLoginTemplate }));
   }
 };
 
@@ -335,8 +348,10 @@ controller.tfa = async (req, res) => {
   if (!ObjectPath.has(req, 'session.global.tfa')) {
     res.redirect(`/login/${redirect ? `?redirect=${redirect}` : ''}`);
   } else {
-    const template = await tfaTemplate();
-    res.send(template({ redirect }));
+    const tmplt = await tfaTemplate();
+    const renderedLoginTemplate = tmplt({ redirect });
+    const mainTmplt = await mainTemplate();
+    res.send(mainTmplt({ body: renderedLoginTemplate }));
   }
 };
 
