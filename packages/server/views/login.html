@@ -28,7 +28,7 @@
     </div>
   {{/if}}
   <div class="separator"></div>
-  <button id="form-submit" type="submit" disabled>Sign In</button>
+  <button id="login-form-submit" type="submit" disabled>Sign In</button>
   <div class="form-div">
     <a href="https://buffer.com/oops">Forgot Your Password?</a>
   </div>
@@ -41,7 +41,7 @@
 <script type="text/javascript">
   var emailInput = document.querySelector('#email');
   var passwordInput = document.querySelector('#password');
-  var submitButton = document.querySelector('#form-submit');
+  var submitButton = document.querySelector('#login-form-submit');
   var loginForm = document.querySelector('#login-form');
   function handleInputChange(e) {
     if (emailInput.value) {
