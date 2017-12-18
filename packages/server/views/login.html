@@ -28,7 +28,7 @@
     </div>
   {{/if}}
   <div class="separator"></div>
-  <button type="submit">Sign In</button>
+  <button id="form-submit" type="submit" disabled>Sign In</button>
   <div class="form-div">
     <a href="https://buffer.com/oops">Forgot Your Password?</a>
   </div>
@@ -37,3 +37,27 @@
     <a href="https://buffer.com/signup?source=buffer-account-login">Sign Up</a>
   </div>
 </form>
+
+<script type="text/javascript">
+  var emailInput = document.querySelector('#email');
+  var passwordInput = document.querySelector('#password');
+  var submitButton = document.querySelector('#form-submit');
+  function handleInputChange(e) {
+    if (emailInput.value) {
+      emailInput.classList.remove('error');
+    }
+    if (passwordInput.value) {
+      passwordInput.classList.remove('error');
+    }
+    if (emailInput.value && passwordInput.value) {
+      submitButton.disabled = false;
+    } else {
+      submitButton.disabled = true;
+    }
+  }
+  emailInput.addEventListener('change', handleInputChange);
+  passwordInput.addEventListener('change', handleInputChange);
+  emailInput.addEventListener('keyup', handleInputChange);
+  passwordInput.addEventListener('keyup', handleInputChange);
+  handleInputChange(); // check when script runs
+</script>

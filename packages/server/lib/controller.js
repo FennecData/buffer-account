@@ -466,7 +466,10 @@ controller.handleTfa = async (req, res, next) => {
       });
     } catch (err) {
       return redirectWithError({
-        baseRoute: err.statusCode === 403 ? '/login' : '/login/tfa',
+        baseRoute:
+          err.statusCode === 403 &&
+          err.error.error === 'Session expired, please log in again' ?
+          '/login' : '/login/tfa',
         redirect,
         err,
         res,

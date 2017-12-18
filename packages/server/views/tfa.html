@@ -27,7 +27,7 @@
   </div>
   {{/if}}
   <div class="separator"></div>
-  <button type="submit">Verify</button>
+  <button id="form-submit" type="submit" disabled>Verify</button>
   <div class="form-div">Having Trouble?</div>
   <div class="form-div">
     <a href="https://buffer.com/verify?recovery=1">Use your 2-step recovery code</a>
@@ -37,3 +37,21 @@
     <a href="mailto:hello@bufferapp.com">Contact Us!</a>
   </div>
 </form>
+
+<script type="text/javascript">
+  var codeInput = document.querySelector('#code');
+  var submitButton = document.querySelector('#form-submit');
+  function handleInputChange(e) {
+    if (codeInput.value) {
+      codeInput.classList.remove('error');
+    }
+    if (codeInput.value) {
+      submitButton.disabled = false;
+    } else {
+      submitButton.disabled = true;
+    }
+  }
+  codeInput.addEventListener('change', handleInputChange);
+  codeInput.addEventListener('keyup', handleInputChange);
+  handleInputChange(); // check when script runs
+</script>
