@@ -1,4 +1,4 @@
-<form action="/login" method="post" class="form-login">
+<form action="/login" method="post" class="form-login" id="login-form">
   <h2>Sign in to Buffer</h2>
   <label for="email">Email</label>
   <input
@@ -42,6 +42,7 @@
   var emailInput = document.querySelector('#email');
   var passwordInput = document.querySelector('#password');
   var submitButton = document.querySelector('#form-submit');
+  var loginForm = document.querySelector('#login-form');
   function handleInputChange(e) {
     if (emailInput.value) {
       emailInput.classList.remove('error');
@@ -59,5 +60,13 @@
   passwordInput.addEventListener('change', handleInputChange);
   emailInput.addEventListener('keyup', handleInputChange);
   passwordInput.addEventListener('keyup', handleInputChange);
+  submitButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    submitButton.disabled = true;
+    submitButton.textContent = 'Signing In...';
+    emailInput.readOnly = true;
+    passwordInput.readOnly = true;
+    loginForm.submit();
+  });
   handleInputChange(); // check when script runs
 </script>
