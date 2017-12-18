@@ -5,13 +5,28 @@
     Enter the code below to log in.
   </p>
   <!-- We should tell the user if it's SMS or app-based tfa code -->
-  <input type="text" name="code" id="code" value="" placeholder="Authentication Code" required>
-  <div class="message-success">
-    We've sent a code to your phone number!
-  </div>
+  <input
+    type="text"
+    class="{{#if inputError}}error{{/if}}"
+    name="code"
+    id="code"
+    value=""
+    placeholder="Authentication Code"
+    required
+  >
   {{#if redirect}}
     <input type="hidden" name="redirect" value="{{redirect}}">
   {{/if}}
+  {{#if errorMessage}}
+  <div class="form-div message-error">
+    {{errorMessage}}
+  </div>
+  {{else}}
+  <div class="form-div message-success">
+    We've sent a code to your phone number!
+  </div>
+  {{/if}}
+  <div class="separator"></div>
   <button type="submit">Verify</button>
   <div class="form-div">Having Trouble?</div>
   <div class="form-div">

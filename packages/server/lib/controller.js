@@ -20,6 +20,35 @@ const readFileAsync = promisify(readFile);
 
 const controller = module.exports;
 
+const parseErrorMessage = ({ err }) => {
+  switch (err.statusCode) {
+    case 500:
+    case 400:
+      return 'Oops! An unexpected error occured, please try again.';
+    default:
+      return err.error.error;
+  }
+};
+
+const redirectWithError = ({
+  baseRoute,
+  redirect,
+  err,
+  res,
+}) => {
+  const queryParams = {
+    redirect,
+    errorMessage: parseErrorMessage({ err }),
+    errorCode: err.statusCode,
+  };
+  return res.redirect(`${baseRoute}?${
+    Object.keys(queryParams)
+      .filter(key => queryParams[key])
+      .map(key => `${key}=${queryParams[key]}`)
+      .join('&')
+  }`);
+};
+
 let cachedLoginTemplate;
 const loginTemplate = async () => {
   if (cachedLoginTemplate) {
@@ -159,12 +188,22 @@ const autoLoginWithAccessToken = async ({
   });
 
   try {
-    const apiRes = await bufferApi.convertSession({
-      accessToken,
-      createSession: !bufferSession,
-      clientId,
-      clientSecret,
-    });
+    let apiRes;
+    try {
+      apiRes = await bufferApi.convertSession({
+        accessToken,
+        createSession: !bufferSession,
+        clientId,
+        clientSecret,
+      });
+    } catch (err) {
+      return redirectWithError({
+        baseRoute: '/login',
+        redirect,
+        err,
+        res,
+      });
+    }
 
     passThroughBufferWebCookie({
       res,
@@ -206,11 +245,21 @@ const autoLoginWithBufferSession = async ({
   });
 
   try {
-    const apiRes = await bufferApi.convertSession({
-      bufferSession,
-      clientId,
-      clientSecret,
-    });
+    let apiRes;
+    try {
+      apiRes = await bufferApi.convertSession({
+        bufferSession,
+        clientId,
+        clientSecret,
+      });
+    } catch (err) {
+      return redirectWithError({
+        baseRoute: '/login',
+        redirect,
+        err,
+        res,
+      });
+    }
 
     passThroughBufferWebCookie({
       res,
@@ -244,13 +293,17 @@ const autoLoginWithBufferSession = async ({
 
 controller.login = async (req, res, next) => {
   const production = req.app.get('isProduction');
-  const { redirect } = req.query;
+  const {
+    redirect,
+    errorMessage,
+    errorCode,
+  } = req.query;
   const accessToken = getAnyAccessToken({ session: req.session || {} });
   const bufferSession = getCookie({
     req,
     name: `${production ? '' : 'local'}bufferapp_ci_session`,
   });
-  if (accessToken) {
+  if (accessToken && !errorMessage) {
     autoLoginWithAccessToken({
       accessToken,
       bufferSession,
@@ -259,7 +312,7 @@ controller.login = async (req, res, next) => {
       res,
       next,
     });
-  } else if (bufferSession) {
+  } else if (bufferSession && !errorMessage) {
     autoLoginWithBufferSession({
       bufferSession,
       redirect,
@@ -269,7 +322,11 @@ controller.login = async (req, res, next) => {
     });
   } else {
     const tmplt = await loginTemplate();
-    const renderedLoginTemplate = tmplt({ redirect });
+    const renderedLoginTemplate = tmplt({
+      redirect,
+      errorMessage,
+      inputError: errorCode === '401',
+    });
     const mainTmplt = await mainTemplate();
     res.send(mainTmplt({ body: renderedLoginTemplate }));
   }
@@ -287,19 +344,31 @@ controller.handleLogin = async (req, res, next) => {
 
   const production = req.app.get('isProduction');
   const sessionClient = req.app.get('sessionClient');
-  const url = req.body.redirect ? parse(req.body.redirect).hostname : undefined;
+  const { redirect } = req.body;
+  const url = redirect ? parse(redirect).hostname : undefined;
   const { clientId, clientSecret, sessionKey } = selectClient({
     app: parseAppFromUrl({ url }),
   });
 
   try {
-    const apiRes = await bufferApi.signin({
-      email: req.body.email,
-      password: req.body.password,
-      createSession: true,
-      clientId,
-      clientSecret,
-    });
+    let apiRes;
+    try {
+      apiRes = await bufferApi.signin({
+        email: req.body.email,
+        password: req.body.password,
+        createSession: true,
+        clientId,
+        clientSecret,
+      });
+    } catch (err) {
+      return redirectWithError({
+        baseRoute: '/login',
+        redirect,
+        err,
+        res,
+      });
+    }
+
 
     passThroughBufferWebCookie({
       res,
@@ -344,12 +413,22 @@ controller.handleLogin = async (req, res, next) => {
 };
 
 controller.tfa = async (req, res) => {
-  const { redirect } = req.query;
+  const {
+    redirect,
+    errorMessage,
+    // we'll likely get an error code here too
+    // but aren't useing it yet
+  } = req.query;
   if (!ObjectPath.has(req, 'session.global.tfa')) {
     res.redirect(`/login/${redirect ? `?redirect=${redirect}` : ''}`);
   } else {
     const tmplt = await tfaTemplate();
-    const renderedLoginTemplate = tmplt({ redirect });
+    const renderedLoginTemplate = tmplt({
+      redirect,
+      errorMessage,
+      inputError:
+        errorMessage === 'This code doesn\'t seem to match.  Try again?',
+    });
     const mainTmplt = await mainTemplate();
     res.send(mainTmplt({ body: renderedLoginTemplate }));
   }
@@ -376,13 +455,23 @@ controller.handleTfa = async (req, res, next) => {
   });
 
   try {
-    const apiRes = await bufferApi.tfa({
-      userId: req.session.global.userId,
-      code,
-      clientId,
-      clientSecret,
-      createSession: true,
-    });
+    let apiRes;
+    try {
+      apiRes = await bufferApi.tfa({
+        userId: req.session.global.userId,
+        code,
+        clientId,
+        clientSecret,
+        createSession: true,
+      });
+    } catch (err) {
+      return redirectWithError({
+        baseRoute: err.statusCode === 403 ? '/login' : '/login/tfa',
+        redirect,
+        err,
+        res,
+      });
+    }
 
     passThroughBufferWebCookie({
       res,

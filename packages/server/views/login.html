@@ -1,12 +1,33 @@
 <form action="/login" method="post" class="form-login">
   <h2>Sign in to Buffer</h2>
   <label for="email">Email</label>
-  <input type="email" name="email" id="email" value="" required>
+  <input
+    type="email"
+    class="{{#if inputError}}error{{/if}}"
+    name="email"
+    id="email"
+    value=""
+    required
+  >
+  <div class="separator"></div>
   <label for="password">Password</label>
-  <input type="password" name="password" id="password" value="" required>
+  <input
+    type="password"
+    class="{{#if inputError}}error{{/if}}"
+    name="password"
+    id="password"
+    value=""
+    required
+  >
   {{#if redirect}}
     <input type="hidden" name="redirect" value="{{redirect}}">
   {{/if}}
+  {{#if errorMessage}}
+    <div class="form-div message-error">
+      {{errorMessage}}
+    </div>
+  {{/if}}
+  <div class="separator"></div>
   <button type="submit">Sign In</button>
   <div class="form-div">
     <a href="https://buffer.com/oops">Forgot Your Password?</a>
