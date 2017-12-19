@@ -426,6 +426,7 @@ controller.tfa = async (req, res) => {
     const renderedLoginTemplate = tmplt({
       redirect,
       errorMessage,
+      isSMS: req.session.global.tfa.method === 'sms',
       inputError:
         errorMessage === 'This code doesn\'t seem to match.  Try again?',
     });
