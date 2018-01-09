@@ -42,10 +42,12 @@ sessionExports.createSession = async ({
   session,
   production,
   res,
+  userId,
 }) => {
   // this will throw errors when a session cannot be created
   const { token } = await sessionClient.call('create', {
     session,
+    userId,
   });
   sessionExports.writeCookie({
     name: sessionExports.cookieName({ production }),

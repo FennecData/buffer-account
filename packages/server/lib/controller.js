@@ -288,11 +288,13 @@ const autoLoginWithBufferSession = async ({
         accessToken: token,
       },
     };
+
     await createSession({
       session,
       production,
       res,
       sessionClient,
+      userId: user._id,
     });
 
     // redirect the user back to the right place
@@ -357,7 +359,6 @@ controller.handleLogin = async (req, res, next) => {
   }
 
   const production = req.app.get('isProduction');
-  const sessionClient = req.app.get('sessionClient');
   const { redirect } = req.body;
   const url = redirect ? parse(redirect).hostname : undefined;
   const { clientId, clientSecret, sessionKey } = selectClient({
@@ -411,7 +412,7 @@ controller.handleLogin = async (req, res, next) => {
       session,
       production,
       res,
-      sessionClient,
+      userId: user._id,
     });
 
     if (session.global.tfa) {
