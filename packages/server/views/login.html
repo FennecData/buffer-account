@@ -1,10 +1,72 @@
-<h1>Login</h1>
-
-<form action="/login" method="post">
-  <input type="email" name="email" value="" placeholder="your email" required>
-  <input type="password" name="password" value="" placeholder="your password" required>
-  <% if (redirect) { %>
-    <input type="hidden" name="redirect" value="<%= redirect %>">
-  <% } %>
-  <button type="submit">Login</button>
+<form action="/login" method="post" class="form-login" id="login-form">
+  <h2>Sign in to Buffer</h2>
+  <label for="email">Email</label>
+  <input
+    type="email"
+    class="{{#if inputError}}error{{/if}}"
+    name="email"
+    id="email"
+    value=""
+    required
+  >
+  <div class="separator"></div>
+  <label for="password">Password</label>
+  <input
+    type="password"
+    class="{{#if inputError}}error{{/if}}"
+    name="password"
+    id="password"
+    value=""
+    required
+  >
+  {{#if redirect}}
+    <input type="hidden" name="redirect" value="{{redirect}}">
+  {{/if}}
+  {{#if errorMessage}}
+    <div class="form-div message-error">
+      {{errorMessage}}
+    </div>
+  {{/if}}
+  <div class="separator"></div>
+  <button id="login-form-submit" type="submit" disabled>Sign In</button>
+  <div class="form-div">
+    <a href="https://buffer.com/oops">Forgot Your Password?</a>
+  </div>
+  <div class="form-div">
+    Don't have an account?
+    <a href="https://buffer.com/signup?source=buffer-account-login">Sign Up</a>
+  </div>
 </form>
+
+<script type="text/javascript">
+  var emailInput = document.querySelector('#email');
+  var passwordInput = document.querySelector('#password');
+  var submitButton = document.querySelector('#login-form-submit');
+  var loginForm = document.querySelector('#login-form');
+  function handleInputChange(e) {
+    if (emailInput.value) {
+      emailInput.classList.remove('error');
+    }
+    if (passwordInput.value) {
+      passwordInput.classList.remove('error');
+    }
+    if (emailInput.value && passwordInput.value) {
+      submitButton.disabled = false;
+    } else {
+      submitButton.disabled = true;
+    }
+  }
+  emailInput.addEventListener('change', handleInputChange);
+  passwordInput.addEventListener('change', handleInputChange);
+  emailInput.addEventListener('keyup', handleInputChange);
+  passwordInput.addEventListener('keyup', handleInputChange);
+  submitButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    submitButton.disabled = true;
+    submitButton.textContent = 'Signing In...';
+    emailInput.readOnly = true;
+    passwordInput.readOnly = true;
+    loginForm.submit();
+  });
+  handleInputChange(); // check when script runs
+</script>

@@ -1,12 +1,73 @@
-<h1>Login</h1>
-
-<p>Enter your two factor code</p>
-<!-- We should tell the user if it's SMS or app-based tfa code -->
-
-<form action="/login/tfa" method="post">
-  <input type="text" name="code" value="" placeholder="" required>
-  <% if (redirect) { %>
-    <input type="hidden" name="redirect" value="<%= redirect %>">
-  <% } %>
-  <button type="submit">Complete Login</button>
+<form action="/login/tfa" method="post" class="form-tfa" id="tfa-form">
+  <h2>2-Step Login</h2>
+  {{#if isSMS}}
+  <p>
+    We've sent a verification code to your backup phone number.
+    Enter the code below to log in.
+  </p>
+  {{else}}
+  <p>
+    Use your configured Google Authenticator App to obtain your code.
+  </p>
+  {{/if}}
+  <!-- We should tell the user if it's SMS or app-based tfa code -->
+  <input
+    type="text"
+    class="{{#if inputError}}error{{/if}}"
+    name="code"
+    id="code"
+    value=""
+    placeholder="Authentication Code"
+    required
+  >
+  {{#if redirect}}
+    <input type="hidden" name="redirect" value="{{redirect}}">
+  {{/if}}
+  {{#if errorMessage}}
+  <div class="form-div message-error">
+    {{errorMessage}}
+  </div>
+  {{else}}
+  {{#if isSMS}}
+  <div class="form-div message-success">
+    We've sent a code to your phone number!
+  </div>
+  {{/if}}
+  {{/if}}
+  <div class="separator"></div>
+  <button id="tfa-form-submit" type="submit" disabled>Verify</button>
+  <div class="form-div">Having Trouble?</div>
+  <div class="form-div">
+    <a href="https://buffer.com/verify?recovery=1">Use your 2-step recovery code</a>
+  </div>
+  <div class="form-div">
+    or
+    <a href="mailto:hello@bufferapp.com">Contact Us!</a>
+  </div>
 </form>
+
+<script type="text/javascript">
+  var codeInput = document.querySelector('#code');
+  var submitButton = document.querySelector('#tfa-form-submit');
+  var tfaForm = document.querySelector('#tfa-form');
+  function handleInputChange(e) {
+    if (codeInput.value) {
+      codeInput.classList.remove('error');
+    }
+    if (codeInput.value) {
+      submitButton.disabled = false;
+    } else {
+      submitButton.disabled = true;
+    }
+  }
+  codeInput.addEventListener('change', handleInputChange);
+  codeInput.addEventListener('keyup', handleInputChange);
+  submitButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    submitButton.disabled = true;
+    submitButton.textContent = 'Verifying...';
+    codeInput.readOnly = true;
+    tfaForm.submit();
+  });
+  handleInputChange(); // check when script runs
+</script>

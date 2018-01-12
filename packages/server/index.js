@@ -7,10 +7,13 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const { join } = require('path');
 const shutdownHelper = require('@bufferapp/shutdown-helper');
+const {
+  middleware: sessionMiddleware,
+} = require('@bufferapp/session-manager');
 const { apiError } = require('./middleware');
-const session = require('./lib/session');
 const controller = require('./lib/controller');
 const rpc = require('./rpc');
+
 
 const app = express();
 const server = http.createServer(app);
@@ -58,8 +61,26 @@ const getHtml = () => fs.readFileSync(join(__dirname, 'index.html'), 'utf8')
 app.use(logMiddleware({ name: 'BufferAccount' }));
 app.use(cookieParser());
 
+app.get('/health-check', controller.healthCheck);
+
 // All routes after this have access to the user session
-app.use(session.middleware);
+app.use(sessionMiddleware.getSession({
+  production: isProduction,
+  sessionKeys: ['*'],
+}));
+
+app.route('/login')
+  .get(controller.login)
+  .post(bodyParser.urlencoded({ extended: true }), controller.handleLogin);
+
+app.route('/login/tfa')
+  .get(controller.tfa)
+  .post(bodyParser.urlencoded({ extended: true }), controller.handleTfa);
+
+app.use(sessionMiddleware.validateSession({
+  production: isProduction,
+  requiredSessionKeys: ['account.accessToken'],
+}));
 
 app.post('/rpc', (req, res, next) => {
   rpc(req, res)
@@ -67,23 +88,9 @@ app.post('/rpc', (req, res, next) => {
     .catch(err => next(err));
 });
 
-app.get('/', (req, res) => {
-  if (req.session && req.session.account && req.session.account.accessToken) {
-    res.send(getHtml());
-  } else {
-    res.redirect('/login');
-  }
-});
+app.get('/logout', controller.logout);
 
-app.route('/login')
-  .get(controller.login)
-  .post(bodyParser.urlencoded({ extended: true }), controller.handleLogin);
-app.route('/login/tfa')
-  .get(controller.tfa)
-  .post(bodyParser.urlencoded({ extended: true }), controller.handleTfa);
-app.post('/signout', controller.signout);
-
-app.get('/health-check', controller.healthCheck);
+app.get('/', (req, res) => res.send(getHtml()));
 
 app.use(apiError);
 

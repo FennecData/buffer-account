@@ -72,6 +72,11 @@ spec:
               name: buffer-publish-buffer-api-client
         - name: API_ADDR
           value: https://api.bufferapp.com
+        - name: BUGSNAG_KEY
+          valueFrom:
+            secretKeyRef:
+              key: bugsnag
+              name: buffer-account-keys
         livenessProbe:
           httpGet:
             path: /health-check

@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/account-server",
-  "version": "0.5.34",
+  "version": "0.5.40",
   "description": "",
   "scripts": {
     "start": "micro",
@@ -12,12 +12,13 @@
   "dependencies": {
     "@bufferapp/logger": "0.7.0",
     "@bufferapp/micro-rpc": "0.1.6",
+    "@bufferapp/session-manager": "0.5.40",
     "@bufferapp/shutdown-helper": "0.2.0",
     "body-parser": "1.17.2",
     "bugsnag": "1.11.0",
     "cookie-parser": "1.4.3",
-    "ejs": "2.5.7",
     "express": "4.15.3",
+    "handlebars": "4.0.11",
     "jsonwebtoken": "7.4.1",
     "micro": "7.3.3",
     "micro-rpc-client": "0.1.1",
