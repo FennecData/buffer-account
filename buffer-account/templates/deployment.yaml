@@ -37,8 +37,8 @@ spec:
         - containerPort: 80
           protocol: TCP
         env:
-        - name: SESSION_VERSION
-          value: v1
+        # - name: SESSION_VERSION
+        #   value: v1
         # TODO: will need a client ID and secret for each app
         - name: CLIENT_ID
           valueFrom:
