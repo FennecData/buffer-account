@@ -1,9 +1,23 @@
 const RPCClient = require('micro-rpc-client');
 const ObjectPath = require('object-path');
+const jwt = require('jsonwebtoken');
 
 const sessionExports = module.exports;
 
-const sessionClient = new RPCClient({ url: `http://${process.env.SESSION_SVC_HOST}` });
+// the version of the session service to create new sessions
+// existing sessions can have different versions
+const createSessionServiceVersion = () =>
+  process.env.SESSION_VERSION;
+
+// TODO: remove beta '1' version after its been removed
+const sessionServiceUrl = ({
+  sessionVersion,
+}) =>
+  `http://session-service-${sessionVersion || '1'}`;
+
+const sessionClient = ({
+  sessionVersion,
+}) => new RPCClient({ url: sessionServiceUrl({ sessionVersion }) });
 
 sessionExports.serviceUrl = ({ production }) => `https://account${production ? '' : '.local'}.buffer.com`;
 
@@ -45,7 +59,9 @@ sessionExports.createSession = async ({
   userId,
 }) => {
   // this will throw errors when a session cannot be created
-  const { token } = await sessionClient.call('create', {
+  const { token } = await sessionClient({
+    sessionVersion: createSessionServiceVersion(),
+  }).call('create', {
     session,
     userId,
   });
@@ -65,14 +81,20 @@ sessionExports.updateSession = async ({
   session,
   req,
   production,
-}) =>
-  sessionClient.call('update', {
-    session,
-    token: sessionExports.getCookie({
-      name: sessionExports.cookieName({ production }),
-      req,
-    }),
+}) => {
+  const sessionCookie = sessionExports.getCookie({
+    name: sessionExports.cookieName({ production }),
+    req,
   });
+  const { sessionVersion } = jwt.decode(sessionCookie);
+  return sessionClient({
+    sessionVersion,
+  }).call('update', {
+    session,
+    token: sessionCookie,
+    sessionVersion,
+  });
+};
 
 sessionExports.destroySession = async({
   req,
@@ -80,11 +102,16 @@ sessionExports.destroySession = async({
   production,
 }) => {
   const cookieName = sessionExports.cookieName({ production });
-  await sessionClient.call('destroy', {
-    token: sessionExports.getCookie({
-      name: cookieName,
-      req,
-    }),
+  const sessionCookie = sessionExports.getCookie({
+    name: cookieName,
+    req,
+  });
+  const { sessionVersion } = jwt.decode(sessionCookie);
+  await sessionClient({
+    sessionVersion,
+  }).call('destroy', {
+    token: sessionCookie,
+    sessionVersion,
   });
   res.clearCookie(cookieName, {
     domain: sessionExports.cookieDomain({ production }),
@@ -107,9 +134,13 @@ const getSession = ({
       return next();
     }
     try {
-      const session = await sessionClient.call('get', {
+      const { sessionVersion } = jwt.decode(sessionCookie);
+      const session = await sessionClient({
+        sessionVersion,
+      }).call('get', {
         token: sessionCookie,
         keys: sessionKeys,
+        sessionVersion,
       });
       req.session = session;
       return next();
