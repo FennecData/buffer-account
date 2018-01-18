@@ -9,15 +9,21 @@ const sessionExports = module.exports;
 const createSessionServiceVersion = () =>
   process.env.SESSION_VERSION;
 
+sessionExports.createSessionServiceVersion = createSessionServiceVersion;
+
 // TODO: remove beta '1' version after its been removed
 const sessionServiceUrl = ({
-  sessionVersion,
+  sessionVersion = '1',
+  production,
 }) =>
-  `http://session-service-${sessionVersion || '1'}`;
+  `http://session-service-${sessionVersion}${production ? '.buffer' : ''}`;
 
 const sessionClient = ({
   sessionVersion,
-}) => new RPCClient({ url: sessionServiceUrl({ sessionVersion }) });
+  production,
+}) => new RPCClient({ url: sessionServiceUrl({ sessionVersion, production }) });
+
+sessionExports.sessionClient = sessionClient;
 
 sessionExports.serviceUrl = ({ production }) => `https://account${production ? '' : '.local'}.buffer.com`;
 
@@ -61,6 +67,7 @@ sessionExports.createSession = async ({
   // this will throw errors when a session cannot be created
   const { token } = await sessionClient({
     sessionVersion: createSessionServiceVersion(),
+    production,
   }).call('create', {
     session,
     userId,
@@ -89,6 +96,7 @@ sessionExports.updateSession = async ({
   const { sessionVersion } = jwt.decode(sessionCookie);
   return sessionClient({
     sessionVersion,
+    production,
   }).call('update', {
     session,
     token: sessionCookie,
@@ -109,6 +117,7 @@ sessionExports.destroySession = async({
   const { sessionVersion } = jwt.decode(sessionCookie);
   await sessionClient({
     sessionVersion,
+    production,
   }).call('destroy', {
     token: sessionCookie,
     sessionVersion,
@@ -137,6 +146,7 @@ const getSession = ({
       const { sessionVersion } = jwt.decode(sessionCookie);
       const session = await sessionClient({
         sessionVersion,
+        production,
       }).call('get', {
         token: sessionCookie,
         keys: sessionKeys,

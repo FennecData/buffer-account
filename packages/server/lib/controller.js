@@ -4,7 +4,6 @@ const { compile } = require('handlebars');
 const ObjectPath = require('object-path');
 const { join } = require('path');
 const { parse } = require('url');
-const RPCClient = require('micro-rpc-client');
 const { isShutingDown } = require('@bufferapp/shutdown-helper');
 const bufferApi = require('./bufferApi');
 const {
@@ -14,6 +13,8 @@ const {
   getCookie,
   destroySession,
   serviceUrl,
+  sessionClient,
+  createSessionServiceVersion,
 } = require('@bufferapp/session-manager');
 
 const readFileAsync = promisify(readFile);
@@ -190,7 +191,6 @@ const autoLoginWithAccessToken = async ({
   next,
 }) => {
   const production = req.app.get('isProduction');
-  const sessionClient = req.app.get('sessionClient');
   const url = redirect ? parse(redirect).hostname : undefined;
   const { clientId, clientSecret, sessionKey } = selectClient({
     app: parseAppFromUrl({ url }),
@@ -223,7 +223,6 @@ const autoLoginWithAccessToken = async ({
     await updateSession({
       session,
       req,
-      sessionClient,
       production,
     });
     redirectWithParams({
@@ -243,7 +242,6 @@ const autoLoginWithBufferSession = async ({
   next,
 }) => {
   const production = req.app.get('isProduction');
-  const sessionClient = req.app.get('sessionClient');
   const url = redirect ? parse(redirect).hostname : undefined;
   const { clientId, clientSecret, sessionKey } = selectClient({
     app: parseAppFromUrl({ url }),
@@ -293,7 +291,6 @@ const autoLoginWithBufferSession = async ({
       session,
       production,
       res,
-      sessionClient,
       userId: user._id,
     });
 
@@ -486,7 +483,6 @@ controller.handleTfa = async (req, res, next) => {
     return res.send('missing required fields');
   }
   const production = req.app.get('isProduction');
-  const sessionClient = req.app.get('sessionClient');
   const bufferSession = getCookie({
     req,
     name: `${production ? '' : 'local'}bufferapp_ci_session`,
@@ -538,7 +534,6 @@ controller.handleTfa = async (req, res, next) => {
     await updateSession({
       session,
       req,
-      sessionClient,
       production,
     });
     redirectWithParams({
@@ -575,10 +570,11 @@ controller.healthCheck = (req, res) => {
   if (isShutingDown()) {
     return res.status(500).json({ status: 'shutting down' });
   }
-  const sessionClient = new RPCClient({
-    url: `http://${process.env.SESSION_SVC_HOST}`,
+  const client = sessionClient({
+    production: req.app.get('isProduction'),
+    sessionVersion: createSessionServiceVersion(),
   });
-  sessionClient.listMethods()
+  client.listMethods()
     .then(() => res.status(200).json({ status: 'awesome' }))
     .catch(() => res.status(500).json({ status: 'cannot connect to session service' }));
 };
