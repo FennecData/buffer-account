@@ -60,6 +60,32 @@ const redirectWithError = ({
     res,
   });
 
+const validateRedirect = ({
+  redirect,
+  res,
+}) => {
+  if (!redirect) {
+    return true;
+  }
+  try {
+    // this can throw an error with an invalid url
+    if (!parse(redirect).hostname.includes('buffer.com')) {
+      throw new Error('invalid redirect url');
+    }
+  } catch (err) {
+    redirectWithParams({
+      baseRoute: '/login',
+      queryParams: {
+        errorMessage: 'Invalid redirect url',
+        skipSessionCheck: true,
+      },
+      res,
+    });
+    return false;
+  }
+  return true;
+};
+
 let cachedLoginTemplate;
 const loginTemplate = async () => {
   if (cachedLoginTemplate) {
@@ -191,6 +217,12 @@ const autoLoginWithAccessToken = async ({
   next,
 }) => {
   const production = req.app.get('isProduction');
+  if (!validateRedirect({
+    redirect,
+    res,
+  })) {
+    return false;
+  }
   const url = redirect ? parse(redirect).hostname : undefined;
   const { clientId, clientSecret, sessionKey } = selectClient({
     app: parseAppFromUrl({ url }),
@@ -242,6 +274,12 @@ const autoLoginWithBufferSession = async ({
   next,
 }) => {
   const production = req.app.get('isProduction');
+  if (!validateRedirect({
+    redirect,
+    res,
+  })) {
+    return false;
+  }
   const url = redirect ? parse(redirect).hostname : undefined;
   const { clientId, clientSecret, sessionKey } = selectClient({
     app: parseAppFromUrl({ url }),
@@ -357,6 +395,12 @@ controller.handleLogin = async (req, res, next) => {
 
   const production = req.app.get('isProduction');
   const { redirect } = req.body;
+  if (!validateRedirect({
+    redirect,
+    res,
+  })) {
+    return false;
+  }
   const url = redirect ? parse(redirect).hostname : undefined;
   const { clientId, clientSecret, sessionKey } = selectClient({
     app: parseAppFromUrl({ url }),
@@ -487,7 +531,12 @@ controller.handleTfa = async (req, res, next) => {
     req,
     name: `${production ? '' : 'local'}bufferapp_ci_session`,
   });
-
+  if (!validateRedirect({
+    redirect,
+    res,
+  })) {
+    return false;
+  }
   const url = redirect ? parse(redirect).hostname : undefined;
   const { clientId, clientSecret, sessionKey } = selectClient({
     app: parseAppFromUrl({ url }),
