@@ -603,6 +603,12 @@ controller.logout = async (req, res, next) => {
       res,
       production,
     });
+    if (!validateRedirect({
+      redirect,
+      res,
+    })) {
+      return false;
+    }
     redirectWithParams({
       baseRoute: `${serviceUrl({ production })}/login/`,
       queryParams: {
