@@ -1,4 +1,5 @@
 import RPCClient from 'micro-rpc-client';
+import jwt from 'jsonwebtoken';
 
 import {
   middleware,
@@ -50,6 +51,7 @@ describe('SessionManager', () => {
         .toBeCalledWith('get', {
           token: cookieValue,
           keys: sessionKeys,
+          sessionVersion: jwt.fakeSessionVersion,
         });
       expect(req.session)
         .toEqual(RPCClient.fakeSession);
@@ -342,6 +344,7 @@ describe('SessionManager', () => {
         .toBeCalledWith('update', {
           session: expectedSession,
           token: value,
+          sessionVersion: jwt.fakeSessionVersion,
         });
     });
 
@@ -365,6 +368,7 @@ describe('SessionManager', () => {
         .toBeCalledWith('update', {
           session: expectedSession,
           token: value,
+          sessionVersion: jwt.fakeSessionVersion,
         });
     });
 
@@ -456,6 +460,7 @@ describe('SessionManager', () => {
       expect(RPCClient.prototype.call)
         .toBeCalledWith('destroy', {
           token: value,
+          sessionVersion: jwt.fakeSessionVersion,
         });
       expect(res.clearCookie)
         .toBeCalledWith('buffer_session', {
@@ -489,6 +494,7 @@ describe('SessionManager', () => {
       expect(RPCClient.prototype.call)
         .toBeCalledWith('destroy', {
           token: value,
+          sessionVersion: jwt.fakeSessionVersion,
         });
       expect(res.clearCookie)
         .toBeCalledWith(name, {
