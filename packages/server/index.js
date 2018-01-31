@@ -8,8 +8,9 @@ const fs = require('fs');
 const { join } = require('path');
 const shutdownHelper = require('@bufferapp/shutdown-helper');
 const {
-  middleware: sessionMiddleware,
-} = require('@bufferapp/session-manager');
+  setRequestSession,
+  validateSession,
+} = require('@bufferapp/session-manager/middleware');
 const { apiError } = require('./middleware');
 const controller = require('./lib/controller');
 const rpc = require('./rpc');
@@ -27,7 +28,10 @@ let staticAssets = {
 let bugsnagScript = '';
 
 const isProduction = process.env.NODE_ENV === 'production';
+const useProductionServices =
+  isProduction && process.env.USE_LOCAL_SERVICES !== 'true';
 app.set('isProduction', isProduction);
+app.set('useProductionServices', useProductionServices);
 
 if (!isProduction) {
   /* eslint-disable global-require */
@@ -64,8 +68,8 @@ app.use(cookieParser());
 app.get('/health-check', controller.healthCheck);
 
 // All routes after this have access to the user session
-app.use(sessionMiddleware.getSession({
-  production: isProduction,
+app.use(setRequestSession({
+  production: useProductionServices,
   sessionKeys: ['*'],
 }));
 
@@ -77,8 +81,8 @@ app.route('/login/tfa')
   .get(controller.tfa)
   .post(bodyParser.urlencoded({ extended: true }), controller.handleTfa);
 
-app.use(sessionMiddleware.validateSession({
-  production: isProduction,
+app.use(validateSession({
+  production: useProductionServices,
   requiredSessionKeys: ['account.accessToken'],
 }));
 

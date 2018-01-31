@@ -8,18 +8,20 @@ const { isShutingDown } = require('@bufferapp/shutdown-helper');
 const bufferApi = require('./bufferApi');
 const {
   writeCookie,
+  getCookie,
   createSession,
   updateSession,
-  getCookie,
   destroySession,
-  serviceUrl,
+  loginServiceUrl,
   sessionClient,
-  createSessionServiceVersion,
 } = require('@bufferapp/session-manager');
 
 const readFileAsync = promisify(readFile);
 
 const controller = module.exports;
+
+const createSessionServiceVersion = () =>
+  process.env.SESSION_VERSION;
 
 const parseErrorMessage = ({ err }) => {
   switch (err.statusCode) {
@@ -216,7 +218,7 @@ const autoLoginWithAccessToken = async ({
   res,
   next,
 }) => {
-  const production = req.app.get('isProduction');
+  const production = req.app.get('useProductionServices');
   if (!validateRedirect({
     redirect,
     res,
@@ -273,7 +275,7 @@ const autoLoginWithBufferSession = async ({
   res,
   next,
 }) => {
-  const production = req.app.get('isProduction');
+  const production = req.app.get('useProductionServices');
   if (!validateRedirect({
     redirect,
     res,
@@ -330,6 +332,7 @@ const autoLoginWithBufferSession = async ({
       production,
       res,
       userId: user._id,
+      sessionVersion: createSessionServiceVersion(),
     });
 
     // redirect the user back to the right place
@@ -343,7 +346,7 @@ const autoLoginWithBufferSession = async ({
 };
 
 controller.login = async (req, res, next) => {
-  const production = req.app.get('isProduction');
+  const production = req.app.get('useProductionServices');
   const {
     redirect,
     errorMessage,
@@ -393,7 +396,7 @@ controller.handleLogin = async (req, res, next) => {
     return res.send('missing required fields');
   }
 
-  const production = req.app.get('isProduction');
+  const production = req.app.get('useProductionServices');
   const { redirect } = req.body;
   if (!validateRedirect({
     redirect,
@@ -454,6 +457,7 @@ controller.handleLogin = async (req, res, next) => {
       production,
       res,
       userId: user._id,
+      sessionVersion: createSessionServiceVersion(),
     });
 
     if (session.global.tfa) {
@@ -526,7 +530,7 @@ controller.handleTfa = async (req, res, next) => {
   if (!code) {
     return res.send('missing required fields');
   }
-  const production = req.app.get('isProduction');
+  const production = req.app.get('useProductionServices');
   const bufferSession = getCookie({
     req,
     name: `${production ? '' : 'local'}bufferapp_ci_session`,
@@ -597,7 +601,7 @@ controller.handleTfa = async (req, res, next) => {
 controller.logout = async (req, res, next) => {
   try {
     const { redirect } = req.query;
-    const production = req.app.get('isProduction');
+    const production = req.app.get('useProductionServices');
     await destroySession({
       req,
       res,
@@ -610,7 +614,7 @@ controller.logout = async (req, res, next) => {
       return false;
     }
     redirectWithParams({
-      baseRoute: `${serviceUrl({ production })}/login/`,
+      baseRoute: `${loginServiceUrl({ production })}/login/`,
       queryParams: {
         redirect,
       },
@@ -626,7 +630,7 @@ controller.healthCheck = (req, res) => {
     return res.status(500).json({ status: 'shutting down' });
   }
   const client = sessionClient({
-    production: req.app.get('isProduction'),
+    production: req.app.get('useProductionServices'),
     sessionVersion: createSessionServiceVersion(),
   });
   client.listMethods()

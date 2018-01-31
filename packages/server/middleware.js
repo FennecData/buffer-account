@@ -7,7 +7,7 @@ module.exports.apiError = (err, req, res, next) => { // eslint-disable-line no-u
     const httpCode = err.httpCode;
     delete filteredError.httpCode;
     res.status(httpCode).send(filteredError);
-  } else if (req.app.get('isProduction')) {
+  } else if (req.app.get('useProductionServices')) {
     req.app.get('bugsnag').notify(err, {
       originalUrl: req.originalUrl,
     });
