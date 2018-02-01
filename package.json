@@ -3,14 +3,13 @@
   "version": "0.0.1",
   "description": "🍥",
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
+    "bootstrap": "yarn",
     "clean": "lerna clean",
     "test": "if [ -n \"$CI\" ]; then yarn run init; fi && lerna run test",
     "test-update": "lerna run test-update",
-    "init": "yarn install && lerna bootstrap --loglevel verbose --hoist",
+    "init": "yarn",
     "start": "cd ./packages/server/ && yarn run start",
     "publish": "lerna publish --exact",
-    "publish-beta": "lerna publish --npm-tag=beta --exact",
     "build": "webpack  --config ./packages/server/webpack.config.js --output-path=`pwd`",
     "updated": "lerna updated"
   },
@@ -48,7 +47,7 @@
     "immutable": "3.8.1",
     "js-cookie": "2.1.4",
     "keymirror": "0.1.1",
-    "lerna": "2.0.0-rc.5",
+    "lerna": "2.8.0",
     "lodash.clonedeep": "4.5.0",
     "lodash.debounce": "4.0.8",
     "lodash.escaperegexp": "4.1.2",
@@ -88,5 +87,9 @@
     "webpack": "2.6.1",
     "webpack-dev-middleware": "1.10.2",
     "webpack-hot-middleware": "2.18.0"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true
 }

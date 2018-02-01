@@ -1,7 +1,8 @@
 {
   "name": "account",
-  "lerna": "2.0.0-beta.38",
+  "lerna": "2.8.0",
   "version": "0.5.44",
   "independent": false,
-  "npmClient": "yarn"
+  "npmClient": "yarn",
+  "useWorkspaces": true
 }
