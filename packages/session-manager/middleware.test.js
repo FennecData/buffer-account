@@ -1,10 +1,7 @@
 import RPCClient from 'micro-rpc-client';
 import jwt from 'jsonwebtoken';
 
-const {
-  setRequestSession,
-  validateSession,
-} = require('./middleware');
+const { setRequestSession, validateSession } = require('./middleware');
 
 describe('middleware', () => {
   describe('setRequestSession', () => {
@@ -15,8 +12,7 @@ describe('middleware', () => {
       const res = {};
       const next = jest.fn();
       await setRequestSession({ production: true })(req, res, next);
-      expect(next)
-        .toBeCalled();
+      expect(next).toBeCalled();
     });
 
     it('should handle production session cookie', async () => {
@@ -37,16 +33,13 @@ describe('middleware', () => {
         sessionKeys,
       });
       await configuredMiddlware(req, res, next);
-      expect(next)
-        .toBeCalled();
-      expect(RPCClient.prototype.call)
-        .toBeCalledWith('get', {
-          token: cookieValue,
-          keys: sessionKeys,
-          sessionVersion: jwt.fakeSessionVersion,
-        });
-      expect(req.session)
-        .toEqual(RPCClient.fakeSession);
+      expect(next).toBeCalled();
+      expect(RPCClient.prototype.call).toBeCalledWith('get', {
+        token: cookieValue,
+        keys: sessionKeys,
+        sessionVersion: jwt.fakeSessionVersion,
+      });
+      expect(req.session).toEqual(RPCClient.fakeSession);
     });
 
     it('should handle session service failure', async () => {
@@ -68,8 +61,7 @@ describe('middleware', () => {
         sessionKeys,
       });
       await configuredMiddlware(req, res, next);
-      expect(next)
-        .toBeCalledWith(new Error(RPCClient.fakeErrorMessage));
+      expect(next).toBeCalledWith(new Error(RPCClient.fakeErrorMessage));
     });
   });
 
@@ -90,8 +82,7 @@ describe('middleware', () => {
         requiredSessionKeys,
       });
       await configuredMiddlware(req, res, next);
-      expect(next)
-        .toBeCalled();
+      expect(next).toBeCalled();
     });
 
     it('should call production redirect with invalid session', async () => {
@@ -99,7 +90,7 @@ describe('middleware', () => {
       const host = 'someHost';
       const originalUrl = '/someUrl';
       const redirect = encodeURIComponent(`https://${host}${originalUrl}`);
-      const accountUrl = 'https://account.buffer.com/login/';
+      const loginUrl = 'https://login.buffer.com/login/';
       const req = {
         session: {},
         originalUrl,
@@ -114,10 +105,8 @@ describe('middleware', () => {
         production: true,
       });
       await configuredMiddlware(req, res, next);
-      expect(next)
-        .not.toBeCalled();
-      expect(res.redirect)
-        .toBeCalledWith(`${accountUrl}?redirect=${redirect}`);
+      expect(next).not.toBeCalled();
+      expect(res.redirect).toBeCalledWith(`${loginUrl}?redirect=${redirect}`);
     });
 
     it('should call dev redirect with invalid session', async () => {
@@ -125,7 +114,7 @@ describe('middleware', () => {
       const host = 'someHost';
       const originalUrl = '/someUrl';
       const redirect = encodeURIComponent(`https://${host}${originalUrl}`);
-      const accountUrl = 'https://account.local.buffer.com/login/';
+      const loginUrl = 'https://login.local.buffer.com/login/';
       const req = {
         session: {},
         originalUrl,
@@ -140,10 +129,8 @@ describe('middleware', () => {
         production: false,
       });
       await configuredMiddlware(req, res, next);
-      expect(next)
-        .not.toBeCalled();
-      expect(res.redirect)
-        .toBeCalledWith(`${accountUrl}?redirect=${redirect}`);
+      expect(next).not.toBeCalled();
+      expect(res.redirect).toBeCalledWith(`${loginUrl}?redirect=${redirect}`);
     });
 
     it('should call redirect with invalid session (missing one)', async () => {
@@ -167,10 +154,8 @@ describe('middleware', () => {
         requiredSessionKeys,
       });
       await configuredMiddlware(req, res, next);
-      expect(next)
-        .not.toBeCalled();
-      expect(res.redirect)
-        .toBeCalled();
+      expect(next).not.toBeCalled();
+      expect(res.redirect).toBeCalled();
     });
 
     it('should call redirect when session is missing', async () => {
@@ -189,10 +174,8 @@ describe('middleware', () => {
         production: true,
       });
       await configuredMiddlware(req, res, next);
-      expect(next)
-        .not.toBeCalled();
-      expect(res.redirect)
-        .toBeCalled();
+      expect(next).not.toBeCalled();
+      expect(res.redirect).toBeCalled();
     });
   });
 });
