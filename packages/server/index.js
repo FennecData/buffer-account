@@ -3,7 +3,6 @@ const express = require('express');
 const logMiddleware = require('@bufferapp/logger/middleware');
 const bugsnag = require('bugsnag');
 const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
 const fs = require('fs');
 const { join } = require('path');
 const shutdownHelper = require('@bufferapp/shutdown-helper');
@@ -12,7 +11,7 @@ const {
   validateSession,
 } = require('@bufferapp/session-manager/middleware');
 const { apiError } = require('./middleware');
-const controller = require('./lib/controller');
+const healthCheck = require('./healthCheck');
 const rpc = require('./rpc');
 
 
@@ -65,21 +64,13 @@ const getHtml = () => fs.readFileSync(join(__dirname, 'index.html'), 'utf8')
 app.use(logMiddleware({ name: 'BufferAccount' }));
 app.use(cookieParser());
 
-app.get('/health-check', controller.healthCheck);
+app.get('/health-check', healthCheck);
 
 // All routes after this have access to the user session
 app.use(setRequestSession({
   production: useProductionServices,
   sessionKeys: ['*'],
 }));
-
-app.route('/login')
-  .get(controller.login)
-  .post(bodyParser.urlencoded({ extended: true }), controller.handleLogin);
-
-app.route('/login/tfa')
-  .get(controller.tfa)
-  .post(bodyParser.urlencoded({ extended: true }), controller.handleTfa);
 
 app.use(validateSession({
   production: useProductionServices,
@@ -91,8 +82,6 @@ app.post('/rpc', (req, res, next) => {
     // catch any unexpected errors
     .catch(err => next(err));
 });
-
-app.get('/logout', controller.logout);
 
 app.get('/', (req, res) => res.send(getHtml()));
 
