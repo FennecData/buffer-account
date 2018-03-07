@@ -5,6 +5,11 @@ const {
 const {
   loginServiceUrl,
 } = require('./urls');
+const {
+  cookieName,
+  cookieDomain,
+  destroyCookie,
+} = require('./cookies');
 
 const setRequestSession = ({
   production,
@@ -19,8 +24,29 @@ const setRequestSession = ({
       });
       req.session = session;
       next();
-    } catch (err) {
-      next(err);
+    } catch (e) {
+      const bugsnag = req.app.get('bugsnag');
+      if (bugsnag) {
+        bugsnag.notify(e, {
+          originalUrl: req.originalUrl,
+        });
+      }
+      // destroy the cookie(s) and redirect to the login page
+      // if getting the session failed for any reason
+      destroyCookie({
+        name: cookieName({ production }),
+        domain: cookieDomain({ production }),
+        res,
+      });
+      destroyCookie({
+        name: `${production ? '' : 'local'}bufferapp_ci_session`,
+        domain: '.buffer.com',
+        res,
+      });
+      const redirect = encodeURIComponent(`https://${req.get('host')}${req.originalUrl}`);
+      const baseUrl =
+        `${loginServiceUrl({ production })}/login/`;
+      res.redirect(`${baseUrl}?redirect=${redirect}`);
     }
   };
 

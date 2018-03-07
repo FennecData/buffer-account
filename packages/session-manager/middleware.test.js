@@ -49,10 +49,17 @@ describe('middleware', () => {
         cookies: {
           [bufferCookieName]: cookieValue,
         },
+        app: {
+          get: () => {},
+        },
+        get: () => {},
       };
       const sessionUrl = 'someSessionUrl';
       const sessionKeys = ['*'];
-      const res = {};
+      const res = {
+        clearCookie: () => {},
+        redirect: () => {},
+      };
       const next = jest.fn();
 
       const configuredMiddlware = setRequestSession({
@@ -61,7 +68,7 @@ describe('middleware', () => {
         sessionKeys,
       });
       await configuredMiddlware(req, res, next);
-      expect(next).toBeCalledWith(new Error(RPCClient.fakeErrorMessage));
+      expect(next).not.toBeCalled();
     });
   });
 
